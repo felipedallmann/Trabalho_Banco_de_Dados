@@ -1,0 +1,19 @@
+{
+    "Descrição": {
+        "Descrição": "Whisky Mark One 980ml.Blended Whisky, top entre os Priemium nacionais, Mark One é destilado de malte e cereais. É envelhecido em barris de carvalho e produzido com puro malte escocês e destilados nacionais de origem nobre."
+    },
+    "Informações": {
+        "Categoria": "Whisky",
+        "Fabricante": "Stock",
+        "Id do produto": "2004",
+        "Preço com oferta": "20",
+        "Preço sem oferta": "20"
+    },
+    "Marcadores": {
+        "Marcadores": [
+            "Volume: 980 ml.",
+            "Graduação Alcóolica: 40% Vol.",
+            "Origem: Nacional."
+        ]
+    }
+}

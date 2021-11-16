@@ -1,0 +1,19 @@
+{
+    "Descrição": {
+        "Descrição": "Whisky Grant's Family Reserva.O Grant's é um whisky extraordinário, um dos mais complexos whiskies uma vez produzidos na Escócia. Tem um aroma fresco, com notas de malte, embora complexo e levemente doce, com alusão a banana e caramelo. O paladar é limpo, mas também complexo, com notas de fruta (típico de Speyside), equilibrado e com um toque de doçura.É proibida a venda de bebidas alcoólicas para menores de 18 anos."
+    },
+    "Informações": {
+        "Categoria": "Whisky",
+        "Fabricante": "Grant's",
+        "Id do produto": "42",
+        "Preço com oferta": "79.9",
+        "Preço sem oferta": "99.9"
+    },
+    "Marcadores": {
+        "Marcadores": [
+            "Origem: Escócia",
+            "Teor Alcoólico: 40% vol.",
+            "Volume: 1000 ml"
+        ]
+    }
+}

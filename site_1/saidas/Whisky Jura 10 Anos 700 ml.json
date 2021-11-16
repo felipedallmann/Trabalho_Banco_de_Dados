@@ -1,0 +1,20 @@
+{
+    "Descrição": {
+        "Descrição": "Whisky Jura 10 Anos.Na garrafa o símbolo celta do nascimento, representa o início, com aromas de carvalho e caramelo, 10 anos de envelhecimento em carvalho americano sendo 40% barricas novas."
+    },
+    "Informações": {
+        "Categoria": "Whisky",
+        "Fabricante": "Jura",
+        "Id do produto": "551",
+        "Preço com oferta": "319.9",
+        "Preço sem oferta": "369.9"
+    },
+    "Marcadores": {
+        "Marcadores": [
+            "País de Origem: Escócia.",
+            "Single malt.",
+            "Graduação: 40% vol.",
+            "Volume: 700 ml."
+        ]
+    }
+}

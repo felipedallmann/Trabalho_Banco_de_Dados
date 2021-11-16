@@ -1,7 +1,7 @@
 # web_scraping
 
 ## Pré-requisitos
-pip install beautifulsoup4
+pip install BeautifulSoup4
 
 ## site 1
 https://www.casadabebida.com.br/whisky/

@@ -1,0 +1,21 @@
+{
+    "Descrição": {
+        "Descrição": "Johnnie Walker Gold Label foi criado em 1920 em comemoração aos 100 anos da fundação dos negócios de Johnnie Walker.Em sua formulação são usados os melhores Whiskys da Escócia, envelhecidos por, no mínimo, 18 anos.É suntuosamente luxuoso e suave, com uma textura cremosa que o torna único na categoria.A água utilizada em sua composição provém de um manancial de onde se extrai ouro, fazendo com que seu sabor seja único."
+    },
+    "Informações": {
+        "Categoria": "Whisky",
+        "Fabricante": "Johnnie Walker",
+        "Id do produto": "321",
+        "Preço com oferta": "149.9",
+        "Preço sem oferta": "149.9"
+    },
+    "Marcadores": {
+        "Marcadores": [
+            "Origem: Escócia.",
+            "Categoria: Super Deluxe (18 anos).",
+            "Graduação: 40% vol.",
+            "Volume: 200 ml.",
+            "É proibida a venda de bebidas para menores de 18 anos."
+        ]
+    }
+}
