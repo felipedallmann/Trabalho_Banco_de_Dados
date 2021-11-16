@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import sys
 import requests
 import json
-import re
+import os
 
 url = sys.argv[1]
 
@@ -16,7 +16,11 @@ title = doc.find_all("span", itemprop="name")
 title = title[-1].string
 print(title)
 
-f = open(title+".json", "w",encoding='utf-8')
+if not os.path.isdir('saidas'):
+    os.mkdir('saidas')
+	
+
+f = open("saidas/"+title+".json", "w",encoding='utf-8')
 
 
 # informações
@@ -67,7 +71,7 @@ json_infos = {
     "Marcadores" : marker_dict
 }
 
-js = json.dumps(json_infos)
+js = json.dumps(json_infos, indent=4, sort_keys= True, ensure_ascii=False )
 f.write(js)
 
 
