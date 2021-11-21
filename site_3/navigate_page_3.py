@@ -46,3 +46,5 @@ for link in products_page:
     link = link.find("a")
     os.system('python3 web_scraping_3.py {}'.format(link['href']))
     print(link['href'])
+
+driver.quit
