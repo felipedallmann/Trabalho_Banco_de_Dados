@@ -45,3 +45,28 @@ CREATE TABLE IF NOT EXISTS t2.loja_vende_whisky
     CONSTRAINT fk_loja_vende_whisky_loja FOREIGN KEY (loja_nome)
         REFERENCES t2.loja (nome)
 );
+
+
+CREATE TABLE IF NOT EXISTS t2.pais_origem
+(
+    nome VARCHAR(50),
+    continente VARCHAR(30),
+    CONSTRAINT fk_pais_origem PRIMARY KEY(nome)
+);
+
+CREATE TABLE IF NOT EXISTS t2.ingrediente
+(
+    nome VARCHAR(50),
+    CONSTRAINT pk_ingrediente PRIMARY KEY (nome)
+);
+
+CREATE TABLE IF NOT EXISTS t2.destilaria_utiliza_ingrediente
+(
+    destilaria_nome VARCHAR(50),
+    ingrediente_nome VARCHAR(50),
+    CONSTRAINT pk_destilaria_utiliza_ingrediente PRIMARY KEY (destilaria_nome, ingrediente_nome),
+    CONSTRAINT fk_destilaria_utiliza_ingrediente_destilaria FOREIGN KEY (destilaria_nome)
+        REFERENCES t2.destilaria (nome),
+    CONSTRAINT destilaria_utiliza_ingrediente_ingrediente FOREIGN KEY (ingrediente_nome)
+        REFERENCES t2.ingrediente (nome)
+);
