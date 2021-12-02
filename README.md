@@ -3,6 +3,9 @@
 ## Pré-requisitos
 pip install BeautifulSoup4
 
+## Dados:
+Idade do whisky, nome, preço, teor alcoolico, destilaria, país de origem e ingredientes.
+
 ## site 1
 https://www.casadabebida.com.br/whisky/
 
