@@ -22,8 +22,6 @@ CREATE TABLE IF NOT EXISTS t2.whisky
     id SERIAL,
     idade INT NOT NULL,
     nome VARCHAR(50) NOT NULL,
-    preco DECIMAL(2) NOT NULL,
-    preco_desconto DECIMAL(2) NOT NULL,
     teor_alcolico DECIMAL(2) NOT NULL,
     destilaria_nome VARCHAR(50) NOT NULL,
     pais_origem_nome VARCHAR(50) NOT NULL,
@@ -39,6 +37,9 @@ CREATE TABLE IF NOT EXISTS t2.loja_vende_whisky
 (
     whisky_id INT,
     loja_nome VARCHAR(50),
+    preco DECIMAL(2) NOT NULL,
+    preco_desconto DECIMAL(2),
+    acessado_em DATE NOT NULL,
 	CONSTRAINT pk_loja_vende_whisky PRIMARY KEY (whisky_id, loja_nome),
     CONSTRAINT fk_loja_vende_whisky_whisky FOREIGN KEY (whisky_id)
         REFERENCES t2.whisky (id),
