@@ -14,6 +14,8 @@ CREATE TABLE IF NOT EXISTS t2.loja
 (
     nome VARCHAR(50),
     url VARCHAR(50) NOT NULL,
+    numero_itens_vendido INT NOT NULL,
+    preco_medio DECIMAL(2) NOT NULL,
 	CONSTRAINT pk_loja PRIMARY KEY (nome)
 );
 
