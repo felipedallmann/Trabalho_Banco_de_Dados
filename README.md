@@ -15,5 +15,4 @@ https://www.superadega.com.br/whisky
 ## site 3
 https://caledoniastore.com.br
 
-## site 4
-https://www.reidoswhiskys.com.br/whiskys/
+
