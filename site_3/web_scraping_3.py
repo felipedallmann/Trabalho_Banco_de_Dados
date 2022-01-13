@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 # -*- coding: utf-8 -*-
-
+from datetime import date
 from bs4 import BeautifulSoup
 import sys
 import requests
@@ -9,6 +9,10 @@ import json
 import os
 
 from requests.api import head
+
+today = date.today()
+dt = today.strftime("%d/%m/%Y")
+
 
 url = sys.argv[1]
 
@@ -84,7 +88,8 @@ descript = {
 json_infos = {
     "Título": title,
     "Informações": markers,
-    "Descrição": descript
+    "Descrição": descript,
+    "Data": dt
 }
 
 js = json.dumps(json_infos, indent=4, sort_keys=True, ensure_ascii=False)
