@@ -35,17 +35,17 @@ CREATE TABLE IF NOT EXISTS t2.whisky
    CHECK (preco >= 0 AND preco_desconto >= 0 AND teor_alcolico >= 0)
 );
 
-CREATE TABLE IF NOT EXISTS t2.loja_vende_whisky
+CREATE TABLE IF NOT EXISTS t2.historico
 (
     whisky_id INT,
     loja_nome VARCHAR(50),
     preco DECIMAL(2) NOT NULL,
     preco_desconto DECIMAL(2),
     acessado_em DATE NOT NULL,
-	CONSTRAINT pk_loja_vende_whisky PRIMARY KEY (whisky_id, loja_nome),
-    CONSTRAINT fk_loja_vende_whisky_whisky FOREIGN KEY (whisky_id)
+	CONSTRAINT pk_historico PRIMARY KEY (whisky_id, loja_nome, acessado_em),
+    CONSTRAINT fk_historico_whisky FOREIGN KEY (whisky_id)
         REFERENCES t2.whisky (id),
-    CONSTRAINT fk_loja_vende_whisky_loja FOREIGN KEY (loja_nome)
+    CONSTRAINT fk_historico_loja FOREIGN KEY (loja_nome)
         REFERENCES t2.loja (nome)
 );
 
