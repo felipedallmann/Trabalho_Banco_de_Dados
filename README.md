@@ -24,21 +24,21 @@ CREATE ROLE "trabalho-bd-user" WITH\
 	INHERIT\
 	NOREPLICATION\
 	CONNECTION LIMIT -1\
-	PASSWORD 'senha';\
+	PASSWORD 'senha';
   
 ## server configuration 
 name: trabalho-bd\
 host: localhost\
 port: 5432\
 maintaince database: postgres\
-username: trabalho-bd-user\
+username: trabalho-bd-user
 
 ## Database configuration
 CREATE DATABASE "trabalho-bd"\
     WITH \
     OWNER = "trabalho-bd-user"\
     ENCODING = 'UTF8'\
-    CONNECTION LIMIT = -1;\
+    CONNECTION LIMIT = -1;
 
 CREATE SCHEMA j2ee;\
 CREATE TABLE j2ee.website\
@@ -48,4 +48,4 @@ CREATE TABLE j2ee.website\
   	url character varying(100) NOT NULL,\
   CONSTRAINT pk_website PRIMARY KEY (id),\
   CONSTRAINT uq_website_nome UNIQUE (nome)\
-);\
+);
