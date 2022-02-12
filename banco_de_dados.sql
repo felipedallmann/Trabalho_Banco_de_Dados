@@ -90,9 +90,6 @@ CREATE TABLE IF NOT EXISTS projetobd.execucao_scripts
     script_data_insercao DATE,
     data_execucao DATE,
     CONSTRAINT pk_execucao_scripts PRIMARY KEY (script_loja_nome, script_data_insercao, data_execucao),
-    CONSTRAINT fk_execucao_scripts_script_loja_nome FOREIGN KEY (script_loja_nome)
-	REFERENCES projetobd.script(loja_nome),
-    CONSTRAINT fk_execucao_scripts_script_data_insercao FOREIGN KEY (script_data_insercao)
-	REFERENCES projetobd.script(data_insercao)
+    CONSTRAINT fk_execucao_scripts_script_loja_nome FOREIGN KEY (script_loja_nome, script_data_insercao)
+		REFERENCES projetobd.script(loja_nome, data_insercao)
 );
-
