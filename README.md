@@ -15,6 +15,8 @@ https://www.superadega.com.br/whisky
 ## site 3
 https://caledoniastore.com.br
 
+# Como executar
+
 ## pgadmin configuration
 CREATE ROLE "trabalho-bd-user" WITH\
 	LOGIN\
@@ -25,8 +27,8 @@ CREATE ROLE "trabalho-bd-user" WITH\
 	NOREPLICATION\
 	CONNECTION LIMIT -1\
 	PASSWORD 'senha';
-  
-## server configuration 
+
+## server configuration
 name: trabalho-bd\
 host: localhost\
 port: 5432\
@@ -49,3 +51,15 @@ CREATE TABLE j2ee.website\
   CONSTRAINT pk_website PRIMARY KEY (id),\
   CONSTRAINT uq_website_nome UNIQUE (nome)\
 );
+
+## Usando Docker-Compose
+Execute:
+
+1) `docker-compose up`
+
+### Valores do PGAdmin
+host: postgres_projetobd\
+port: 5432\
+database: projetobd\
+username: projetobd\
+password: projetobd
