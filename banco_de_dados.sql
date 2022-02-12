@@ -1,9 +1,16 @@
 CREATE SCHEMA IF NOT EXISTS projetobd;
 
+CREATE TABLE IF NOT EXISTS projetobd.pais_origem
+(
+    nome VARCHAR(50),
+    continente VARCHAR(30),
+    CONSTRAINT pk_pais_origem PRIMARY KEY(nome)
+);
+
 CREATE TABLE IF NOT EXISTS projetobd.destilaria
 (
     nome VARCHAR(50),
-    fundacao DATE NOT NULL,
+    data_fundacao DATE NOT NULL,
     pais_origem_nome VARCHAR(50) NOT NULL,
 	CONSTRAINT pk_destilaria PRIMARY KEY (nome),
     CONSTRAINT fk_destilaria_pais_origem FOREIGN KEY (pais_origem_nome)
@@ -32,41 +39,22 @@ CREATE TABLE IF NOT EXISTS projetobd.whisky
         REFERENCES projetobd.destilaria (nome),
     CONSTRAINT fk_whisky_pais_origem FOREIGN KEY (pais_origem_nome)
         REFERENCES projetobd.pais_origem (nome),
-   CHECK (preco >= 0 AND preco_desconto >= 0 AND teor_alcolico >= 0)
-);
-
-CREATE TABLE IF NOT EXISTS projetobd.loja_vende_whisky
-(
-    whisky_id INT,
-    loja_nome VARCHAR(50),
-    preco DECIMAL(2) NOT NULL,
-    preco_desconto DECIMAL(2),
-	CONSTRAINT pk_loja_vende_whisky PRIMARY KEY (whisky_id, loja_nome),
-    CONSTRAINT fk_loja_vende_whisky_whisky FOREIGN KEY (whisky_id)
-        REFERENCES projetobd.whisky (id),
-    CONSTRAINT fk_loja_vende_whisky_loja FOREIGN KEY (loja_nome)
-        REFERENCES projetobd.loja (nome)
+    CHECK (teor_alcolico >= 0)
 );
 
 CREATE TABLE IF NOT EXISTS projetobd.historico
 (
     whisky_id INT,
     loja_nome VARCHAR(50),
-    preco DECIMAL(2) NOT NULL,
-    preco_desconto DECIMAL(2),
+    preco_sem_desconto DECIMAL(2) NOT NULL,
+    preco_com_desconto DECIMAL(2),
     acessado_em DATE NOT NULL,
 	CONSTRAINT pk_historico PRIMARY KEY (whisky_id, loja_nome, acessado_em),
     CONSTRAINT fk_historico_whisky FOREIGN KEY (whisky_id)
         REFERENCES projetobd.whisky (id),
     CONSTRAINT fk_historico_loja FOREIGN KEY (loja_nome)
-        REFERENCES projetobd.loja (nome)
-);
-
-CREATE TABLE IF NOT EXISTS projetobd.pais_origem
-(
-    nome VARCHAR(50),
-    continente VARCHAR(30),
-    CONSTRAINT fk_pais_origem PRIMARY KEY(nome)
+        REFERENCES projetobd.loja (nome),
+    CHECK (preco_sem_desconto >= 0 AND preco_com_desconto >= 0)
 );
 
 CREATE TABLE IF NOT EXISTS projetobd.ingrediente
