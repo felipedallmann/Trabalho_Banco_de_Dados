@@ -3,7 +3,6 @@ CREATE SCHEMA IF NOT EXISTS projetobd;
 CREATE TABLE IF NOT EXISTS projetobd.pais_origem
 (
     nome VARCHAR(50),
-    continente VARCHAR(30),
     CONSTRAINT pk_pais_origem PRIMARY KEY(nome)
 );
 
