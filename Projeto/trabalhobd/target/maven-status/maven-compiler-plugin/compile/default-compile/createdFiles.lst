@@ -1,9 +1,0 @@
-dao\WebSiteDAO.class
-jdbc\ConnectionFactory.class
-dao\PgDAOFactory.class
-dao\DAOFactory.class
-model\WebSite.class
-dao\DAO.class
-controller\WebSiteController.class
-dao\PgWebSiteDAO.class
-jdbc\PgConnectionFactory.class
