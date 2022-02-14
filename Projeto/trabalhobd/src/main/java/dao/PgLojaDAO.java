@@ -12,59 +12,57 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.WebSite;
+import model.Loja;
 
 /**
  *
  * @author dskaster
  */
-public class PgWebSiteDAO implements WebSiteDAO {
+public class PgLojaDAO implements LojaDAO {
 
     private final Connection connection;
     
     private static final String CREATE_QUERY =
-                                "INSERT INTO j2ee.website(nome, url) " +
+                                "INSERT INTO projetobd.loja(nome, url) " +
                                 "VALUES(?, ?);";
     
     private static final String READ_QUERY =
                                 "SELECT url, nome " +
-                                "FROM j2ee.website " +
-                                "WHERE id = ?;";      
+                                "FROM projetobd.loja " +
+                                "WHERE nome = ?;";      
     
     private static final String UPDATE_QUERY =
-                                "UPDATE j2ee.website " +
-                                "SET url = ?, nome = ?" +
-                                "WHERE id = ?;";
+                                "UPDATE projetobd.loja " +
+                                "SET url = ?" +
+                                "WHERE nome = ?;";
 
 
     private static final String DELETE_QUERY =
-                                "DELETE FROM j2ee.website " +
-                                "WHERE id = ?;";
+                                "DELETE FROM projetobd.loja " +
+                                "WHERE nome = ?;";
     
     private static final String ALL_QUERY =
-                                "SELECT id, nome, url " +
-                                "FROM j2ee.website " +
-                                "ORDER BY id;";    
+                                "SELECT nome, url " +
+                                "FROM projetobd.loja " +
+                                "ORDER BY nome;";    
 
     private static final String GET_BY_NAME_QUERY =
                                 "SELECT nome, url" +
-                                "FROM j2ee.website " +
+                                "FROM projetobd.loja " +
                                 "WHERE nome = ?;";
     
-    public PgWebSiteDAO(Connection connection) {
+    public PgLojaDAO(Connection connection) {
         this.connection = connection;
     }
 
-
     @Override
-    public WebSite getByName(String login) throws SQLException {
+    public Loja getByName(String name) throws SQLException {
         try (PreparedStatement statement = connection.prepareStatement(GET_BY_NAME_QUERY)) {
-            statement.setString(1, login);
+            statement.setString(1, name);
 
             try (ResultSet result = statement.executeQuery()) {
                 if (result.next()) {
-                    WebSite webSite = new WebSite();
-                    webSite.setId(result.getInt("id"));
+                    Loja webSite = new Loja();
                     webSite.setNome(result.getString("nome"));
                     webSite.setURL(result.getString("URL"));
                     return webSite;
@@ -75,21 +73,21 @@ public class PgWebSiteDAO implements WebSiteDAO {
                 }
             }
         } catch (SQLException ex) {
-            Logger.getLogger(PgWebSiteDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
             
             throw new SQLException("Erro ao obter site.");
         }
     }
 
     @Override
-    public void create(WebSite webSite) throws SQLException {
+    public void create(Loja webSite) throws SQLException {
         try (PreparedStatement statement = connection.prepareStatement(CREATE_QUERY)) {
             statement.setString(1, webSite.getNome());
             statement.setString(2, webSite.getURL());
 
             statement.executeUpdate();
         } catch (SQLException ex) {
-            Logger.getLogger(PgWebSiteDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
 
             if (ex.getMessage().contains("uq_website_nome")) {
                 throw new SQLException("Erro ao inserir site: nome já existente.");
@@ -102,14 +100,13 @@ public class PgWebSiteDAO implements WebSiteDAO {
     }
 
     @Override
-    public WebSite read(Integer id) throws SQLException {
-        WebSite webSite = new WebSite();
+    public Loja read(String nome) throws SQLException {
+        Loja webSite = new Loja();
 
         try (PreparedStatement statement = connection.prepareStatement(READ_QUERY)) {
-            statement.setInt(1, id);
+            statement.setString(1, nome);
             try (ResultSet result = statement.executeQuery()) {
                 if (result.next()) {
-                    webSite.setId(id);
                     webSite.setNome(result.getString("nome"));
                     webSite.setURL(result.getString("URL"));
                 } else {
@@ -117,7 +114,7 @@ public class PgWebSiteDAO implements WebSiteDAO {
                 }
             }
         } catch (SQLException ex) {
-            Logger.getLogger(PgWebSiteDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
             
             if (ex.getMessage().equals("Erro ao visualizar: usuário não encontrado.")) {
                 throw ex;
@@ -130,7 +127,7 @@ public class PgWebSiteDAO implements WebSiteDAO {
     }
 
     @Override
-    public void update(WebSite webSite) throws SQLException {
+    public void update(Loja webSite) throws SQLException {
         String query;
 
         query = UPDATE_QUERY;
@@ -144,7 +141,7 @@ public class PgWebSiteDAO implements WebSiteDAO {
                 throw new SQLException("Erro ao editar: usuário não encontrado.");
             }
         } catch (SQLException ex) {
-            Logger.getLogger(PgWebSiteDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
 
             if (ex.getMessage().equals("Erro ao editar: site não encontrado.")) {
                 throw ex;
@@ -157,15 +154,15 @@ public class PgWebSiteDAO implements WebSiteDAO {
     }
 
     @Override
-    public void delete(Integer id) throws SQLException {
+    public void delete(String nome) throws SQLException {
         try (PreparedStatement statement = connection.prepareStatement(DELETE_QUERY)) {
-            statement.setInt(1, id);
-
+            statement.setString(1, nome);
+            System.out.println(statement);
             if (statement.executeUpdate() < 1) {
                 throw new SQLException("Erro ao excluir: site não encontrado.");
             }
         } catch (SQLException ex) {
-            Logger.getLogger(PgWebSiteDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
 
             if (ex.getMessage().equals("Erro ao excluir: usuário não encontrado.")) {
                 throw ex;
@@ -176,22 +173,21 @@ public class PgWebSiteDAO implements WebSiteDAO {
     }
 
     @Override
-    public List<WebSite> all() throws SQLException {
+    public List<Loja> all() throws SQLException {
         
-        List<WebSite> webSiteList = new ArrayList<>();
+        List<Loja> webSiteList = new ArrayList<>();
 
         try (PreparedStatement statement = connection.prepareStatement(ALL_QUERY);
              ResultSet result = statement.executeQuery()) {
             while (result.next()) {
-                WebSite webSite = new WebSite();
-                webSite.setId(result.getInt("id"));
+                Loja webSite = new Loja();
                 webSite.setNome(result.getString("nome"));
                 webSite.setURL(result.getString("url"));
 
                 webSiteList.add(webSite);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(PgWebSiteDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
 
             throw new SQLException("Erro ao listar usuários.");
         }

@@ -5,14 +5,14 @@
 package dao;
 
 import java.sql.SQLException;
-import model.WebSite;
+import model.Loja;
 
 /**
  *
  * @author dskaster
  */
-public interface WebSiteDAO extends DAO<WebSite> {
+public interface LojaDAO extends DAO<Loja> {
 
-    public WebSite getByName(String name) throws SQLException;
+    public Loja getByName(String name) throws SQLException;
     
 }

@@ -21,7 +21,6 @@ function readWebSite(e) {
         var webSite = JSON.parse(data);
         var $modal = $('.modal-visualizar-website');
 
-        $modal.find('.p_id').html('<strong>ID: </strong>' + webSite.id);
         $modal.find(".p_nome").html('<strong>Nome: </strong>' + webSite.nome);
         $modal.find('.p_url').html('<strong>URL: </strong>' + webSite.URL);
         $modal.modal();

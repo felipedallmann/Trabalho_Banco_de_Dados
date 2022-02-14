@@ -11,7 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <%@include file="/view/include/head.jsp"  %>
-        <title>[WebSite App] WebSite: cadastro</title>
+        <title>[WebSite App] Loja: cadastro</title>
     </head>
     <body>
        <div class="container">
@@ -19,7 +19,7 @@
 
             <form
                 class="form"
-                action="${pageContext.servletContext.contextPath}/website/create"
+                action="${pageContext.servletContext.contextPath}/loja/create"
                 enctype="form-data"
                 method="POST">
 
@@ -46,6 +46,6 @@
         </div>
                 
         <%@include file="/view/include/scripts.jsp"%>
-        <script src="${pageContext.servletContext.contextPath}/assets/js/website.js"></script>
+        <script src="${pageContext.servletContext.contextPath}/assets/js/loja.js"></script>
     </body>
 </html>

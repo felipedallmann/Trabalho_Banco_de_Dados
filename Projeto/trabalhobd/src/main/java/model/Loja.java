@@ -4,23 +4,32 @@
  */
 package model;
 
-import java.sql.Date;
+import com.google.gson.annotations.SerializedName;
 
 /**
  *
  * @author Usuario
  */
-public class WebSite {
-    private Integer id;
-    private String nome;
+public class Loja {
+    @SerializedName("Fabricante") private String nome;
     private String URL;
+    private transient int itensVendidos;
+    private transient int precoMedio;
 
-    public Integer getId() {
-        return id;
+    public int getItensVendidos() {
+        return itensVendidos;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setItensVendidos(int itensVendidos) {
+        this.itensVendidos = itensVendidos;
+    }
+
+    public int getPrecoMedio() {
+        return precoMedio;
+    }
+
+    public void setPrecoMedio(int precoMedio) {
+        this.precoMedio = precoMedio;
     }
 
     public String getNome() {

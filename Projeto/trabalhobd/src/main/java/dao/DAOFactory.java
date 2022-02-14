@@ -16,6 +16,8 @@ import jdbc.ConnectionFactory;
 public abstract class DAOFactory implements AutoCloseable {
     
     protected Connection connection;
+    public abstract LojaDAO getLojaDAO();
+    public abstract ScriptDAO getScriptDAO();
      
     public static DAOFactory getInstance() throws ClassNotFoundException, IOException, SQLException {
         Connection connection = ConnectionFactory.getInstance().getConnection();
@@ -80,8 +82,6 @@ public abstract class DAOFactory implements AutoCloseable {
             throw new SQLException("Erro ao fechar conexão ao banco de dados.");
         }
     }
-
-    public abstract WebSiteDAO getWebSiteDAO();
 
     @Override
     public void close() throws SQLException {

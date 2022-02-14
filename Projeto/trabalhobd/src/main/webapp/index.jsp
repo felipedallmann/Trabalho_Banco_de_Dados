@@ -16,13 +16,13 @@
         <div class="container">
             
                 <p class="help-block">
-                    <a href="${pageContext.servletContext.contextPath}/website/create">
+                    <a href="${pageContext.servletContext.contextPath}/loja/create">
                         <h2 class="form-signin-heading">Cadastrar site</h2>
                     </a>
                 </p>
                 
                  <p class="help-block">
-                    <a href="${pageContext.servletContext.contextPath}/website">
+                    <a href="${pageContext.servletContext.contextPath}/loja">
                         <h2 class="form-signin-heading">Mostrar sites cadastrados</h2>
                     </a>
                 </p>

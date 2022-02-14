@@ -17,9 +17,12 @@ public class PgDAOFactory extends DAOFactory {
     }
 
     @Override
-    public WebSiteDAO getWebSiteDAO() {
-        return new PgWebSiteDAO(this.connection);
+    public LojaDAO getLojaDAO() {
+        return new PgLojaDAO(this.connection);
     }
 
-    
+    @Override
+    public ScriptDAO getScriptDAO() {
+        return new ScriptDAO(this.connection);
+    }
 }
