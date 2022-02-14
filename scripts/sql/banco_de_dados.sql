@@ -9,7 +9,6 @@ CREATE TABLE IF NOT EXISTS projetobd.pais_origem
 CREATE TABLE IF NOT EXISTS projetobd.destilaria
 (
     nome VARCHAR(50),
-    data_fundacao DATE NOT NULL,
     pais_origem_nome VARCHAR(50) NOT NULL,
 	CONSTRAINT pk_destilaria PRIMARY KEY (nome),
     CONSTRAINT fk_destilaria_pais_origem FOREIGN KEY (pais_origem_nome)
@@ -20,8 +19,6 @@ CREATE TABLE IF NOT EXISTS projetobd.loja
 (
     nome VARCHAR(50),
     url VARCHAR(50) NOT NULL,
-    numero_itens_vendido INT NOT NULL,
-    preco_medio DECIMAL(2) NOT NULL,
 	CONSTRAINT pk_loja PRIMARY KEY (nome)
 );
 
