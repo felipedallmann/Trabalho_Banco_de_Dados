@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Miniatura Johnnie Walker Black Label 200 ml.Altura:19,5 cm.Largura da Frente: 5 cm.Comprimento Lateral: 4,5 cm.",
-    "Fabricante": "Johnnie Walker",
-    "Id do produto": "928",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Categoria: Deluxe (12 anos)",
-        "Graduação: 40% vol.",
-        "Volume: 200 ml."
-    ],
-    "Preço com oferta": "49.9",
-    "Preço sem oferta": "59.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Miniatura Johnnie Walker Black Label 200 ml.Altura:19,5 cm.Largura da Frente: 5 cm.Comprimento Lateral: 4,5 cm.",
+  "Fabricante": "Johnnie Walker",
+  "Id do produto": "928",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Categoria: Deluxe (12 anos)",
+    "Graduação: 40% vol.",
+    "Volume: 200 ml."
+  ],
+  "Preço com oferta": "49.9",
+  "Preço sem oferta": "59.9",
+  "Nome": "Miniatura J"
 }

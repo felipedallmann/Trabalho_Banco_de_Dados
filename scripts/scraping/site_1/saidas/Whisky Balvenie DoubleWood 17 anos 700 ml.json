@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Balvenie DoubleWood 17 anos 700 ml.Após 17 anos maturando em barris de carvalho americano que adicionam notas suaves e doces de baunilha, o The Balvenie Doublewood 17 anos é transferido para finalização em barris de carvalho xerez europeu, que acrescentarão sabores ricos, picantes, profundos e plenos.Como irmão mais velho do tradicional Doublewood 12 anos, esta nova versão de mais idade compartilha o mesmo DNA, os mesmos caramelos e especiarias, mas ao mesmo tempo claramente diferentes e únicos, com notas de baunilha mais profunda, notas de maçã verde, caramelo cremoso e uma riqueza e complexidade impressionantes.Balvenie, que deriva o seu nome do bispo Bethan de Mortlach do século XI, foi fundada em 1892 por William Grant para ajudar a Glenfiddich (outra destilaria do grupo William Grant & Sons) a atender a demanda pelos whiskies Blended produzidos pelo grupo.Inicialmente toda a produção era destinada aos Blendeds do grupo, e os whiskies da Balvenie só começaram a ser engarrafados como Single Malts na década de 70.",
-    "Fabricante": "Balvenie",
-    "Id do produto": "784",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Single malt.",
-        "Graduação: 40% vol.",
-        "Volume: 700 ml."
-    ],
-    "Preço com oferta": "1399.9",
-    "Preço sem oferta": "1599.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Balvenie DoubleWood 17 anos 700 ml.Após 17 anos maturando em barris de carvalho americano que adicionam notas suaves e doces de baunilha, o The Balvenie Doublewood 17 anos é transferido para finalização em barris de carvalho xerez europeu, que acrescentarão sabores ricos, picantes, profundos e plenos.Como irmão mais velho do tradicional Doublewood 12 anos, esta nova versão de mais idade compartilha o mesmo DNA, os mesmos caramelos e especiarias, mas ao mesmo tempo claramente diferentes e únicos, com notas de baunilha mais profunda, notas de maçã verde, caramelo cremoso e uma riqueza e complexidade impressionantes.Balvenie, que deriva o seu nome do bispo Bethan de Mortlach do século XI, foi fundada em 1892 por William Grant para ajudar a Glenfiddich (outra destilaria do grupo William Grant & Sons) a atender a demanda pelos whiskies Blended produzidos pelo grupo.Inicialmente toda a produção era destinada aos Blendeds do grupo, e os whiskies da Balvenie só começaram a ser engarrafados como Single Malts na década de 70.",
+  "Fabricante": "Balvenie",
+  "Id do produto": "784",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Single malt.",
+    "Graduação: 40% vol.",
+    "Volume: 700 ml."
+  ],
+  "Preço com oferta": "1399.9",
+  "Preço sem oferta": "1599.9",
+  "Nome": "Whisky Balvenie DoubleWood 17 anos 700 ml"
 }

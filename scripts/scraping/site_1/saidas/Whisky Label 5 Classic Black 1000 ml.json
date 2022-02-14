@@ -1,14 +1,15 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Label 5 Classic Black 1000 ml.Label 5 é um blended Scotch Whisky do coração da Escócia com vários prémios.Um dos melhores Scotch blended do mundo, Label 5 foi amadurecido em barricas de carvalho sob o cuidado constante do mestre da adega.Isto permitiu adquirir a sua incomparável suavidade e sabor persistente.Com sabores de malte defumado e delicados com notas de flores e frutas.É suave e robusto, um whisky de caráter.Os maltes de Speyside são a espinha dorsal deste “blend”",
-    "Fabricante": "Label 5",
-    "Id do produto": "924",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação: 40% vol.",
-        "Volume: 1000 ml."
-    ],
-    "Preço com oferta": "79.9",
-    "Preço sem oferta": "99.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Label 5 Classic Black 1000 ml.Label 5 é um blended Scotch Whisky do coração da Escócia com vários prémios.Um dos melhores Scotch blended do mundo, Label 5 foi amadurecido em barricas de carvalho sob o cuidado constante do mestre da adega.Isto permitiu adquirir a sua incomparável suavidade e sabor persistente.Com sabores de malte defumado e delicados com notas de flores e frutas.É suave e robusto, um whisky de caráter.Os maltes de Speyside são a espinha dorsal deste “blend”",
+  "Fabricante": "Label 5",
+  "Id do produto": "924",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Graduação: 40% vol.",
+    "Volume: 1000 ml."
+  ],
+  "Preço com oferta": "79.9",
+  "Preço sem oferta": "99.9",
+  "Nome": "Whisky Label 5 Classic Black 1000 ml"
 }

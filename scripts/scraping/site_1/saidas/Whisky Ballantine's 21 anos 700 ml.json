@@ -1,14 +1,15 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Ballantine's 21 anos 700 ml.Scotch whisky importado, com maltes envelhecidos por no mínimo 21 anos. Produzido em quantidades muito limitadas.Apresenta cor avermelhada-ouro e brilhante. Aroma com notas de mel, leve toque de maçã e flores. Paladar robusto, levemente adocicado de mel, leve toque de fumo, urze e especiarias. Final prolongado, com toques de Jerez seco.É proibida a venda de bebidas alcoólicas para menores de 18 anos.",
-    "Fabricante": "Ballantine's",
-    "Id do produto": "40",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Teor alcoólico 43% vol.",
-        "Volume: 700 ml (vidro)."
-    ],
-    "Preço com oferta": "599.9",
-    "Preço sem oferta": "899.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Ballantine's 21 anos 700 ml.Scotch whisky importado, com maltes envelhecidos por no mínimo 21 anos. Produzido em quantidades muito limitadas.Apresenta cor avermelhada-ouro e brilhante. Aroma com notas de mel, leve toque de maçã e flores. Paladar robusto, levemente adocicado de mel, leve toque de fumo, urze e especiarias. Final prolongado, com toques de Jerez seco.É proibida a venda de bebidas alcoólicas para menores de 18 anos.",
+  "Fabricante": "Ballantine's",
+  "Id do produto": "40",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Teor alcoólico 43% vol.",
+    "Volume: 700 ml (vidro)."
+  ],
+  "Preço com oferta": "599.9",
+  "Preço sem oferta": "899.9",
+  "Nome": "Whisky Ballantine's 21 anos 700 ml"
 }

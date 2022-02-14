@@ -1,11 +1,12 @@
 {
-    "ABV": "40%",
-    "Data": "13/02/2022",
-    "Descrição": "Dimple 15",
-    "Idade": "Sem idade declarada (NAS)",
-    "Marca": "Dewar’s",
-    "País/Região": "Escócia – N/A",
-    "Preço": "R$550,00",
-    "Tipo": "Blended Whisky",
-    "Título": "Dimple Golden Selection (1000ml)"
+  "ABV": "40%",
+  "Data": "13/02/2022",
+  "Descrição": "Dimple 15",
+  "Idade": "Sem idade declarada (NAS)",
+  "Marca": "Dewar’s",
+  "País/Região": "Escócia – N/A",
+  "Preço": "R$550,00",
+  "Tipo": "Blended Whisky",
+  "Título": "Dimple Golden Selection (1000ml)",
+  "Nome": "Dimple Golden Selection (1000ml)"
 }

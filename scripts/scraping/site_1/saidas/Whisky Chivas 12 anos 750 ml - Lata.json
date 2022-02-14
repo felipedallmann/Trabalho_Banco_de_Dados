@@ -1,14 +1,15 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Chivas 12 anos 750 ml - Lata.Edição Limitada na caixa de lata.O Chivas 12 anos é um clássico whisky de puro malte fabricado em Speyside, desde 1786, na destilaria de Strathisla, a mais antiga das Highlands escocesas.A combinação de blends únicos não disponíveis para venda e o malte de Longmorn são os segredos do sucesso deste Premium Blended Scotch Whisky 12 anos.Atualmente, Chivas Regal é um dos whiskies mais renomados e vendidos do mundo, e é sinônimo de qualidade, luxo e sofisticação onde quer que seja apreciado.O sabor multifacetado do Chivas 12 revela um aroma de maçã e de frutas, seguido do adocicado do mel, notas de baunilha, amêndoas e uma suavidade que perdura no paladar.O sabor único do whisky Chivas 12 permite que ele seja consumido puro ou em drinks.",
-    "Fabricante": "Chivas",
-    "Id do produto": "1571",
-    "Marcadores": [
-        "Volume: 750 ml.",
-        "Graduação alcoólica: 40% vol.",
-        "País: Escócia."
-    ],
-    "Preço com oferta": "139.9",
-    "Preço sem oferta": "159.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Chivas 12 anos 750 ml - Lata.Edição Limitada na caixa de lata.O Chivas 12 anos é um clássico whisky de puro malte fabricado em Speyside, desde 1786, na destilaria de Strathisla, a mais antiga das Highlands escocesas.A combinação de blends únicos não disponíveis para venda e o malte de Longmorn são os segredos do sucesso deste Premium Blended Scotch Whisky 12 anos.Atualmente, Chivas Regal é um dos whiskies mais renomados e vendidos do mundo, e é sinônimo de qualidade, luxo e sofisticação onde quer que seja apreciado.O sabor multifacetado do Chivas 12 revela um aroma de maçã e de frutas, seguido do adocicado do mel, notas de baunilha, amêndoas e uma suavidade que perdura no paladar.O sabor único do whisky Chivas 12 permite que ele seja consumido puro ou em drinks.",
+  "Fabricante": "Chivas",
+  "Id do produto": "1571",
+  "Marcadores": [
+    "Volume: 750 ml.",
+    "Graduação alcoólica: 40% vol.",
+    "País: Escócia."
+  ],
+  "Preço com oferta": "139.9",
+  "Preço sem oferta": "159.9",
+  "Nome": "Whisky Chivas 12 anos 750 ml - Lata"
 }

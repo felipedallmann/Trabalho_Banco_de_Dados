@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Dalmore 18 Anos 700 ML.Um uísque robusto e formidável.Uma evolução do estilo da Casa Dalmore, este single malt 18 anos aproveita expressão notas mais ousadas.The Dalmore 18 anos apresenta o resultado de maturação prolongado e a influência da madeira.Amadurecido inicialmente por 14 anos em carvalho branco barris ex-bourbon americano, o espírito é então transferido para 30 anos de idade Matusalém pontas de xerez oloroso por mais quatro anos.Estas pontas de xerez da casa sherry renome mundial Gonzalez Byass são fabricados exclusivamente para a Dalmore.Aromas de especiarias, chocolate e café.",
-    "Fabricante": "Dalmore",
-    "Id do produto": "550",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Single malt.",
-        "Graduação: 43% vol.",
-        "Volume: 700 ml."
-    ],
-    "Preço com oferta": "1899.9",
-    "Preço sem oferta": "1999.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Dalmore 18 Anos 700 ML.Um uísque robusto e formidável.Uma evolução do estilo da Casa Dalmore, este single malt 18 anos aproveita expressão notas mais ousadas.The Dalmore 18 anos apresenta o resultado de maturação prolongado e a influência da madeira.Amadurecido inicialmente por 14 anos em carvalho branco barris ex-bourbon americano, o espírito é então transferido para 30 anos de idade Matusalém pontas de xerez oloroso por mais quatro anos.Estas pontas de xerez da casa sherry renome mundial Gonzalez Byass são fabricados exclusivamente para a Dalmore.Aromas de especiarias, chocolate e café.",
+  "Fabricante": "Dalmore",
+  "Id do produto": "550",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Single malt.",
+    "Graduação: 43% vol.",
+    "Volume: 700 ml."
+  ],
+  "Preço com oferta": "1899.9",
+  "Preço sem oferta": "1999.9",
+  "Nome": "Whisky Dalmore 18 Anos 700 ml"
 }

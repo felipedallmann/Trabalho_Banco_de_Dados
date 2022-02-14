@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Glenmorangie Quinta Ruban 12 anos 750 ml.Glenmorangie Quinta Ruban gastou 10 anos de maturação em barris de carvalho branco americano, antes de ser transferido para tubos de porta ruby especialmente selecionados da Quintas ou propriedades vinícolas de Portugal.Maturação extra nestes tubos de porta desenvolve Glenmorangie Quinta Ruban em um espírito voluptuosa com um complexo equilíbrio de sabores doces e secos e um contraste intrigante de texturas suaves e nítidas.Um whisky de cor mais escura e de maior intensidade.",
-    "Fabricante": "Glenmorangie",
-    "Id do produto": "708",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Single malt.",
-        "Graduação: 46% vol.",
-        "Volume: 750 ml."
-    ],
-    "Preço com oferta": "578.9",
-    "Preço sem oferta": "699.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Glenmorangie Quinta Ruban 12 anos 750 ml.Glenmorangie Quinta Ruban gastou 10 anos de maturação em barris de carvalho branco americano, antes de ser transferido para tubos de porta ruby especialmente selecionados da Quintas ou propriedades vinícolas de Portugal.Maturação extra nestes tubos de porta desenvolve Glenmorangie Quinta Ruban em um espírito voluptuosa com um complexo equilíbrio de sabores doces e secos e um contraste intrigante de texturas suaves e nítidas.Um whisky de cor mais escura e de maior intensidade.",
+  "Fabricante": "Glenmorangie",
+  "Id do produto": "708",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Single malt.",
+    "Graduação: 46% vol.",
+    "Volume: 750 ml."
+  ],
+  "Preço com oferta": "578.9",
+  "Preço sem oferta": "699.9",
+  "Nome": "Whisky Glenmorangie Quinta Ruban 12 anos 750 ml"
 }

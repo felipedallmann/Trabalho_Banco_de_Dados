@@ -1,14 +1,11 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Grand Macnish 8 anos.Foi no ano de 1863 que Robert Macnish, homem que dedicou sua vida à arte da elaboração de Scotch Whisky, fez um blend dos mais apurados maltes e convidou seus amigos para provarem.\"Grand Whisky\" foi a resposta de todos eles.Desde então, o mundo passou a ter o prazer de saborear o Grand Macnish.Produzido e engarrafado na Escócia, na região das Highlands, o Grand Macnish é um whisky leve e suave que traz até hoje em sua elaboração todo o carinho, bom gosto e perfeccionismo do seu criador.Características:",
-    "Fabricante": "Grand Macnish",
-    "Id do produto": "644",
-    "Marcadores": [
-        "Origem: Escócia.",
-        "Graduação: 40% vol.",
-        "Volume: 1000 ml."
-    ],
-    "Preço com oferta": "89.9",
-    "Preço sem oferta": "89.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Grand Macnish 8 anos.Foi no ano de 1863 que Robert Macnish, homem que dedicou sua vida à arte da elaboração de Scotch Whisky, fez um blend dos mais apurados maltes e convidou seus amigos para provarem.\"Grand Whisky\" foi a resposta de todos eles.Desde então, o mundo passou a ter o prazer de saborear o Grand Macnish.Produzido e engarrafado na Escócia, na região das Highlands, o Grand Macnish é um whisky leve e suave que traz até hoje em sua elaboração todo o carinho, bom gosto e perfeccionismo do seu criador.Características:",
+  "Fabricante": "Grand Macnish",
+  "Id do produto": "644",
+  "Marcadores": ["Origem: Escócia.", "Graduação: 40% vol.", "Volume: 1000 ml."],
+  "Preço com oferta": "89.9",
+  "Preço sem oferta": "89.9",
+  "Nome": "Whisky Grand Macnish 8 anos 1000 ml"
 }

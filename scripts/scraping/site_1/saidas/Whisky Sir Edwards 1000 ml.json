@@ -1,14 +1,15 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Sir Edwards 1000 ml.Whisky composto de destilado alcoólicos de malte e de destilado de cereais não maltados, combinados e engarrafados na Escócia.",
-    "Fabricante": "Sir Edwards",
-    "Id do produto": "586",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação alcoólica: 40% vol.",
-        "Volume: 1000 ml."
-    ],
-    "Preço com oferta": "79.9",
-    "Preço sem oferta": "89.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Sir Edwards 1000 ml.Whisky composto de destilado alcoólicos de malte e de destilado de cereais não maltados, combinados e engarrafados na Escócia.",
+  "Fabricante": "Sir Edwards",
+  "Id do produto": "586",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Graduação alcoólica: 40% vol.",
+    "Volume: 1000 ml."
+  ],
+  "Preço com oferta": "79.9",
+  "Preço sem oferta": "89.9",
+  "Nome": "Whisky Sir Edwards 1000 ml"
 }

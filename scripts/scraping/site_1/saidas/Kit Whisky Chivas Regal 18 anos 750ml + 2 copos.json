@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Kit Whisky Chivas Regal 18 anos 750ml + 2 copos.Lançado em 1997, este uísque é feito a partir da combinação dos mais puros uísques de grãos e maltes, cada um deles, envelhecido em barris especiais de carvalho por 18 anos ou mais. Uísque de sabor excepcionalmente rico e suave com um paladar aveludado de chocolate escuro com notas florais elegantes. O uísque vende 120 mil caixas por ano no mundo.É proibida a venda de bebida alcoólica para menores de 18 anos.",
-    "Fabricante": "Chivas",
-    "Id do produto": "2342",
-    "Marcadores": [
-        "Origem: Escócia",
-        "Categoria: 18 Anos",
-        "Graduação: 40% vol.",
-        "Volume: 750 ml."
-    ],
-    "Preço com oferta": "449.9",
-    "Preço sem oferta": "499.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Kit Whisky Chivas Regal 18 anos 750ml + 2 copos.Lançado em 1997, este uísque é feito a partir da combinação dos mais puros uísques de grãos e maltes, cada um deles, envelhecido em barris especiais de carvalho por 18 anos ou mais. Uísque de sabor excepcionalmente rico e suave com um paladar aveludado de chocolate escuro com notas florais elegantes. O uísque vende 120 mil caixas por ano no mundo.É proibida a venda de bebida alcoólica para menores de 18 anos.",
+  "Fabricante": "Chivas",
+  "Id do produto": "2342",
+  "Marcadores": [
+    "Origem: Escócia",
+    "Categoria: 18 Anos",
+    "Graduação: 40% vol.",
+    "Volume: 750 ml."
+  ],
+  "Preço com oferta": "449.9",
+  "Preço sem oferta": "499.9",
+  "Nome": "Kit Whisky Chivas Regal 18 anos 750ml + 2 copos"
 }

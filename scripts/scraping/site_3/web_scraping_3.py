@@ -109,7 +109,7 @@ class Scraper:
         else:
             description = ""
 
-        json_infos = {"Título": title, "Descrição": description, "Data": self.DT}
+        json_infos = {"Nome": title, "Descrição": description, "Data": self.DT}
         json_infos.update(markers)
         print(json_infos)
 

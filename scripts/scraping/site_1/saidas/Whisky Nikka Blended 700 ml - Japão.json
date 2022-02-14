@@ -1,14 +1,15 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Nikka Blended Malt 700 ml - Japão.Este luxuoso whisky é feito com malte como seu ingrediente principal.Usando apenas malte ao invés de whisky de grão como base permitiu ao Nikka criar um uísque com um carácter distintivo.Este whisky dá aos apreciadores de um bom whisky momentos únicos, com um nariz suave e palato com sabor rico , maduro e perfumado.Mais uma edição excepcional do famoso whisky Nikka.Medalha Prata - International Spirits Challenge 2016.Medalha Ouro - International Spirits Challenge 2017.",
-    "Fabricante": "Nikka",
-    "Id do produto": "1194",
-    "Marcadores": [
-        "Whisky Importado do Japão.",
-        "Teor Alcoólico: 40% vol.",
-        "Volume: 700 ml."
-    ],
-    "Preço com oferta": "399.9",
-    "Preço sem oferta": "699.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Nikka Blended Malt 700 ml - Japão.Este luxuoso whisky é feito com malte como seu ingrediente principal.Usando apenas malte ao invés de whisky de grão como base permitiu ao Nikka criar um uísque com um carácter distintivo.Este whisky dá aos apreciadores de um bom whisky momentos únicos, com um nariz suave e palato com sabor rico , maduro e perfumado.Mais uma edição excepcional do famoso whisky Nikka.Medalha Prata - International Spirits Challenge 2016.Medalha Ouro - International Spirits Challenge 2017.",
+  "Fabricante": "Nikka",
+  "Id do produto": "1194",
+  "Marcadores": [
+    "Whisky Importado do Japão.",
+    "Teor Alcoólico: 40% vol.",
+    "Volume: 700 ml."
+  ],
+  "Preço com oferta": "399.9",
+  "Preço sem oferta": "699.9",
+  "Nome": "Whisky Nikka Blended 700 ml - Japão"
 }

@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Johnnie Walker Gold Ultimate 18 Anos.Johnnie Walker® Ultimate, versão rara no mercado nacional é envelhecido 18 anos e mistura grandes e clássicos sabores de Johnnie Walker com intrigantes notas contemporâneas de citrinos e amêndoas perfumadas.Inicialmente doce com uma corrente de baunilha morna e uma sugestão de tangerinas, ele se move suavemente sobre o paladar em uma sensação de noz e maldade antes de um longo acabamento traz sugestões elegantes de fumaça de carvão macio e um entusiasmo cítrico lindamente desvanecido.",
-    "Fabricante": "Johnnie Walker",
-    "Id do produto": "977",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Categoria: Super Deluxe (18 anos).",
-        "Graduação: 40% vol.",
-        "Volume: 750 ml."
-    ],
-    "Preço com oferta": "499.9",
-    "Preço sem oferta": "659.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Johnnie Walker Gold Ultimate 18 Anos.Johnnie Walker® Ultimate, versão rara no mercado nacional é envelhecido 18 anos e mistura grandes e clássicos sabores de Johnnie Walker com intrigantes notas contemporâneas de citrinos e amêndoas perfumadas.Inicialmente doce com uma corrente de baunilha morna e uma sugestão de tangerinas, ele se move suavemente sobre o paladar em uma sensação de noz e maldade antes de um longo acabamento traz sugestões elegantes de fumaça de carvão macio e um entusiasmo cítrico lindamente desvanecido.",
+  "Fabricante": "Johnnie Walker",
+  "Id do produto": "977",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Categoria: Super Deluxe (18 anos).",
+    "Graduação: 40% vol.",
+    "Volume: 750 ml."
+  ],
+  "Preço com oferta": "499.9",
+  "Preço sem oferta": "659.9",
+  "Nome": "Whisky Johnnie Walker Gold Ultimate 18 Anos 750 ml"
 }

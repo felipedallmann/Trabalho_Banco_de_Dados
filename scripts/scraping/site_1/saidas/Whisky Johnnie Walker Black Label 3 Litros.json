@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Johnnie Walker Black Label 3 Litros. Poucas Unidades!!!",
-    "Fabricante": "Johnnie Walker",
-    "Id do produto": "899",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Categoria: Deluxe (12 anos)",
-        "Graduação Alcoólica: 40% vol.",
-        "Volume: 3000 ml."
-    ],
-    "Preço com oferta": "799.9",
-    "Preço sem oferta": "799.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Johnnie Walker Black Label 3 Litros. Poucas Unidades!!!",
+  "Fabricante": "Johnnie Walker",
+  "Id do produto": "899",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Categoria: Deluxe (12 anos)",
+    "Graduação Alcoólica: 40% vol.",
+    "Volume: 3000 ml."
+  ],
+  "Preço com oferta": "799.9",
+  "Preço sem oferta": "799.9",
+  "Nome": "Whisky Johnnie Walker Black Label 3 Litros"
 }

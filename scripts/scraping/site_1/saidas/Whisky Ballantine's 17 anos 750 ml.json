@@ -1,13 +1,11 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Ballantine's 17 anos 750 ml.Scotch Whisky envelhecido em barris de carvalho por pelo menos 17 anos. Seu paladar tem toques especiais de mel, madeira e turfa. Um dos líderes de vendas na Coréia, Japão, China e Taiwan - principais mercados para uísques envelhecidos.É proibida a venda de bebidas alcoólicas para menores de 18 anos.",
-    "Fabricante": "Ballantine's",
-    "Id do produto": "39",
-    "Marcadores": [
-        "Teor alcoólico 40% vol.",
-        "Volume: 750 ml (vidro)."
-    ],
-    "Preço com oferta": "299.9",
-    "Preço sem oferta": "319.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Ballantine's 17 anos 750 ml.Scotch Whisky envelhecido em barris de carvalho por pelo menos 17 anos. Seu paladar tem toques especiais de mel, madeira e turfa. Um dos líderes de vendas na Coréia, Japão, China e Taiwan - principais mercados para uísques envelhecidos.É proibida a venda de bebidas alcoólicas para menores de 18 anos.",
+  "Fabricante": "Ballantine's",
+  "Id do produto": "39",
+  "Marcadores": ["Teor alcoólico 40% vol.", "Volume: 750 ml (vidro)."],
+  "Preço com oferta": "299.9",
+  "Preço sem oferta": "319.9",
+  "Nome": "Whisky Ballantine's 17 anos 750 ml"
 }

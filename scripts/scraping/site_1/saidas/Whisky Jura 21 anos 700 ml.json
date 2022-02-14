@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Jura 21 anos.Magnífico whisky single malt 21 anos de sabor único.",
-    "Fabricante": "Jura",
-    "Id do produto": "560",
-    "Marcadores": [
-        "País de Origem: Escócia.",
-        "Single malt.",
-        "Graduação: 44% vol.",
-        "Volume: 700 ml."
-    ],
-    "Preço com oferta": "899.9",
-    "Preço sem oferta": "1199.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Jura 21 anos.Magnífico whisky single malt 21 anos de sabor único.",
+  "Fabricante": "Jura",
+  "Id do produto": "560",
+  "Marcadores": [
+    "País de Origem: Escócia.",
+    "Single malt.",
+    "Graduação: 44% vol.",
+    "Volume: 700 ml."
+  ],
+  "Preço com oferta": "899.9",
+  "Preço sem oferta": "1199.9",
+  "Nome": "Whisky Jura 21 anos 700 ml"
 }

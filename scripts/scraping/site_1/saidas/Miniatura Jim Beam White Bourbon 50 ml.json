@@ -1,21 +1,22 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Miniatura Jim Beam White Bourbon 50 ml.Whisky Jim Beam White é elaborado a partir de destilado alcoólico de milho, centeio e malte de cevada. Envelhecido em Kentucky, Estados unidos, uma verdadeira lenda o Bourbon JIM BEAM revela o mais puro espírito do oeste americano. Durante mais de 200 anos, a família Beam tem se dedicado à fabricação do Bourbon mais vendido do mundo. Whisky importado dos Estados Unidos.O Bourbon representa o puro espírito americano e sua fórmula foi desenvolvida por Jacob Beam em 1795 e hoje está na 7ª geração. No processo de fermentação é utilizado fermento do estoque particular de Jacob Beam para maior consistência do produto e destilado a baixa temperatura, conferindo maior sabor.Altura:10,7 cm.Largura da Frente: 3 cm.Comprimento Lateral: 3 cm.",
-    "Fabricante": "Jim Beam",
-    "Id do produto": "870",
-    "Marcadores": [
-        "Origem: Estados Unidos",
-        "Categoria: Standard",
-        "Graduação: 40% vol.",
-        "Volume: 50 ml.",
-        "Sabor: corpo médio, ligeiro sabor caramelizado e de baunilha",
-        "Aroma: baunilha, carvalho com toque de especiarias",
-        "Envelhecido 4 anos",
-        "Envelhecimento em barris de carvalho novos e \"tostados\", em uma região com fortes variações de temperatura e umidade que provocam uma combinação, a alta graduação, originando uma camada caramelizada ao redor do barril",
-        "Principal ingrediente: milho mais suave e saboroso",
-        "Cor: palha dourada"
-    ],
-    "Preço com oferta": "19.9",
-    "Preço sem oferta": "24.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Miniatura Jim Beam White Bourbon 50 ml.Whisky Jim Beam White é elaborado a partir de destilado alcoólico de milho, centeio e malte de cevada. Envelhecido em Kentucky, Estados unidos, uma verdadeira lenda o Bourbon JIM BEAM revela o mais puro espírito do oeste americano. Durante mais de 200 anos, a família Beam tem se dedicado à fabricação do Bourbon mais vendido do mundo. Whisky importado dos Estados Unidos.O Bourbon representa o puro espírito americano e sua fórmula foi desenvolvida por Jacob Beam em 1795 e hoje está na 7ª geração. No processo de fermentação é utilizado fermento do estoque particular de Jacob Beam para maior consistência do produto e destilado a baixa temperatura, conferindo maior sabor.Altura:10,7 cm.Largura da Frente: 3 cm.Comprimento Lateral: 3 cm.",
+  "Fabricante": "Jim Beam",
+  "Id do produto": "870",
+  "Marcadores": [
+    "Origem: Estados Unidos",
+    "Categoria: Standard",
+    "Graduação: 40% vol.",
+    "Volume: 50 ml.",
+    "Sabor: corpo médio, ligeiro sabor caramelizado e de baunilha",
+    "Aroma: baunilha, carvalho com toque de especiarias",
+    "Envelhecido 4 anos",
+    "Envelhecimento em barris de carvalho novos e \"tostados\", em uma região com fortes variações de temperatura e umidade que provocam uma combinação, a alta graduação, originando uma camada caramelizada ao redor do barril",
+    "Principal ingrediente: milho mais suave e saboroso",
+    "Cor: palha dourada"
+  ],
+  "Preço com oferta": "19.9",
+  "Preço sem oferta": "24.9",
+  "Nome": "Miniatura Jim Beam White Bourbon 50 ml"
 }

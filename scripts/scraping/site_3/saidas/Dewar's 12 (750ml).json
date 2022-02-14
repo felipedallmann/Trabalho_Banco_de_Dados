@@ -1,11 +1,12 @@
 {
-    "ABV": "40%",
-    "Data": "13/02/2022",
-    "Descrição": "O Dewar’s 12 anos é um blended whisky leve e adocicado, que leva como base o single malt Aberfeldy. Além dele, há outros maltes que compõe o portfólio da Bacardi, proprietária da Dewar’s. Entre eles, Brackla, MacDuff (Deveron) e Aultmore. Todos os whiskies da Dewar’s passam por um processo comum, conhecido como Double Aging. Após o processo de blending, o whisky é transferido para tonéis de carvalho, onde passa mais seis meses. Segundo a marca, ainda que esta maturação encareça o processo produtivo, ela também torna o whisky mais suave e harmônico. Nas palavras de Stephanie MacLeod, master blender da Dewar’s “com isso permitimos que as diferentes partes do blend se unam, e, basicamente, possam se conhecer (…). Isso adiciona outra dimensão de suavidade”",
-    "Idade": "12 anos",
-    "Marca": "Dewar’s",
-    "País/Região": "Escócia – N/A",
-    "Preço": "R$145,00",
-    "Tipo": "Blended Whisky",
-    "Título": "Dewar’s 12 (750ml)"
+  "ABV": "40%",
+  "Data": "13/02/2022",
+  "Descrição": "O Dewar’s 12 anos é um blended whisky leve e adocicado, que leva como base o single malt Aberfeldy. Além dele, há outros maltes que compõe o portfólio da Bacardi, proprietária da Dewar’s. Entre eles, Brackla, MacDuff (Deveron) e Aultmore. Todos os whiskies da Dewar’s passam por um processo comum, conhecido como Double Aging. Após o processo de blending, o whisky é transferido para tonéis de carvalho, onde passa mais seis meses. Segundo a marca, ainda que esta maturação encareça o processo produtivo, ela também torna o whisky mais suave e harmônico. Nas palavras de Stephanie MacLeod, master blender da Dewar’s “com isso permitimos que as diferentes partes do blend se unam, e, basicamente, possam se conhecer (…). Isso adiciona outra dimensão de suavidade”",
+  "Idade": "12 anos",
+  "Marca": "Dewar’s",
+  "País/Região": "Escócia – N/A",
+  "Preço": "R$145,00",
+  "Tipo": "Blended Whisky",
+  "Título": "Dewar’s 12 (750ml)",
+  "Nome": "Dewar's 12 (750ml)"
 }

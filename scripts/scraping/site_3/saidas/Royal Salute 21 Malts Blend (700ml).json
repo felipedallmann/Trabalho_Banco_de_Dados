@@ -1,11 +1,12 @@
 {
-    "ABV": "40%",
-    "Data": "13/02/2022",
-    "Descrição": "Royal Salute Malts Blend",
-    "Idade": "21 anos",
-    "Marca": "Royal Salute",
-    "País/Região": "Escócia – N/A",
-    "Preço": "R$1.250,00",
-    "Tipo": "Blended Malt",
-    "Título": "Royal Salute 21 Malts Blend (700ml)"
+  "ABV": "40%",
+  "Data": "13/02/2022",
+  "Descrição": "Royal Salute Malts Blend",
+  "Idade": "21 anos",
+  "Marca": "Royal Salute",
+  "País/Região": "Escócia – N/A",
+  "Preço": "R$1.250,00",
+  "Tipo": "Blended Malt",
+  "Título": "Royal Salute 21 Malts Blend (700ml)",
+  "Nome": "Royal Salute 21 Malts Blend (700ml)"
 }

@@ -89,6 +89,7 @@ class Scraper:
 
         print(list_of_markers)
         json_infos = {
+            "Nome": title,
             "Descrição": final_text,
             "Marcadores": list_of_markers,
             "Data": self.DT,

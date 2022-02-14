@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Singleton 12 Anos Dufftown 700 ml - Single Malt.Whisky Super Premiado, confira nas imagens do produto!Whisky que traz o prazer a partir do primeiro gole, esta é uma família impressionante de Single Malt Scotch Whikys que todos devem conhecer.O Whisky Singleton of Dufftown foi construído durante o reinado da rainha Victoria.E embora os métodos tradicionais, séculos de artesanato e fontes antigas de água permaneçam, Dufftown - a mais suave das famílias de três pessoas - está em uma missão para criar novos uísques escoceses Single Malt de sabor incrível que explodem com sabor.",
-    "Fabricante": "Singleton",
-    "Id do produto": "874",
-    "Marcadores": [
-        "País de Origem: Escócia.",
-        "Single Malt Scotch Whisky.",
-        "Graduação alcoólica: 40% vol.",
-        "Volume: 700 ml."
-    ],
-    "Preço com oferta": "199.9",
-    "Preço sem oferta": "249.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Singleton 12 Anos Dufftown 700 ml - Single Malt.Whisky Super Premiado, confira nas imagens do produto!Whisky que traz o prazer a partir do primeiro gole, esta é uma família impressionante de Single Malt Scotch Whikys que todos devem conhecer.O Whisky Singleton of Dufftown foi construído durante o reinado da rainha Victoria.E embora os métodos tradicionais, séculos de artesanato e fontes antigas de água permaneçam, Dufftown - a mais suave das famílias de três pessoas - está em uma missão para criar novos uísques escoceses Single Malt de sabor incrível que explodem com sabor.",
+  "Fabricante": "Singleton",
+  "Id do produto": "874",
+  "Marcadores": [
+    "País de Origem: Escócia.",
+    "Single Malt Scotch Whisky.",
+    "Graduação alcoólica: 40% vol.",
+    "Volume: 700 ml."
+  ],
+  "Preço com oferta": "199.9",
+  "Preço sem oferta": "249.9",
+  "Nome": "Whisky Singleton 12 Anos Dufftown 700 ml"
 }

@@ -1,10 +1,11 @@
 {
-    "ABV": "40%",
-    "Data": "13/02/2022",
-    "Descrição": "Johnnie Walker Blue Label",
-    "Marca": "Johnnie Walker",
-    "Preço": "R$1.117,00",
-    "Região": "N/A",
-    "Tipo": "Blended Whisky",
-    "Título": "Johnnie Walker Blue Label (750ml)"
+  "ABV": "40%",
+  "Data": "13/02/2022",
+  "Descrição": "Johnnie Walker Blue Label",
+  "Marca": "Johnnie Walker",
+  "Preço": "R$1.117,00",
+  "Região": "N/A",
+  "Tipo": "Blended Whisky",
+  "Título": "Johnnie Walker Blue Label (750ml)",
+  "Nome": "Johnnie Walker Blue Label (750ml)"
 }

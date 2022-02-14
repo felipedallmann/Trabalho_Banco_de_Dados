@@ -1,14 +1,15 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Jack Daniels Apple 1000 ml.A nova bebida é a junção do clássico Jack Daniels Tennessee Whiskey com licor de maçã.A ideia segundo Casey Nelson Diretor Global da Marca é continuar investindo na categoria de whiskeys saborizados que vem crescendo ano após ano.Depois do sucesso do Tennessee Honey com mel lançado em 2011 a empresa tinha lançado o Jack Daniels Tennessee Fire com canela.",
-    "Fabricante": "Jack Daniels",
-    "Id do produto": "1924",
-    "Marcadores": [
-        "Importado dos EUA.",
-        "Graduação alcoólica: 35% vol.",
-        "Volume: 1000 ml (vidro)."
-    ],
-    "Preço com oferta": "139.9",
-    "Preço sem oferta": "149.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Jack Daniels Apple 1000 ml.A nova bebida é a junção do clássico Jack Daniels Tennessee Whiskey com licor de maçã.A ideia segundo Casey Nelson Diretor Global da Marca é continuar investindo na categoria de whiskeys saborizados que vem crescendo ano após ano.Depois do sucesso do Tennessee Honey com mel lançado em 2011 a empresa tinha lançado o Jack Daniels Tennessee Fire com canela.",
+  "Fabricante": "Jack Daniels",
+  "Id do produto": "1924",
+  "Marcadores": [
+    "Importado dos EUA.",
+    "Graduação alcoólica: 35% vol.",
+    "Volume: 1000 ml (vidro)."
+  ],
+  "Preço com oferta": "139.9",
+  "Preço sem oferta": "149.9",
+  "Nome": "Jack Daniels Apple 1000 ml"
 }

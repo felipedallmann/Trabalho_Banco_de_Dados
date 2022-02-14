@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Jura Turas Mara 1000 ml.O nome desta nova edição do Isle of Jura é a tradução literalmente do gaélico como \"longa jornada\" e homenageia os muitos habitantes da ilha de Jura que foram forçados a emigrar grandes distâncias, principalmente para o Canadá e os EUA, durante os séculos 18 e 19.O whisky foi maturado em barris vindos de vários países diferentes, de Portugal, França, Espanha e Estados Unidos, fazendo um whisky diferente com um grande carácter e sabor intenso.Notas carnudas de baunilha e caramelo e cerejas pretas no paladar.",
-    "Fabricante": "Jura",
-    "Id do produto": "853",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Single malt.",
-        "Graduação: 42% vol.",
-        "Volume: 1000 ml."
-    ],
-    "Preço com oferta": "399.9",
-    "Preço sem oferta": "399.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Jura Turas Mara 1000 ml.O nome desta nova edição do Isle of Jura é a tradução literalmente do gaélico como \"longa jornada\" e homenageia os muitos habitantes da ilha de Jura que foram forçados a emigrar grandes distâncias, principalmente para o Canadá e os EUA, durante os séculos 18 e 19.O whisky foi maturado em barris vindos de vários países diferentes, de Portugal, França, Espanha e Estados Unidos, fazendo um whisky diferente com um grande carácter e sabor intenso.Notas carnudas de baunilha e caramelo e cerejas pretas no paladar.",
+  "Fabricante": "Jura",
+  "Id do produto": "853",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Single malt.",
+    "Graduação: 42% vol.",
+    "Volume: 1000 ml."
+  ],
+  "Preço com oferta": "399.9",
+  "Preço sem oferta": "399.9",
+  "Nome": "Whisky Jura Turas Mara 1000 ml"
 }

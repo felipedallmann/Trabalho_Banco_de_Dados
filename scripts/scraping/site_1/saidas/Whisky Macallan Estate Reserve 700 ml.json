@@ -1,18 +1,19 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Macallan Estate Reserve 700 ml.O Macallan Estate Reserve faz parte da Coleção 1824 e é um estilo clássico da Macallan que inclui uma parcela de barris especialmente selecionados para oferecer grande riqueza e intensidade.Sua composição inclui uma parcela de barricas de carvalho espanhol selecionado que antes foram usadas para envelhecer vinho Jerez muitas delas, usadas pela primeira vez para whisky.A graduação alcoólica é sensivelmente mais alta do que a tradicional: 45,7%.Além disso, ele não é filtrado a frio, tornando-o bastante oleoso, marca registrada da destilaria.The Macallan é com razão um dos single malts mais respeitados do mundo.O cuidado com os detalhes em todo o processo produtivo chega a ser exaustivo.A destilaria é uma das únicas do mundo que conta com um profissional cuja única função é avaliar e escolher cada uma das barricas que irá maturar o whisky.É o master of wood, função hoje desempenhada por Stuart MacPherson.Marcas de Distinção da Macallan é a Seleção do Barril. Todo malte Macallan revela o incomparável compromisso com o domínio da madeira e do espírito pelo qual o Macallan é conhecido desde sua fundação, em 1824.É uma expressão do nosso desejo duradouro de ir além do comum, buscar o extraordinário e criar malte único inigualável.Com um compromisso inabalável de colocar barris de xerez no coração do malte Macallan, nossa reputação pelo extraordinário testemunho dos excepcionais barris de carvalho em que amadurecemos nosso espírito.Providos, trabalhados, torrados e temperados sob o olhar atento de The Macallan Master of Wood, esses barris escolhidos a dedo são entregues às exigentes especificações do Macallan Master Distiller e sua equipe.Uma vez preenchido, o espírito de maturação permanece imperturbado nos mesmos barris pelo número necessário de anos que precisa ser digno de sua expressão Macallan destinada.São estes tonéis de carvalho que contribuem da melhor forma para a qualidade, cor natural e aromas e sabores característicos que se encontram no coração do malte Macallan.",
-    "Fabricante": "Macallan",
-    "Id do produto": "1152",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação Alcoólica: 45,7% vol.",
-        "Volume: 700 ml.",
-        "COR: Âmbar escuro",
-        "OLFATO: Frutas macias, gengibre, baunilha, fudge e frutas cítricas.",
-        "PALADAR: Rico e frutado com madeira de carvalho intenso e laranja temperada.",
-        "FINAL: Longo com madeira doce cítrica e carvalho."
-    ],
-    "Preço com oferta": "1699.9",
-    "Preço sem oferta": "1999.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Macallan Estate Reserve 700 ml.O Macallan Estate Reserve faz parte da Coleção 1824 e é um estilo clássico da Macallan que inclui uma parcela de barris especialmente selecionados para oferecer grande riqueza e intensidade.Sua composição inclui uma parcela de barricas de carvalho espanhol selecionado que antes foram usadas para envelhecer vinho Jerez muitas delas, usadas pela primeira vez para whisky.A graduação alcoólica é sensivelmente mais alta do que a tradicional: 45,7%.Além disso, ele não é filtrado a frio, tornando-o bastante oleoso, marca registrada da destilaria.The Macallan é com razão um dos single malts mais respeitados do mundo.O cuidado com os detalhes em todo o processo produtivo chega a ser exaustivo.A destilaria é uma das únicas do mundo que conta com um profissional cuja única função é avaliar e escolher cada uma das barricas que irá maturar o whisky.É o master of wood, função hoje desempenhada por Stuart MacPherson.Marcas de Distinção da Macallan é a Seleção do Barril. Todo malte Macallan revela o incomparável compromisso com o domínio da madeira e do espírito pelo qual o Macallan é conhecido desde sua fundação, em 1824.É uma expressão do nosso desejo duradouro de ir além do comum, buscar o extraordinário e criar malte único inigualável.Com um compromisso inabalável de colocar barris de xerez no coração do malte Macallan, nossa reputação pelo extraordinário testemunho dos excepcionais barris de carvalho em que amadurecemos nosso espírito.Providos, trabalhados, torrados e temperados sob o olhar atento de The Macallan Master of Wood, esses barris escolhidos a dedo são entregues às exigentes especificações do Macallan Master Distiller e sua equipe.Uma vez preenchido, o espírito de maturação permanece imperturbado nos mesmos barris pelo número necessário de anos que precisa ser digno de sua expressão Macallan destinada.São estes tonéis de carvalho que contribuem da melhor forma para a qualidade, cor natural e aromas e sabores característicos que se encontram no coração do malte Macallan.",
+  "Fabricante": "Macallan",
+  "Id do produto": "1152",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Graduação Alcoólica: 45,7% vol.",
+    "Volume: 700 ml.",
+    "COR: Âmbar escuro",
+    "OLFATO: Frutas macias, gengibre, baunilha, fudge e frutas cítricas.",
+    "PALADAR: Rico e frutado com madeira de carvalho intenso e laranja temperada.",
+    "FINAL: Longo com madeira doce cítrica e carvalho."
+  ],
+  "Preço com oferta": "1699.9",
+  "Preço sem oferta": "1999.9",
+  "Nome": "Whisky Macallan Estate Reserve 700 ml"
 }

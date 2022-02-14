@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Kit FireBall + 2 Copos Shot 750 ml.Contém:- 1 FireBall 750 ml.- 2 Copos de Shot.Fireball é feito com o melhor do whisky canadense e aroma natural de canela de acordo com a própria marca, nada doce, mas bem quente, é um plus.Se você ainda não experimentou, imagine o que se sente em ficar cara a cara com um dragão que respira fogo e que apenas comeu um barril de uísque cheio de canela picante.Fireball é certamente o verdadeiro e original Cinnamony.Para quem ainda não experimentou a empresa define o produto como “um chute do Chuck Norris na cara, caso o pé dele estivesse queimando e com sabor de canela.Um sucesso de vendas nos EUA. Premiações:Premiado com 87 pontos do Beverage Testing Institute, e uma Medalha de Prata da Revista Internacional de Spirits.",
-    "Fabricante": "FireBall",
-    "Id do produto": "1221",
-    "Marcadores": [
-        "Importado dos Canada.",
-        "Graduação alcoólica: 33% vol.",
-        "Volume: 750 ml (vidro).",
-        "Composição: Whisky Canadense, Sacarose, Águas desmineralizada, Aromatizante, Corante Caramelo."
-    ],
-    "Preço com oferta": "99.9",
-    "Preço sem oferta": "149.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Kit FireBall + 2 Copos Shot 750 ml.Contém:- 1 FireBall 750 ml.- 2 Copos de Shot.Fireball é feito com o melhor do whisky canadense e aroma natural de canela de acordo com a própria marca, nada doce, mas bem quente, é um plus.Se você ainda não experimentou, imagine o que se sente em ficar cara a cara com um dragão que respira fogo e que apenas comeu um barril de uísque cheio de canela picante.Fireball é certamente o verdadeiro e original Cinnamony.Para quem ainda não experimentou a empresa define o produto como “um chute do Chuck Norris na cara, caso o pé dele estivesse queimando e com sabor de canela.Um sucesso de vendas nos EUA. Premiações:Premiado com 87 pontos do Beverage Testing Institute, e uma Medalha de Prata da Revista Internacional de Spirits.",
+  "Fabricante": "FireBall",
+  "Id do produto": "1221",
+  "Marcadores": [
+    "Importado dos Canada.",
+    "Graduação alcoólica: 33% vol.",
+    "Volume: 750 ml (vidro).",
+    "Composição: Whisky Canadense, Sacarose, Águas desmineralizada, Aromatizante, Corante Caramelo."
+  ],
+  "Preço com oferta": "99.9",
+  "Preço sem oferta": "149.9",
+  "Nome": "Kit FireBall + 2 Copos Shot 750 ml"
 }

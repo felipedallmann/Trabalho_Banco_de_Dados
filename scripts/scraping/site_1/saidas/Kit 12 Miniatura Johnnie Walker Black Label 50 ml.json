@@ -1,16 +1,17 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Kit 12 Miniatura Johnnie Walker Black Label 50 ml.*A Garrafinha de vidro foi substituída por plástico, sendo agora esse o novo padrão do fabricante e importador Diageo.Altura:11 cm.Largura da Frente: 3 cm.Comprimento Lateral: 2,5 cm.",
-    "Fabricante": "Johnnie Walker",
-    "Id do produto": "766",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Kit com 12 unidades de 50 ml cada.",
-        "Graduação alcoólica: 40% vol.",
-        "Volume: 50 ml por unidade.",
-        "Garrafinha de Plástico*."
-    ],
-    "Preço com oferta": "178.8",
-    "Preço sem oferta": "298.8"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Kit 12 Miniatura Johnnie Walker Black Label 50 ml.*A Garrafinha de vidro foi substituída por plástico, sendo agora esse o novo padrão do fabricante e importador Diageo.Altura:11 cm.Largura da Frente: 3 cm.Comprimento Lateral: 2,5 cm.",
+  "Fabricante": "Johnnie Walker",
+  "Id do produto": "766",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Kit com 12 unidades de 50 ml cada.",
+    "Graduação alcoólica: 40% vol.",
+    "Volume: 50 ml por unidade.",
+    "Garrafinha de Plástico*."
+  ],
+  "Preço com oferta": "178.8",
+  "Preço sem oferta": "298.8",
+  "Nome": "Kit 12 Miniatura Johnnie Walker Black Label 50 ml"
 }

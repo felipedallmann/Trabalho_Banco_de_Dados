@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Johnnie Walker Black Label 1000 ml.É um destilado alcoólico de cevada germinada e grãos de cereais produzidos, combinados e engarrafados na Escócia.Seu caráter único e gosto suave provêm de seu amadurecimento pelos 12 longos anos de envelhecimento.A marca Johnnie Walker existe desde 1920 e hoje é o whisky escocês mais vendido no mundo.É proibida a venda de bebidas alcoólicas para menores de 18 anos.",
-    "Fabricante": "Johnnie Walker",
-    "Id do produto": "14",
-    "Marcadores": [
-        "Origem: Escócia",
-        "Categoria: Deluxe (12 anos)",
-        "Graduação: 40% vol.",
-        "Volume: 1000 ml"
-    ],
-    "Preço com oferta": "199.9",
-    "Preço sem oferta": "219.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Johnnie Walker Black Label 1000 ml.É um destilado alcoólico de cevada germinada e grãos de cereais produzidos, combinados e engarrafados na Escócia.Seu caráter único e gosto suave provêm de seu amadurecimento pelos 12 longos anos de envelhecimento.A marca Johnnie Walker existe desde 1920 e hoje é o whisky escocês mais vendido no mundo.É proibida a venda de bebidas alcoólicas para menores de 18 anos.",
+  "Fabricante": "Johnnie Walker",
+  "Id do produto": "14",
+  "Marcadores": [
+    "Origem: Escócia",
+    "Categoria: Deluxe (12 anos)",
+    "Graduação: 40% vol.",
+    "Volume: 1000 ml"
+  ],
+  "Preço com oferta": "199.9",
+  "Preço sem oferta": "219.9",
+  "Nome": "Whisky Johnnie Walker Black Label 1000 ml"
 }

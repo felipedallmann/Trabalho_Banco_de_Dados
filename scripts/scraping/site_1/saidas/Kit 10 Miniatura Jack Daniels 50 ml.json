@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Kit 10 Miniatura Jack Daniels 50 ml. Exclusividade da Casa da Bebida. Aproveite!Altura: 11,5 cm.Largura da Frente: 3,5 cm.Comprimento Lateral: 3,5 cm.",
-    "Fabricante": "Jack Daniels",
-    "Id do produto": "745",
-    "Marcadores": [
-        "Importado dos EUA.",
-        "Kit com 10 unidades.",
-        "Graduação alcoólica: 40% vol.",
-        "Volume: 50 ml por unidade (vidro)."
-    ],
-    "Preço com oferta": "179",
-    "Preço sem oferta": "299.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Kit 10 Miniatura Jack Daniels 50 ml. Exclusividade da Casa da Bebida. Aproveite!Altura: 11,5 cm.Largura da Frente: 3,5 cm.Comprimento Lateral: 3,5 cm.",
+  "Fabricante": "Jack Daniels",
+  "Id do produto": "745",
+  "Marcadores": [
+    "Importado dos EUA.",
+    "Kit com 10 unidades.",
+    "Graduação alcoólica: 40% vol.",
+    "Volume: 50 ml por unidade (vidro)."
+  ],
+  "Preço com oferta": "179",
+  "Preço sem oferta": "299.9",
+  "Nome": "Kit 10 Miniatura Jack Daniels 50 ml"
 }

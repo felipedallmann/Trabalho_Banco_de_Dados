@@ -1,18 +1,19 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Label 5 12 anos Extra Premium 750 ml.DELICADO E GENEROSO.O LABEL 5 Extra Premium 12 Year Old é um excecional Scotch Whisky totalmente maturado em cascos de carvalho durante 12 anos.Durante este processo, e sob o cuidado constante do Master Blender, adquire a sua incomparável suavidade e o final prolongado.\"Sabor intenso e equilibrado onde o caramelo assume um papel importante. As notas adocicadas e de carvalho acompanham os sabores das bagas maduras.\"",
-    "Fabricante": "Label 5",
-    "Id do produto": "925",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação: 40% vol.",
-        "Volume: 750 ml.",
-        "Aparência: Âmbar médio",
-        "Olfato: Maravilhoso equilíbrio de carvalho, fumo e bagas espremidas",
-        "Paladar: Suavidade cremosa com sabores persistentes de frutos e fumo de carvalho",
-        "Final: Longo, generoso e intenso."
-    ],
-    "Preço com oferta": "149.9",
-    "Preço sem oferta": "149.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Label 5 12 anos Extra Premium 750 ml.DELICADO E GENEROSO.O LABEL 5 Extra Premium 12 Year Old é um excecional Scotch Whisky totalmente maturado em cascos de carvalho durante 12 anos.Durante este processo, e sob o cuidado constante do Master Blender, adquire a sua incomparável suavidade e o final prolongado.\"Sabor intenso e equilibrado onde o caramelo assume um papel importante. As notas adocicadas e de carvalho acompanham os sabores das bagas maduras.\"",
+  "Fabricante": "Label 5",
+  "Id do produto": "925",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Graduação: 40% vol.",
+    "Volume: 750 ml.",
+    "Aparência: Âmbar médio",
+    "Olfato: Maravilhoso equilíbrio de carvalho, fumo e bagas espremidas",
+    "Paladar: Suavidade cremosa com sabores persistentes de frutos e fumo de carvalho",
+    "Final: Longo, generoso e intenso."
+  ],
+  "Preço com oferta": "149.9",
+  "Preço sem oferta": "149.9",
+  "Nome": "Whisky Label 5 12 anos Extra Premium 750 ml"
 }

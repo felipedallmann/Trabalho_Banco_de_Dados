@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Glenlivet Founders Reserve 750 ml.É o single malt que deu origem a todos os demais. É a mais antiga destilaria legal situada na paróquia de Glenlivet, em Speyside na Escócia. Foi fundada em 1824 e tem operado quase continuamente desde então.O sabor suave, cremoso e equilibrado do single malt The Glenlivet Founder's Reserve é o resultado de uma seleção especial de barris para maturação.São utilizados tradicionais barris de carvalho em conjunto com barris americanos de primeiro uso. Já o aroma do Founder's Reserve possui graciosos aromas frutados e florais.",
-    "Fabricante": "Glenlivet",
-    "Id do produto": "1138",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Single Malt.",
-        "Graduação alcoólica: 40% vol.",
-        "Volume: 750 ml."
-    ],
-    "Preço com oferta": "199.9",
-    "Preço sem oferta": "269.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Glenlivet Founders Reserve 750 ml.É o single malt que deu origem a todos os demais. É a mais antiga destilaria legal situada na paróquia de Glenlivet, em Speyside na Escócia. Foi fundada em 1824 e tem operado quase continuamente desde então.O sabor suave, cremoso e equilibrado do single malt The Glenlivet Founder's Reserve é o resultado de uma seleção especial de barris para maturação.São utilizados tradicionais barris de carvalho em conjunto com barris americanos de primeiro uso. Já o aroma do Founder's Reserve possui graciosos aromas frutados e florais.",
+  "Fabricante": "Glenlivet",
+  "Id do produto": "1138",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Single Malt.",
+    "Graduação alcoólica: 40% vol.",
+    "Volume: 750 ml."
+  ],
+  "Preço com oferta": "199.9",
+  "Preço sem oferta": "269.9",
+  "Nome": "Whisky Glenlivet Founders Reserve 750 ml"
 }

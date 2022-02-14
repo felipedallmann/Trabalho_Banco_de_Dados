@@ -1,14 +1,15 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Grants Family Reserve 750 ml.O whisky Grant’s é produzido pela William Grant & Sons, uma premiada e familiar destilaria fundada por William Grant em 1886, que até hoje é comandada pelos seus descendentes.Criar um blend é uma arte. O cuidado, a sensibilidade para a escolha e a perfeita combinação entre diversos componentes são essenciais para produzir um whisky equilibrado e complexo.William Grant começou a produzir blended whiskies quando terminou de construir sua primeira destilaria em 1887, e foi responsável pelo blend por 25 anos.Ele anotou a “receita” desse blend num livro em 1912, e os mesmos parâmetros para a produção são respeitados até hoje, mais de 100 anos depois.Após décadas de expertise adquirida pelos Master Distillers que passaram pela destilaria, o Grant’s tornou-se o terceiro whisky mais vendido no mundo, presente em mais de 180 países.",
-    "Fabricante": "Grant's",
-    "Id do produto": "1177",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação Alcoólica: 40% vol.",
-        "Volume: 750 ml."
-    ],
-    "Preço com oferta": "69.9",
-    "Preço sem oferta": "79.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Grants Family Reserve 750 ml.O whisky Grant’s é produzido pela William Grant & Sons, uma premiada e familiar destilaria fundada por William Grant em 1886, que até hoje é comandada pelos seus descendentes.Criar um blend é uma arte. O cuidado, a sensibilidade para a escolha e a perfeita combinação entre diversos componentes são essenciais para produzir um whisky equilibrado e complexo.William Grant começou a produzir blended whiskies quando terminou de construir sua primeira destilaria em 1887, e foi responsável pelo blend por 25 anos.Ele anotou a “receita” desse blend num livro em 1912, e os mesmos parâmetros para a produção são respeitados até hoje, mais de 100 anos depois.Após décadas de expertise adquirida pelos Master Distillers que passaram pela destilaria, o Grant’s tornou-se o terceiro whisky mais vendido no mundo, presente em mais de 180 países.",
+  "Fabricante": "Grant's",
+  "Id do produto": "1177",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Graduação Alcoólica: 40% vol.",
+    "Volume: 750 ml."
+  ],
+  "Preço com oferta": "69.9",
+  "Preço sem oferta": "79.9",
+  "Nome": "Whisky Grants Family Reserve 750 ml"
 }

@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Buchanan's 18 anos 750 ml.Apresentamos a nova garrafa do esplêndido Buchanan's 18 anos.Buchanan's foi criado há mais de um século por James Buchanan.Em 1879, vivendo em Londres, começou a buscar por uma mistura que tivesse tanto qualidade quanto um sabor inconfundível. Em 1884, ele tinha criado um blend que ia ao encontro de seu desejo e como garantia da excepcional qualidade desse produto, colocou seu próprio nome nele.Os maltes e grãos de Whisky utilizados na fabricação de Buchanan's Special Reserve descansam por, no mínimo, 18 anos.Dalwhinnie é o principal single malte usado em sua composição.É proibida a venda de bebidas alcoólicas para menores de 18 anos.",
-    "Fabricante": "Buchanan's",
-    "Id do produto": "32",
-    "Marcadores": [
-        "Origem: Escócia",
-        "Categoria: Super Deluxe (18 Anos)",
-        "Graduação: 40% vol.",
-        "Volume: 750 ml"
-    ],
-    "Preço com oferta": "499.9",
-    "Preço sem oferta": "799.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Buchanan's 18 anos 750 ml.Apresentamos a nova garrafa do esplêndido Buchanan's 18 anos.Buchanan's foi criado há mais de um século por James Buchanan.Em 1879, vivendo em Londres, começou a buscar por uma mistura que tivesse tanto qualidade quanto um sabor inconfundível. Em 1884, ele tinha criado um blend que ia ao encontro de seu desejo e como garantia da excepcional qualidade desse produto, colocou seu próprio nome nele.Os maltes e grãos de Whisky utilizados na fabricação de Buchanan's Special Reserve descansam por, no mínimo, 18 anos.Dalwhinnie é o principal single malte usado em sua composição.É proibida a venda de bebidas alcoólicas para menores de 18 anos.",
+  "Fabricante": "Buchanan's",
+  "Id do produto": "32",
+  "Marcadores": [
+    "Origem: Escócia",
+    "Categoria: Super Deluxe (18 Anos)",
+    "Graduação: 40% vol.",
+    "Volume: 750 ml"
+  ],
+  "Preço com oferta": "499.9",
+  "Preço sem oferta": "799.9",
+  "Nome": "Whisky Buchanan's 18 anos 750 ml"
 }

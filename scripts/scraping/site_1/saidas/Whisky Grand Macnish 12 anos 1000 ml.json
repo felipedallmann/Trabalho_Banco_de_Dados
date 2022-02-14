@@ -1,14 +1,15 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Grand Macnish 12 anos.Mantendo a suavidade de seu irmão mais novo, Gran Macnish 12 anos é um whisky maduro, intenso e frutado.O sabor marcante é um indicativo da qualidade e idade dos maltes usados. Características:",
-    "Fabricante": "Grand Macnish",
-    "Id do produto": "643",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação: 40% vol.",
-        "Volume: 1000 ml."
-    ],
-    "Preço com oferta": "199.9",
-    "Preço sem oferta": "199.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Grand Macnish 12 anos.Mantendo a suavidade de seu irmão mais novo, Gran Macnish 12 anos é um whisky maduro, intenso e frutado.O sabor marcante é um indicativo da qualidade e idade dos maltes usados. Características:",
+  "Fabricante": "Grand Macnish",
+  "Id do produto": "643",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Graduação: 40% vol.",
+    "Volume: 1000 ml."
+  ],
+  "Preço com oferta": "199.9",
+  "Preço sem oferta": "199.9",
+  "Nome": "Whisky Grand Macnish 12 anos 1000 ml"
 }

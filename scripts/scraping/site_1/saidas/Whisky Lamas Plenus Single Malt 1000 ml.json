@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Lamas Plenus Single Malt 1000 ml.Cor ouro claro de brilho intenso, sem corante e sem filtragem a frio.De aroma agradável e equilibrado, é possível identificar notas distintas do doce do malte, do floral, do cítrico e da baunilha. Possui sabor marcante, que combina um álcool não agressivo com o cítrico, os taninos do carvalho, a baunilha, o mel, a amêndoa e um leve apimentado de especiarias.A maturação em barris de carvalho americano lhe confere suavidade, harmonia e equilíbrio de um sofisticado single malt whisky.A primeira expressão de single malt da Lamas Destilaria e o mais tradicional deles: Plenus (do latim, “completo”).",
-    "Fabricante": "Lamas",
-    "Id do produto": "2665",
-    "Marcadores": [
-        "Graduação alcóolica: 43%.",
-        "Volume: 1000mL.",
-        "Paladar: Potente, cítrico, amadeirado, baunilha, mel, amêndoa e picante. Maturação: Barril de carvalho americano.",
-        "Idade: No Age Statement (NAS)."
-    ],
-    "Preço com oferta": "145.9",
-    "Preço sem oferta": "145.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Lamas Plenus Single Malt 1000 ml.Cor ouro claro de brilho intenso, sem corante e sem filtragem a frio.De aroma agradável e equilibrado, é possível identificar notas distintas do doce do malte, do floral, do cítrico e da baunilha. Possui sabor marcante, que combina um álcool não agressivo com o cítrico, os taninos do carvalho, a baunilha, o mel, a amêndoa e um leve apimentado de especiarias.A maturação em barris de carvalho americano lhe confere suavidade, harmonia e equilíbrio de um sofisticado single malt whisky.A primeira expressão de single malt da Lamas Destilaria e o mais tradicional deles: Plenus (do latim, “completo”).",
+  "Fabricante": "Lamas",
+  "Id do produto": "2665",
+  "Marcadores": [
+    "Graduação alcóolica: 43%.",
+    "Volume: 1000mL.",
+    "Paladar: Potente, cítrico, amadeirado, baunilha, mel, amêndoa e picante. Maturação: Barril de carvalho americano.",
+    "Idade: No Age Statement (NAS)."
+  ],
+  "Preço com oferta": "145.9",
+  "Preço sem oferta": "145.9",
+  "Nome": "Whisky Lamas Plenus Single Malt 1000 ml"
 }

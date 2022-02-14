@@ -86,6 +86,7 @@ class Scraper:
         description = doc.find("div", {"class": "productDescription"}).text.strip()
 
         json_infos = {
+            "Nome": title,
             "Descrição": description,
             "Data": self.DT,
             "Fabricante": manufacturer,

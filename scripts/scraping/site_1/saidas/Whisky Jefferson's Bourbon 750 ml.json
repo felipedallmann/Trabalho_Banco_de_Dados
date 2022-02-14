@@ -1,15 +1,16 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Jefferson's Bourbon.Equilíbrio e complexidade são feitos acessíveis desse incrível Bourbon.Ocorre o encontro de quatro estilos de Bourbon que se casam juntos em pequenos lotes.O resultado é um perfil de sabor levemente frutado e surpreendentemente sofisticado, acabamento como sempre com elegância e infusão suave de baunilha.",
-    "Fabricante": "Jefferson's",
-    "Id do produto": "650",
-    "Marcadores": [
-        "Importado dos EUA.",
-        "Bourbon Premium.",
-        "Graduação alcoólica: 41,15% vol.",
-        "Volume: 750 ml."
-    ],
-    "Preço com oferta": "249.9",
-    "Preço sem oferta": "269.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Jefferson's Bourbon.Equilíbrio e complexidade são feitos acessíveis desse incrível Bourbon.Ocorre o encontro de quatro estilos de Bourbon que se casam juntos em pequenos lotes.O resultado é um perfil de sabor levemente frutado e surpreendentemente sofisticado, acabamento como sempre com elegância e infusão suave de baunilha.",
+  "Fabricante": "Jefferson's",
+  "Id do produto": "650",
+  "Marcadores": [
+    "Importado dos EUA.",
+    "Bourbon Premium.",
+    "Graduação alcoólica: 41,15% vol.",
+    "Volume: 750 ml."
+  ],
+  "Preço com oferta": "249.9",
+  "Preço sem oferta": "269.9",
+  "Nome": "Whisky Jefferson's Bourbon 750 ml"
 }

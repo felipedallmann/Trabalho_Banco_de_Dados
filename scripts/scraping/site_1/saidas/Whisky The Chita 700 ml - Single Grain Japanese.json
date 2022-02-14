@@ -1,14 +1,15 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky The Chita 700 ml - Single Grain Japanese.Uísque de grão único japonês da destilaria Chita, uma das fantásticas destilarias de propriedade da Suntory.Esta é a sua principal expressão - um uísque amadurecido em uma combinação de barris de vinho Sherry, Bourbon e (curiosamente).Bom uísque para os meses de verão.Nota olfativa: melão, frutas cítricas e cereais com mel.Nota gustativa: Bolo de baunilha e mais mel. Um toque de flor de pomar.Acabamento: comprimento médio, bastante picante.",
-    "Fabricante": "Suntory The Chita",
-    "Id do produto": "1758",
-    "Marcadores": [
-        "Volume: 700 ml.",
-        "Graduação alcoólica: 43% vol.",
-        "País: Japão"
-    ],
-    "Preço com oferta": "369.9",
-    "Preço sem oferta": "449.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky The Chita 700 ml - Single Grain Japanese.Uísque de grão único japonês da destilaria Chita, uma das fantásticas destilarias de propriedade da Suntory.Esta é a sua principal expressão - um uísque amadurecido em uma combinação de barris de vinho Sherry, Bourbon e (curiosamente).Bom uísque para os meses de verão.Nota olfativa: melão, frutas cítricas e cereais com mel.Nota gustativa: Bolo de baunilha e mais mel. Um toque de flor de pomar.Acabamento: comprimento médio, bastante picante.",
+  "Fabricante": "Suntory The Chita",
+  "Id do produto": "1758",
+  "Marcadores": [
+    "Volume: 700 ml.",
+    "Graduação alcoólica: 43% vol.",
+    "País: Japão"
+  ],
+  "Preço com oferta": "369.9",
+  "Preço sem oferta": "449.9",
+  "Nome": "Whisky The Chita 700 ml - Single Grain Japanese"
 }

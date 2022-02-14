@@ -1,14 +1,11 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Chivas Regal Brothers Blend 1000 mlO Whisky Chivas  Brothers Blend é maravilhoso e conta com um sabor balanceado que ajuda a deixar qualquer pessoa apaixonada por ele.Com notas de frutas cítricas, amêndoas, avelã, passas, mel e laranja, ele tem um sabor único e delicioso.",
-    "Fabricante": "Chivas",
-    "Id do produto": "1394",
-    "Marcadores": [
-        "Volume: 1000 ml.",
-        "Graduação: 40% vol.",
-        "País: Escócia."
-    ],
-    "Preço com oferta": "199.9",
-    "Preço sem oferta": "199.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Chivas Regal Brothers Blend 1000 mlO Whisky Chivas  Brothers Blend é maravilhoso e conta com um sabor balanceado que ajuda a deixar qualquer pessoa apaixonada por ele.Com notas de frutas cítricas, amêndoas, avelã, passas, mel e laranja, ele tem um sabor único e delicioso.",
+  "Fabricante": "Chivas",
+  "Id do produto": "1394",
+  "Marcadores": ["Volume: 1000 ml.", "Graduação: 40% vol.", "País: Escócia."],
+  "Preço com oferta": "199.9",
+  "Preço sem oferta": "199.9",
+  "Nome": "Whisky Chivas Regal Brothers Blend 1000 ml"
 }

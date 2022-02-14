@@ -1,14 +1,15 @@
 {
-    "Categoria": "Whisky",
-    "Data": "13/02/2022",
-    "Descrição": "Whisky Johnnie Walker Red Rye Finish 750 ml.A inspiração para o Johnnie Walker Red Rye Finish veio da história pessoal de Jim Beveridge.Jim é o Master Blender da Johnnie Walker e é conhecido pelo seu amor por whiskies americanos.Quando era mais novo, passou algum tempo a trabalhar em destilarias de bourbon e rye em Kentucky.Este fascínio por whiskies americanos foi o que o levou a criar o Red Rye.Foram necessários mais de 50 testes com mais de 200 maltes e grãos de whiskies para chegar à mistura perfeita.O resultado é uma mistura feita de quatro whiskies diferentes, incluindo um Cardhu Single Malte.Produzido em pequenos lotes, a mistura primeiro estagiou em barricas novas de bourbon e depois finalizou durante seis meses em barris vintage de centeio.Isso resulta num caráter macio com notas doces e uma pitada de Scotch.",
-    "Fabricante": "Johnnie Walker",
-    "Id do produto": "930",
-    "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação: 40% vol.",
-        "Volume: 750 ml."
-    ],
-    "Preço com oferta": "119.9",
-    "Preço sem oferta": "169.9"
+  "Categoria": "Whisky",
+  "Data": "13/02/2022",
+  "Descrição": "Whisky Johnnie Walker Red Rye Finish 750 ml.A inspiração para o Johnnie Walker Red Rye Finish veio da história pessoal de Jim Beveridge.Jim é o Master Blender da Johnnie Walker e é conhecido pelo seu amor por whiskies americanos.Quando era mais novo, passou algum tempo a trabalhar em destilarias de bourbon e rye em Kentucky.Este fascínio por whiskies americanos foi o que o levou a criar o Red Rye.Foram necessários mais de 50 testes com mais de 200 maltes e grãos de whiskies para chegar à mistura perfeita.O resultado é uma mistura feita de quatro whiskies diferentes, incluindo um Cardhu Single Malte.Produzido em pequenos lotes, a mistura primeiro estagiou em barricas novas de bourbon e depois finalizou durante seis meses em barris vintage de centeio.Isso resulta num caráter macio com notas doces e uma pitada de Scotch.",
+  "Fabricante": "Johnnie Walker",
+  "Id do produto": "930",
+  "Marcadores": [
+    "Importado da Escócia.",
+    "Graduação: 40% vol.",
+    "Volume: 750 ml."
+  ],
+  "Preço com oferta": "119.9",
+  "Preço sem oferta": "169.9",
+  "Nome": "Whisky Johnnie Walker Red Rye Finish 750 ml"
 }
