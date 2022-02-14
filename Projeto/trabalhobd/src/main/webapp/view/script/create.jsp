@@ -1,9 +1,3 @@
-<%-- 
-    Document   : create
-    Created on : 24 de nov de 2021, 11:11:16
-    Author     : dskaster
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>

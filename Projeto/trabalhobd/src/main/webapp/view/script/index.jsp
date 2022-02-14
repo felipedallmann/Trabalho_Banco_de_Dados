@@ -1,9 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 23 de nov de 2021, 12:01:14
-    Author     : dskaster
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -11,13 +5,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <%@include file="/view/include/head.jsp"  %>        
-        <title>[WebSite App] Sites</title>
+        <title>[WebSite App] Scripts</title>
     </head>
     <body>
         <tbody>
         <div class="container">
              <div class="text-center div_inserir_excluir">
-                <a class="btn btn-lg btn-primary" href="${pageContext.servletContext.contextPath}/website/create">
+                <a class="btn btn-lg btn-primary" href="${pageContext.servletContext.contextPath}/script/create">
                     Inserir novo site
                 </a>
 
@@ -25,13 +19,14 @@
                     Excluir múltiplos sites
                 </button>
             </div>
-            <form class="form_excluir_websites" action="${pageContext.servletContext.contextPath}/website/delete" method="POST">
+            <form class="form_excluir_websites" action="${pageContext.servletContext.contextPath}/loja/delete" method="POST">
                 <table class="table table-striped">
                     <thead>
                         <tr>
                             <th class="col-lg-2 h4 ">ID</th>
                             <th class="col-lg-5 h4">Nome</th>
                             <th class="col-lg-4 h4 ">URL</th>
+                            <th class="col-lg-1 h4 ">Adicionar script?</th>
                             <th class="col-lg-1 h4 ">Excluir?</th>
                         </tr>
                     </thead>
@@ -41,7 +36,7 @@
                                     <span class="h4"><c:out value="${webSite.id}"/></span>
                                 </td>
                                 <td>
-                                    <a class="link_visualizar_website" href="#" data-href="${pageContext.servletContext.contextPath}/website/read?id=${webSite.id}">
+                                    <a class="link_visualizar_website" href="#" data-href="${pageContext.servletContext.contextPath}/script/read?id=${webSite.id}">
                                         <span class="h4"><c:out value="${webSite.nome}"/></span>
                                     </a>
                                 </td>
@@ -49,9 +44,16 @@
                                     <span class="h4"><c:out value="${webSite.URL}"/></span>
                                 </td>
                                 <td class="text-center">
+                                    <a class="btn btn-default"
+                                       href="${pageContext.servletContext.contextPath}/script?id=${webSite.id}"
+                                       data-original-title="Script">
+                                        <i class="fa-solid fa-file"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center">
                                     <a class="btn btn-default link_excluir_website"
                                        href="#"
-                                       data-href="${pageContext.servletContext.contextPath}/website/delete?id=${webSite.id}"
+                                       data-href="${pageContext.servletContext.contextPath}/script/delete?id=${webSite.id}"
                                        data-toggle="tooltip"
                                        data-original-title="Excluir">
                                         <i class="fa fa-trash"></i>

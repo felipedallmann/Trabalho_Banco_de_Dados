@@ -1,21 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package controller;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import dao.DAO;
 import dao.DAOFactory;
-import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Date;
 import java.sql.SQLException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,25 +17,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import model.WebSite;
+import model.Script;
 
 /**
  *
  * @author Usuario
  */
-@WebServlet( name = "WebSiteController",
+@WebServlet( name = "scriptController",
         urlPatterns = {
-            "/website",
-            "/website/create",
-            "/website/read",
-            "/website/delete",
+            "/script",
+            "/script/create",
+            "/script/read",
+            "/script/delete",
            
         })
-public class WebSiteController extends HttpServlet {
-
-
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+public class ScriptController extends HttpServlet {
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -56,56 +43,56 @@ public class WebSiteController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        DAO<WebSite> dao;
-        WebSite webSite;
+        DAO<Script> dao;
+        Script script;
         RequestDispatcher dispatcher;
         
-         switch (request.getServletPath()) {
-            case "/website": {
+        switch (request.getServletPath()) {
+            case "/script": {
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
-                    dao = daoFactory.getWebSiteDAO();
+                    dao = daoFactory.getScriptDAO();
 
-                    List<WebSite> webSiteList = dao.all();
-                    request.setAttribute("webSiteList", webSiteList);
+                    List<Script> scriptList = dao.all();
+                    request.setAttribute("scriptList", scriptList);
                 } catch (ClassNotFoundException | IOException | SQLException ex) {
                     request.getSession().setAttribute("error", ex.getMessage());
                 }
 
-                dispatcher = request.getRequestDispatcher("/view/website/index.jsp");
+                dispatcher = request.getRequestDispatcher("/view/script/index.jsp");
                 dispatcher.forward(request, response);
                 break;
             }
-            case "/website/create": {
-                dispatcher = request.getRequestDispatcher("/view/website/create.jsp");
+            case "/script/create": {
+                dispatcher = request.getRequestDispatcher("/view/script/create.jsp");
                 dispatcher.forward(request, response);
-                response.sendRedirect(request.getContextPath() + "/website");
+                response.sendRedirect(request.getContextPath() + "/script");
                 break;
             }
-            case "/website/delete": {
+            case "/script/delete": {
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
-                    dao = daoFactory.getWebSiteDAO();
-                    dao.delete(Integer.parseInt(request.getParameter("id")));
+                    dao = daoFactory.getScriptDAO();
+                    dao.delete(request.getParameter("nome"));
                 } catch (ClassNotFoundException | IOException | SQLException ex) {
                     request.getSession().setAttribute("error", ex.getMessage());
                 }
 
-                response.sendRedirect(request.getContextPath() + "/website");
+                response.sendRedirect(request.getContextPath() + "/script");
                 break;
             }  
             
-            case "/website/read": {
+            case "/script/read": {
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
-                    dao = daoFactory.getWebSiteDAO();
+                    dao = daoFactory.getScriptDAO();
 
-                    webSite = dao.read(Integer.parseInt(request.getParameter("id")));
+                    script = dao.read(request.getParameter("nome"));
 
                     Gson gson = new GsonBuilder().create();
-                    String json = gson.toJson(webSite);
+                    String json = gson.toJson(script);
 
                     response.getOutputStream().print(json);
                 } catch (ClassNotFoundException | IOException | SQLException ex) {
                     request.getSession().setAttribute("error", ex.getMessage());
-                    response.sendRedirect(request.getContextPath() + "/website");
+                    response.sendRedirect(request.getContextPath() + "/script");
                 }
                 break;
             }
@@ -124,72 +111,29 @@ public class WebSiteController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            DAO<WebSite> dao;
-            WebSite webSite = new WebSite();
-            HttpSession session = request.getSession();
-
+        DAO<Script> dao;
+        Script script = new Script();
         String servletPath = request.getServletPath();        
         
-        switch (request.getServletPath()) {
-
-            case "/website/create":{
+        switch (servletPath) {
+            case "/script/create":{
                 // Se fosse um form simples, usaria request.getParameter()
-                String nome = request.getParameter("nome");
-                String URL = request.getParameter("URL");
+                String lojaNome = request.getParameter("lojaNome");
+                String codigo = request.getParameter("codigo");
 
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
-                    dao = daoFactory.getWebSiteDAO();
-                    webSite.setNome(nome);
-                    webSite.setURL(URL);
-                    
-                    
-                    dao = daoFactory.getWebSiteDAO();
-
-                    if (servletPath.equals("/website/create")) {
-                        dao.create(webSite);
-                    }                     
-                    } catch (ClassNotFoundException ex) {
-                    Logger.getLogger(WebSiteController.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (SQLException ex) {
-                    Logger.getLogger(WebSiteController.class.getName()).log(Level.SEVERE, null, ex);
+                    dao = daoFactory.getScriptDAO();
+                    script.setLojaNome(lojaNome);
+                    script.setCodigo(codigo);
+                    script.setDataInsercao(new Date(System.currentTimeMillis()));
+                    dao.create(script);
+                } catch (ClassNotFoundException | SQLException ex) {
+                    Logger.getLogger(ScriptController.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                response.sendRedirect(request.getContextPath() + "/website");
+                response.sendRedirect(request.getContextPath() + "/script");
 
                 break;
             }
-            
-            case "/website/delete": {
-                String[] webSites = request.getParameterValues("delete");
-
-                try (DAOFactory daoFactory = DAOFactory.getInstance()) {
-                    dao = daoFactory.getWebSiteDAO();
-
-                    try {
-                        daoFactory.beginTransaction();
-
-                        for (String webSiteId : webSites) {
-                            dao.delete(Integer.parseInt(webSiteId));
-                        }
-
-                        daoFactory.commitTransaction();
-                        daoFactory.endTransaction();
-                    } catch (SQLException ex) {
-                        session.setAttribute("error", ex.getMessage());
-                        daoFactory.rollbackTransaction();
-                    }
-                } catch (ClassNotFoundException | IOException ex) {
-                    Logger.getLogger(WebSiteController.class.getName()).log(Level.SEVERE, "Controller", ex);
-                    session.setAttribute("error", ex.getMessage());
-                } catch (SQLException ex) {
-                    Logger.getLogger(WebSiteController.class.getName()).log(Level.SEVERE, "Controller", ex);
-                    session.setAttribute("rollbackError", ex.getMessage());
-                }
-
-                response.sendRedirect(request.getContextPath() + "/website");
-                break;
-            }
-            
-            
         }   
     }
 
