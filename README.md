@@ -58,7 +58,7 @@ Execute:
 1) `docker-compose up`
 
 ### Valores do PGAdmin
-host: postgres_projetobd\
+host: projetobd-postgres\
 port: 5432\
 database: projetobd\
 username: projetobd\

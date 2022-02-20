@@ -2,8 +2,8 @@ version: "3.5"
 
 services:
   postgres:
-    container_name: postgres_projetobd
-    build: .
+    container_name: projetobd-postgres
+    image: postgres
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-projetobd}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-projetobd}
@@ -11,15 +11,16 @@ services:
       PGDATA: /data/postgres
     volumes:
       - postgres:/data/postgres
+      - ./scripts/sql/banco_de_dados.sql:/docker-entrypoint-initdb.d/create_tables.sql
     ports:
       - "5432:5432"
     networks:
-      - postgres
+      - projetobd
     restart: unless-stopped
 
   # http://localhost:5050
   pgadmin:
-    container_name: pgadmin_projetobd
+    container_name: projetobd-pgadmin
     image: dpage/pgadmin4
     user: $UID:$GID
     depends_on:
@@ -34,11 +35,11 @@ services:
     ports:
       - "${PGADMIN_PORT:-5050}:80"
     networks:
-      - postgres
+      - projetobd
     restart: unless-stopped
 
 networks:
-  postgres:
+  projetobd:
     driver: bridge
 
 volumes:
