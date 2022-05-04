@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package dao;
 
 import java.io.IOException;
@@ -5,37 +9,35 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import jdbc.ConnectionFactory;
 
+/**
+ *
+ * @author dskaster
+ */
 public abstract class DAOFactory implements AutoCloseable {
-
+    
     protected Connection connection;
-
     public abstract LojaDAO getLojaDAO();
-
     public abstract ScriptDAO getScriptDAO();
-
     public abstract IngredienteDAO getIngredienteDAO();
-
     public abstract DestilariaDAO getDestilariaDAO();
-
-    public abstract WhiskyDAO getWhiskyDAO();
-
+    public abstract PgWhiskyDAO getWhiskyDAO();
     public abstract PaisDeOrigemDAO getPaisDeOrigemDAO();
-
     public abstract HistoricoDAO getHistoricoDAO();
-
+     
     public static DAOFactory getInstance() throws ClassNotFoundException, IOException, SQLException {
         Connection connection = ConnectionFactory.getInstance().getConnection();
         DAOFactory factory;
-
+        
         if (ConnectionFactory.getDbServer().equals("postgresql")) {
             factory = new PgDAOFactory(connection);
-        } else {
+        }
+        else {
             throw new RuntimeException("Servidor de banco de dados não suportado.");
         }
-
+        
         return factory;
-    }
-
+    }    
+    
     public void beginTransaction() throws SQLException {
         try {
             connection.setAutoCommit(false);
@@ -65,7 +67,7 @@ public abstract class DAOFactory implements AutoCloseable {
             throw new SQLException("Erro ao executar transação.");
         }
     }
-
+    
     public void endTransaction() throws SQLException {
         try {
             connection.setAutoCommit(true);
@@ -89,5 +91,5 @@ public abstract class DAOFactory implements AutoCloseable {
     public void close() throws SQLException {
         closeConnection();
     }
-
+    
 }
