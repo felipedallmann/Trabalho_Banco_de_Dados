@@ -11,56 +11,60 @@
         <tbody>
         <div class="container">
              <div class="text-center div_inserir_excluir">
-                <a class="btn btn-lg btn-primary" href="${pageContext.servletContext.contextPath}/script/create">
-                    Inserir novo site
+                <a class="btn btn-lg btn-primary" href="${pageContext.servletContext.contextPath}/script/?create=${pageContext.request.getParameter("lojaNome")}" >
+                    Inserir novo script
                 </a>
 
                 <button class="btn btn-lg btn-warning" data-toggle="modal" data-target=".modal_excluir_websites">
-                    Excluir múltiplos sites
+                    Excluir múltiplos scripts
                 </button>
             </div>
-            <form class="form_excluir_websites" action="${pageContext.servletContext.contextPath}/loja/delete" method="POST">
+            <form class="form_excluir_websites" action="${pageContext.servletContext.contextPath}/script/delete" method="POST">
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th class="col-lg-2 h4 ">ID</th>
-                            <th class="col-lg-5 h4">Nome</th>
-                            <th class="col-lg-4 h4 ">URL</th>
-                            <th class="col-lg-1 h4 ">Adicionar script?</th>
-                            <th class="col-lg-1 h4 ">Excluir?</th>
+                            <th class="col-lg-5 h4">Nome da loja</th>
+                            <th class="col-lg-4 h4 ">Data inserção</th>
+                            <th class="col-lg-1 h4 ">Download</th>
+                            <th class="col-lg-1 h4 ">Executar</th>
+                            <th class="col-lg-1 h4 ">Excluir</th>
                         </tr>
-                    </thead>
-                    <c:forEach var="webSite" items="${requestScope.webSiteList}">
+                    </thead>    
+                    <c:forEach var="script" items="${requestScope.scriptList}">
                             <tr>
                                 <td>
-                                    <span class="h4"><c:out value="${webSite.id}"/></span>
-                                </td>
-                                <td>
-                                    <a class="link_visualizar_website" href="#" data-href="${pageContext.servletContext.contextPath}/script/read?id=${webSite.id}">
-                                        <span class="h4"><c:out value="${webSite.nome}"/></span>
+                                    <a class="link_visualizar_website" href="#" data-href="${pageContext.servletContext.contextPath}/script/read?id=${script.lojaNome}">
+                                        <span class="h4"><c:out value="${script.lojaNome}"/></span>
                                     </a>
                                 </td>
                                 <td >
-                                    <span class="h4"><c:out value="${webSite.URL}"/></span>
+                                    <span class="h4"><c:out value="${script.dataInsercao}"/></span>
                                 </td>
                                 <td class="text-center">
                                     <a class="btn btn-default"
-                                       href="${pageContext.servletContext.contextPath}/script?id=${webSite.id}"
+                                       href="${pageContext.servletContext.contextPath}/script/download?lojaNome=${script.lojaNome}&dataInsercao=${script.dataInsercao}"
                                        data-original-title="Script">
-                                        <i class="fa-solid fa-file"></i>
+                                        <i class="fa-solid fa-download"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a class="btn btn-default"
+                                       href="${pageContext.servletContext.contextPath}/script/run?lojaNome=${script.lojaNome}&dataInsercao=${script.dataInsercao}"
+                                       data-original-title="Script">
+                                        <i class="fa-solid fa-play"></i>
                                     </a>
                                 </td>
                                 <td class="text-center">
                                     <a class="btn btn-default link_excluir_website"
                                        href="#"
-                                       data-href="${pageContext.servletContext.contextPath}/script/delete?id=${webSite.id}"
+                                       data-href="${pageContext.servletContext.contextPath}/script/delete?lojaNome=${script.lojaNome}&dataInsercao=${script.dataInsercao}"
                                        data-toggle="tooltip"
                                        data-original-title="Excluir">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <input class="checkbox-inline" type="checkbox" name="delete" value="${webSite.id}" />
+                                    <input class="checkbox-inline" type="checkbox" name="delete" value="${script.lojaNome}" />
                                 </td>
                             </tr>
                             <br/>

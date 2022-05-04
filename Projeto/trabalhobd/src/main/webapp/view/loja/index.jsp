@@ -31,7 +31,7 @@
                         <tr>
                             <th class="col-lg-5 h4">Nome</th>
                             <th class="col-lg-4 h4 ">URL</th>
-                            <th class="col-lg-1 h4 ">Adicionar script?</th>
+                            <th class="col-lg-1 h4 ">Visualizar scripts</th>
                             <th class="col-lg-1 h4 ">Excluir?</th>
                         </tr>
                     </thead>
@@ -47,7 +47,7 @@
                                 </td>
                                 <td class="text-center">
                                     <a class="btn btn-default"
-                                       href="${pageContext.servletContext.contextPath}/script?nome=${loja.nome}"
+                                       href="${pageContext.servletContext.contextPath}/script?lojaNome=${loja.nome}"
                                        data-original-title="Script">
                                         <i class="fa-solid fa-file"></i>
                                     </a>

@@ -1,6 +1,6 @@
 package model;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 /**
  *
@@ -8,7 +8,7 @@ import java.sql.Date;
  */
 public class Script {
     private String lojaNome;
-    private Date dataInsercao;
+    private Timestamp dataInsercao;
     private String codigo;
 
     public Script() {
@@ -22,11 +22,11 @@ public class Script {
         this.lojaNome = lojaNome;
     }
 
-    public Date getDataInsercao() {
+    public Timestamp getDataInsercao() {
         return dataInsercao;
     }
 
-    public void setDataInsercao(Date dataInsercao) {
+    public void setDataInsercao(Timestamp dataInsercao) {
         this.dataInsercao = dataInsercao;
     }
 

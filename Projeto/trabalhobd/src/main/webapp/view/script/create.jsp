@@ -5,29 +5,27 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <%@include file="/view/include/head.jsp"  %>
-        <title>[WebSite App] WebSite: cadastro</title>
+        <title>[WebSite App] Script: cadastro</title>
     </head>
     <body>
        <div class="container">
-            <h2 class="text-center">Inserção de um novo site</h2>
+            <h2 class="text-center">Inserção de um novo script</h2>
 
             <form
                 class="form"
-                action="${pageContext.servletContext.contextPath}/website/create"
+                action="${pageContext.servletContext.contextPath}/script/create"
                 enctype="form-data"
                 method="POST">
 
                 <div class="form-group">
-                    <label class="control-label" for="usuario-login">Nome do site</label>
-                    <input id="nome" class="form-control" type="text" name="nome" required autofocus/>
+                    <input value="${pageContext.request.getParameter("lojaNome")}" id="URL" class="form-control" type="hidden" name="lojaNome" required autofocus/>
 
                     <p class="help-block"></p>
                 </div>
-
-
+                
                 <div class="form-group">
-                    <label class="control-label" for="usuario-login">URL</label>
-                    <input id="URL" class="form-control" type="text" name="URL" required autofocus/>
+                    <label class="control-label" for="usuario-login">Codigo</label>
+                    <input id="URL" class="form-control" type="text" name="codigo" required autofocus/>
 
                     <p class="help-block"></p>
                 </div>
