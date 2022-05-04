@@ -3,14 +3,46 @@ package model;
 import com.google.gson.annotations.SerializedName;
 import java.sql.Date;
 
+/**
+ *
+ * @author olavo
+ */
 public class Whisky {
     private transient int id;
     private transient String nome;
     private transient String idade;
-    @SerializedName("Teor alcoólico")
+    @SerializedName("Teor alcoólico") 
     private String teorAlcolico;
     private transient String destilariaNome;
     private transient String paisOrigemNome;
+    @SerializedName("Preço sem oferta")
+    private String precoSemDesconto;
+    @SerializedName("Preço com oferta")
+    private String precoComDesconto;
+
+    public String getDestilariaNome() {
+        return destilariaNome;
+    }
+
+    public void setDestilariaNome(String destilariaNome) {
+        this.destilariaNome = destilariaNome;
+    }
+
+    public String getPrecoSemDesconto() {
+        return precoSemDesconto;
+    }
+
+    public void setPrecoSemDesconto(String precoSemDesconto) {
+        this.precoSemDesconto = precoSemDesconto;
+    }
+
+    public String getPrecoComDesconto() {
+        return precoComDesconto;
+    }
+
+    public void setPrecoComDesconto(String precoComDesconto) {
+        this.precoComDesconto = precoComDesconto;
+    }
 
     public Whisky() {
     }
@@ -61,11 +93,10 @@ public class Whisky {
 
     public void setPaisOrigemNome(String paisOrigemNome) {
         this.paisOrigemNome = paisOrigemNome;
-    }
-
+    }    
+    
     @Override
     public String toString() {
-        return "Whisky{" + "id=" + id + ", idade=" + idade + ", nome=" + nome + ", teor_alcolico=" + teorAlcolico
-                + ", destilaria_nome=" + destilariaNome + ", pais_origem_nome=" + paisOrigemNome + '}';
+        return "Whisky{" + "id=" + id + ", idade=" + idade + ", nome=" + nome + ", teor_alcolico=" + teorAlcolico + ", destilaria_nome=" + destilariaNome + ", pais_origem_nome=" + paisOrigemNome + '}';
     }
 }
