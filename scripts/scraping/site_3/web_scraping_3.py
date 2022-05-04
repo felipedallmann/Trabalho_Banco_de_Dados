@@ -94,7 +94,8 @@ class Scraper:
             for i, marker in enumerate(markers):
                 markers[i] = map(lambda x: x.strip(), marker.split(":"))
 
-            markers.insert(0, ["Preço", price])
+            markers.insert(0, ["Preço sem oferta", price])
+            markers.insert(1, ["Preço com oferta", 0])
             markers = tuple(markers)
             # print(tuple(markers))
             # converting into dict
