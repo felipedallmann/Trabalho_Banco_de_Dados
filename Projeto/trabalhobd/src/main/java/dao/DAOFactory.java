@@ -18,6 +18,11 @@ public abstract class DAOFactory implements AutoCloseable {
     protected Connection connection;
     public abstract LojaDAO getLojaDAO();
     public abstract ScriptDAO getScriptDAO();
+    public abstract IngredienteDAO getIngredienteDAO();
+    public abstract DestilariaDAO getDestilariaDAO();
+    public abstract WhiskyDAO getWhiskyDAO();
+    public abstract PaisDeOrigemDAO getPaisDeOrigemDAO();
+    public abstract HistoricoDAO getHistoricoDAO();
      
     public static DAOFactory getInstance() throws ClassNotFoundException, IOException, SQLException {
         Connection connection = ConnectionFactory.getInstance().getConnection();
@@ -78,7 +83,6 @@ public abstract class DAOFactory implements AutoCloseable {
             connection.close();
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
-
             throw new SQLException("Erro ao fechar conexão ao banco de dados.");
         }
     }
