@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package jdbc;
 
 import java.io.IOException;
@@ -11,18 +8,14 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-/**
- *
- * @author dskaster
- */
 public class PgConnectionFactory extends ConnectionFactory {
 
     private String dbHost;
     private String dbPort;
     private String dbName;
     private String dbUser;
-    private String dbPassword;    
-    
+    private String dbPassword;
+
     public PgConnectionFactory() {
     }
 
@@ -43,8 +36,8 @@ public class PgConnectionFactory extends ConnectionFactory {
 
             throw new IOException("Erro ao obter informações do banco de dados.");
         }
-    }    
-    
+    }
+
     @Override
     public Connection getConnection() throws IOException, SQLException, ClassNotFoundException {
         Connection connection = null;
@@ -70,5 +63,5 @@ public class PgConnectionFactory extends ConnectionFactory {
         return connection;
 
     }
-    
+
 }

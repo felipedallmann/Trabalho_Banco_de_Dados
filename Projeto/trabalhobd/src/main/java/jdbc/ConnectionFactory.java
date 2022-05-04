@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package jdbc;
 
 import java.io.IOException;
@@ -10,16 +7,12 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
 
-/**
- *
- * @author dskaster
- */
 public abstract class ConnectionFactory {
 
     private static ConnectionFactory instance = null;
     protected static String propertiesPath = "../../conf/datasource.properties";
     private static String dbServer;
-    
+
     protected ConnectionFactory() {
     }
 
@@ -40,15 +33,14 @@ public abstract class ConnectionFactory {
 
             if (getDbServer().equals("postgresql")) {
                 instance = new PgConnectionFactory();
-            }
-            else {
+            } else {
                 throw new RuntimeException("Servidor de banco de dados não suportado.");
             }
         }
 
         return instance;
     }
-    
+
     /**
      * @return the dbServer
      */
@@ -57,5 +49,5 @@ public abstract class ConnectionFactory {
     }
 
     public abstract Connection getConnection() throws IOException, SQLException, ClassNotFoundException;
-    
+
 }

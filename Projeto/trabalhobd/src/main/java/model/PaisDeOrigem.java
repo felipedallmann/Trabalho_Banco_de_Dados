@@ -2,12 +2,8 @@ package model;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- *
- * @author olavo
- */
 public class PaisDeOrigem {
-    @SerializedName("Origem") 
+    @SerializedName("Origem")
     private String nome;
 
     public PaisDeOrigem() {

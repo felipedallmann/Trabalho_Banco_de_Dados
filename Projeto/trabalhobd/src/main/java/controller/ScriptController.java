@@ -21,27 +21,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Script;
 
-/**
- *
- * @author Usuario
- */
-@WebServlet( name = "scriptController",
-        urlPatterns = {
-            "/script",
-            "/script/create",
-            "/script/read",
-            "/script/delete",
-            "/script/download",   
-            "/script/run",           
-        })
+@WebServlet(name = "scriptController", urlPatterns = {
+        "/script",
+        "/script/create",
+        "/script/read",
+        "/script/delete",
+        "/script/download",
+        "/script/run",
+})
 public class ScriptController extends HttpServlet {
     /**
      * Handles the HTTP <code>GET</code> method.
      *
-     * @param request servlet request
+     * @param request  servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
+     * @throws IOException      if an I/O error occurs
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -49,7 +44,7 @@ public class ScriptController extends HttpServlet {
         ScriptDAO dao;
         Script script;
         RequestDispatcher dispatcher;
-        
+
         switch (request.getServletPath()) {
             case "/script": {
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
@@ -84,7 +79,7 @@ public class ScriptController extends HttpServlet {
                     response.sendRedirect(request.getContextPath() + "/script");
                 }
                 break;
-            }              
+            }
             case "/script/read": {
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
                     dao = daoFactory.getScriptDAO();
@@ -105,21 +100,22 @@ public class ScriptController extends HttpServlet {
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
                     String lojaNome = request.getParameter("lojaNome");
                     Date dataInsercao = Date.valueOf(request.getParameter("dataInsercao"));
-                    
+
                     dao = daoFactory.getScriptDAO();
                     script = dao.read(lojaNome, dataInsercao);
-         
-                    try ( PrintWriter out = response.getWriter()) {
-                        //set the content type
+
+                    try (PrintWriter out = response.getWriter()) {
+                        // set the content type
                         response.setContentType("APPLICATION/OCTET-STREAM");
-                        //force to download dialog
-                        response.setHeader("Content-Disposition", "attachment; filename=\"" + lojaNome + "_" + dataInsercao + ".py\"");
+                        // force to download dialog
+                        response.setHeader("Content-Disposition",
+                                "attachment; filename=\"" + lojaNome + "_" + dataInsercao + ".py\"");
 
                         out.write(script.getCodigo());
                         out.close();
                     }
                     response.sendRedirect(request.getContextPath() + "/script?=" + lojaNome);
-                    
+
                 } catch (ClassNotFoundException | IOException | SQLException ex) {
                     request.getSession().setAttribute("error", ex.getMessage());
                     response.sendRedirect(request.getContextPath() + "/script");
@@ -140,28 +136,28 @@ public class ScriptController extends HttpServlet {
                     response.sendRedirect(request.getContextPath() + "/script");
                 }
                 break;
-            }  
-         }
-        
+            }
+        }
+
     }
 
     /**
      * Handles the HTTP <code>POST</code> method.
      *
-     * @param request servlet request
+     * @param request  servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
+     * @throws IOException      if an I/O error occurs
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         DAO<Script> dao;
         Script script = new Script();
-        String servletPath = request.getServletPath();        
-        
+        String servletPath = request.getServletPath();
+
         switch (servletPath) {
-            case "/script/create":{
+            case "/script/create": {
                 // Se fosse um form simples, usaria request.getParameter()
                 String lojaNome = request.getParameter("lojaNome");
                 String codigo = request.getParameter("codigo");
@@ -180,7 +176,7 @@ public class ScriptController extends HttpServlet {
 
                 break;
             }
-        }   
+        }
     }
 
     /**

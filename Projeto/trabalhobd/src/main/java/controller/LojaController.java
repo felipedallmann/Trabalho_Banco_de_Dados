@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package controller;
 
 import com.google.gson.Gson;
@@ -22,29 +18,22 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.Loja;
 
-/**
- *
- * @author Usuario
- */
-@WebServlet( name = "LojaController",
-        urlPatterns = {
-            "/loja",
-            "/loja/create",
-            "/loja/read",
-            "/loja/delete",
-           
-        })
+@WebServlet(name = "LojaController", urlPatterns = {
+        "/loja",
+        "/loja/create",
+        "/loja/read",
+        "/loja/delete",
+
+})
 public class LojaController extends HttpServlet {
-
-
 
     /**
      * Handles the HTTP <code>GET</code> method.
      *
-     * @param request servlet request
+     * @param request  servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
+     * @throws IOException      if an I/O error occurs
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -52,8 +41,8 @@ public class LojaController extends HttpServlet {
         DAO<Loja> dao;
         Loja loja;
         RequestDispatcher dispatcher;
-        
-         switch (request.getServletPath()) {
+
+        switch (request.getServletPath()) {
             case "/loja": {
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
                     dao = daoFactory.getLojaDAO();
@@ -84,8 +73,8 @@ public class LojaController extends HttpServlet {
 
                 response.sendRedirect(request.getContextPath() + "/loja");
                 break;
-            }  
-            
+            }
+
             case "/loja/read": {
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
                     dao = daoFactory.getLojaDAO();
@@ -102,30 +91,30 @@ public class LojaController extends HttpServlet {
                 }
                 break;
             }
-         }
-        
+        }
+
     }
 
     /**
      * Handles the HTTP <code>POST</code> method.
      *
-     * @param request servlet request
+     * @param request  servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
+     * @throws IOException      if an I/O error occurs
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            DAO<Loja> dao;
-            Loja loja = new Loja();
-            HttpSession session = request.getSession();
+        DAO<Loja> dao;
+        Loja loja = new Loja();
+        HttpSession session = request.getSession();
 
-        String servletPath = request.getServletPath();        
-        
+        String servletPath = request.getServletPath();
+
         switch (request.getServletPath()) {
 
-            case "/loja/create":{
+            case "/loja/create": {
                 // Se fosse um form simples, usaria request.getParameter()
                 String nome = request.getParameter("nome");
                 String URL = request.getParameter("URL");
@@ -137,15 +126,15 @@ public class LojaController extends HttpServlet {
 
                     if (servletPath.equals("/loja/create")) {
                         dao.create(loja);
-                    }                     
-                    } catch (ClassNotFoundException | SQLException ex) {
+                    }
+                } catch (ClassNotFoundException | SQLException ex) {
                     Logger.getLogger(LojaController.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 response.sendRedirect(request.getContextPath() + "/loja");
 
                 break;
             }
-            
+
             case "/loja/delete": {
                 String[] lojas = request.getParameterValues("delete");
 
@@ -176,9 +165,8 @@ public class LojaController extends HttpServlet {
                 response.sendRedirect(request.getContextPath() + "/loja");
                 break;
             }
-            
-            
-        }   
+
+        }
     }
 
     /**

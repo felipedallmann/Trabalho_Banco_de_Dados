@@ -2,17 +2,13 @@ package model;
 
 import java.sql.Timestamp;
 
-/**
- *
- * @author olavo
- */
 public class Script {
     private String lojaNome;
     private Timestamp dataInsercao;
     private String codigo;
 
     public Script() {
-    } 
+    }
 
     public String getLojaNome() {
         return lojaNome;
@@ -37,5 +33,5 @@ public class Script {
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
-    
+
 }

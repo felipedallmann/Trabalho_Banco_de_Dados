@@ -2,12 +2,8 @@ package model;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- *
- * @author olavo
- */
 public class Ingrediente {
-    @SerializedName("Ingredientes")     
+    @SerializedName("Ingredientes")
     private String nome;
 
     public Ingrediente() {

@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package dao;
 
 import java.sql.Connection;
@@ -14,43 +11,32 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Loja;
 
-/**
- *
- * @author dskaster
- */
 public class PgLojaDAO implements LojaDAO {
 
     private final Connection connection;
-    
-    private static final String CREATE_QUERY =
-                                "INSERT INTO projetobd.loja(nome, url) " +
-                                "VALUES(?, ?);";
-    
-    private static final String READ_QUERY =
-                                "SELECT url, nome " +
-                                "FROM projetobd.loja " +
-                                "WHERE nome = ?;";      
-    
-    private static final String UPDATE_QUERY =
-                                "UPDATE projetobd.loja " +
-                                "SET url = ?" +
-                                "WHERE nome = ?;";
 
+    private static final String CREATE_QUERY = "INSERT INTO projetobd.loja(nome, url) " +
+            "VALUES(?, ?);";
 
-    private static final String DELETE_QUERY =
-                                "DELETE FROM projetobd.loja " +
-                                "WHERE nome = ?;";
-    
-    private static final String ALL_QUERY =
-                                "SELECT nome, url " +
-                                "FROM projetobd.loja " +
-                                "ORDER BY nome;";    
+    private static final String READ_QUERY = "SELECT url, nome " +
+            "FROM projetobd.loja " +
+            "WHERE nome = ?;";
 
-    private static final String GET_BY_NAME_QUERY =
-                                "SELECT nome, url" +
-                                "FROM projetobd.loja " +
-                                "WHERE nome = ?;";
-    
+    private static final String UPDATE_QUERY = "UPDATE projetobd.loja " +
+            "SET url = ?" +
+            "WHERE nome = ?;";
+
+    private static final String DELETE_QUERY = "DELETE FROM projetobd.loja " +
+            "WHERE nome = ?;";
+
+    private static final String ALL_QUERY = "SELECT nome, url " +
+            "FROM projetobd.loja " +
+            "ORDER BY nome;";
+
+    private static final String GET_BY_NAME_QUERY = "SELECT nome, url" +
+            "FROM projetobd.loja " +
+            "WHERE nome = ?;";
+
     public PgLojaDAO(Connection connection) {
         this.connection = connection;
     }
@@ -74,7 +60,7 @@ public class PgLojaDAO implements LojaDAO {
             }
         } catch (SQLException ex) {
             Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
-            
+
             throw new SQLException("Erro ao obter site.");
         }
     }
@@ -115,7 +101,7 @@ public class PgLojaDAO implements LojaDAO {
             }
         } catch (SQLException ex) {
             Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
-            
+
             if (ex.getMessage().equals("Erro ao visualizar: usuário não encontrado.")) {
                 throw ex;
             } else {
@@ -131,7 +117,6 @@ public class PgLojaDAO implements LojaDAO {
         String query;
 
         query = UPDATE_QUERY;
-
 
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, webSite.getNome());
@@ -174,11 +159,11 @@ public class PgLojaDAO implements LojaDAO {
 
     @Override
     public List<Loja> all() throws SQLException {
-        
+
         List<Loja> webSiteList = new ArrayList<>();
 
         try (PreparedStatement statement = connection.prepareStatement(ALL_QUERY);
-             ResultSet result = statement.executeQuery()) {
+                ResultSet result = statement.executeQuery()) {
             while (result.next()) {
                 Loja webSite = new Loja();
                 webSite.setNome(result.getString("nome"));
@@ -194,5 +179,5 @@ public class PgLojaDAO implements LojaDAO {
 
         return webSiteList;
     }
-    
+
 }

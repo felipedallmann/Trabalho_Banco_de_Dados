@@ -22,10 +22,6 @@ import model.PaisDeOrigem;
 import model.Script;
 import model.Whisky;
 
-/**
- *
- * @author olavo
- */
 public class PgScriptDAO implements ScriptDAO {
     private final Connection connection;
 
@@ -130,8 +126,7 @@ public class PgScriptDAO implements ScriptDAO {
 
     @Override
     public void update(Script arg0) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from
-                                                                       // nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
@@ -156,8 +151,7 @@ public class PgScriptDAO implements ScriptDAO {
 
     @Override
     public void delete(String arg0) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from
-                                                                       // nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
@@ -191,8 +185,7 @@ public class PgScriptDAO implements ScriptDAO {
 
     @Override
     public List<Script> all() throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from
-                                                                       // nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
