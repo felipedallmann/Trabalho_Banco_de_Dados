@@ -4,24 +4,16 @@
  */
 package model;
 
-import java.sql.Date;
+import com.google.gson.annotations.SerializedName;
 
 /**
  *
  * @author Usuario
  */
-public class WebSite {
-    private Integer id;
+public class Destilaria {
+    @SerializedName("Fabricante") 
     private String nome;
-    private String URL;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    private transient String paisOrigemNome;
 
     public String getNome() {
         return nome;
@@ -31,15 +23,16 @@ public class WebSite {
         this.nome = nome;
     }
 
-    public String getURL() {
-        return URL;
+    @Override
+    public String toString() {
+        return "Destilaria{" + "nome=" + nome + '}';
     }
 
-    public void setURL(String URL) {
-        this.URL = URL;
+    public String getPaisOrigemNome() {
+        return paisOrigemNome;
     }
 
- 
-    
-    
+    public void setPaisOrigemNome(String paisOrigemNome) {
+        this.paisOrigemNome = paisOrigemNome;
+    }
 }
