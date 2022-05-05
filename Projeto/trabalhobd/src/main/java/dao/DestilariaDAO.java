@@ -6,7 +6,9 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -34,9 +36,9 @@ public class DestilariaDAO implements DAO<Destilaria> {
     private static final String DELETE_QUERY = "DELETE FROM projetobd.loja " +
             "WHERE nome = ?;";
 
-    private static final String ALL_QUERY = "SELECT nome, url " +
-            "FROM projetobd.loja " +
-            "ORDER BY nome;";
+    private static final String ALL_QUERY = 
+            "SELECT nome, pais_origem_nome " +
+            "FROM projetobd.destilaria; ";
 
     private static final String GET_BY_NAME_QUERY = "SELECT nome, url" +
             "FROM projetobd.loja " +
@@ -91,7 +93,23 @@ public class DestilariaDAO implements DAO<Destilaria> {
 
     @Override
     public List<Destilaria> all() throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from
-                                                                       // nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        List<Destilaria> destilariaList = new ArrayList<>();
+
+        try (PreparedStatement statement = connection.prepareStatement(ALL_QUERY);
+             ResultSet result = statement.executeQuery()) {
+            while (result.next()) {
+                Destilaria destilaria = new Destilaria();
+                destilaria.setNome(result.getString("nome"));
+                destilaria.setPaisOrigemNome(result.getString("pais_origem_nome"));
+
+                destilariaList.add(destilaria);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+
+            throw new SQLException("Erro ao listar destilarias.");
+        }
+
+        return destilariaList;
     }
 }
