@@ -36,6 +36,7 @@ import model.Whisky;
             "/loja/read",
             "/loja/produtos",            
             "/loja/produtos/whisky",
+            "/loja/produtos/whiskyPesquisa",
             "/loja/delete",
            
         })
@@ -118,7 +119,7 @@ public class LojaController extends HttpServlet {
 //                  OBTENDO WHISKY ESPECIFICO
                     Whisky whisky = whiskydao.read(id);       
 //                  OBTENDO HISTÓRICO DE UM WHISKY ESPECIFICO
-                    List<Whisky> whiskyList = whiskydao.listAllHistorico(nome);
+                    List<Whisky> whiskyList = whiskydao.listAllHistorico(nome, id);
                     
                     request.setAttribute("whisky", whisky);                    
                     request.setAttribute("whiskyList", whiskyList);
@@ -129,6 +130,25 @@ public class LojaController extends HttpServlet {
 
                 
                 dispatcher = request.getRequestDispatcher("/view/loja/whisky.jsp");
+                dispatcher.forward(request, response);    
+                break;
+            }
+            case "/loja/produtos/whiskyPesquisa": {
+                try (DAOFactory daoFactory = DAOFactory.getInstance()) {
+                    whiskydao = daoFactory.getWhiskyDAO();
+                    String whisky_nome = request.getParameter("whisky_nome");
+                    String loja_nome = request.getParameter("loja_nome");
+
+
+                    List<Whisky> whiskyList = whiskydao.listSearch(whisky_nome, loja_nome);
+                    request.setAttribute("whiskyList", whiskyList);
+                    request.setAttribute("loja_nome", loja_nome);
+                } catch (ClassNotFoundException | IOException | SQLException ex) {
+                    request.getSession().setAttribute("error", ex.getMessage());
+                }
+
+                
+                dispatcher = request.getRequestDispatcher("/view/loja/produtos.jsp");
                 dispatcher.forward(request, response);    
                 break;
             }
