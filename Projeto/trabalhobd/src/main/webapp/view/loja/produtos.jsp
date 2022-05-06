@@ -24,26 +24,34 @@
                      <tr>
                         <th>
                           <div>Pesquisa</div>
-                          <div><input/></div>
+                          <form class="" action="${pageContext.servletContext.contextPath}/loja/produtos/whiskyPesquisa?nome=" method="GET">
+                          <div><input type="text" name="Name"/></div>
+                          <div><input type ="submit" value="Search"></div>
+                          </form>
                         </th>
                     </tr>
                         <tr>
                             <th class="col-lg-5 h4">Nome do whisky</th>
                             <th class="col-lg-2 h6 ">Preço do whisky</th>
+                            <th class="col-lg-2 h6 ">Loja nome</th>
                         </tr>
                 </thead>
                 
                <c:forEach var="whisky" items="${requestScope.whiskyList}">
                  <tbody>
-                   <tr>
+                   <tr var="loja_nome" items="${requestScope.loja_nome}">
                         <td>
-                            <a href="" >
-                           <span class="h4"><c:out value="${whisky.nome}"/></span>
+                            <a href="${pageContext.servletContext.contextPath}/loja/produtos/whisky?id=${whisky.id}&nome=${loja_nome}" >
+                                <span class="h4"><c:out value="${whisky.nome}"/></span>
                             </a>
                         </td>
                                 
                         <td >
                             <span class="h4"><c:out value="${whisky.precoSemDesconto}"/></span>
+                        </td>
+                        
+                        <td var="loja_nome" items="${requestScope.loja_nome}">
+                            <span class="h4"><c:out value="${loja_nome}"/></span>
                         </td>
                   </tr>
                  </tbody>
