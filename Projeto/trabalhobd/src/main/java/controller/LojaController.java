@@ -34,7 +34,8 @@ import model.Whisky;
             "/loja",
             "/loja/create",
             "/loja/read",
-            "/loja/produtos",
+            "/loja/produtos",            
+            "/loja/produtos/whisky",
             "/loja/delete",
            
         })
@@ -99,12 +100,35 @@ public class LojaController extends HttpServlet {
 
                     List<Whisky> whiskyList = whiskydao.listAll(nome);
                     request.setAttribute("whiskyList", whiskyList);
+                    request.setAttribute("loja_nome", nome);
                 } catch (ClassNotFoundException | IOException | SQLException ex) {
                     request.getSession().setAttribute("error", ex.getMessage());
                 }
 
                 
                 dispatcher = request.getRequestDispatcher("/view/loja/produtos.jsp");
+                dispatcher.forward(request, response);    
+                break;
+            }
+            case "/loja/produtos/whisky": {
+                try (DAOFactory daoFactory = DAOFactory.getInstance()) {
+                    whiskydao = daoFactory.getWhiskyDAO();
+                    String id = request.getParameter("id");                    
+                    String nome = request.getParameter("nome");
+//                  OBTENDO WHISKY ESPECIFICO
+                    Whisky whisky = whiskydao.read(id);       
+//                  OBTENDO HISTÓRICO DE UM WHISKY ESPECIFICO
+                    List<Whisky> whiskyList = whiskydao.listAllHistorico(nome);
+                    
+                    request.setAttribute("whisky", whisky);                    
+                    request.setAttribute("whiskyList", whiskyList);
+
+                } catch (ClassNotFoundException | IOException | SQLException ex) {
+                    request.getSession().setAttribute("error", ex.getMessage());
+                }
+
+                
+                dispatcher = request.getRequestDispatcher("/view/loja/whisky.jsp");
                 dispatcher.forward(request, response);    
                 break;
             }
