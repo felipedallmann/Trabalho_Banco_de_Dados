@@ -11,6 +11,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -32,9 +34,10 @@ public class PgWhiskyDAO implements WhiskyDAO {
     private static final String CREATE_QUERY = "INSERT INTO projetobd.script(loja_nome, data_insercao, codigo) " +
             "VALUES(?, ?, ?);";
 
-    private static final String READ_QUERY = "SELECT loja_nome, data_insercao, codigo " +
-            "FROM projetobd.script " +
-            "WHERE loja_nome = ? AND data_insercao = ?;";
+    private static final String READ_QUERY = 
+            "SELECT * " +
+            "FROM projetobd.whisky " +
+            "WHERE id = ?;";
 
     private static final String UPDATE_QUERY = "UPDATE j2ee.website " +
             "SET url = ?, nome = ?" +
@@ -49,8 +52,19 @@ public class PgWhiskyDAO implements WhiskyDAO {
             "ORDER BY data_insercao;";
     
     private static final String GET_PRODUCTS =
+                                "SELECT DISTINCT wk.nome, " +
+                                "h.preco_sem_desconto, " +
+                                "wk.id "+
+                                "FROM projetobd.whisky AS wk, " + 
+                                "projetobd.historico AS h, " +
+                                "projetobd.loja AS lj " +
+                                "WHERE lj.nome = ? AND h.whisky_id = wk.id AND h.loja_nome = lj.nome AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico)";
+    
+    private static final String GET_HISTORY =
                                 "SELECT wk.nome, " +
-                                "h.preco_sem_desconto " +
+                                "h.preco_sem_desconto, " +
+                                "h.acessado_em, "+
+                                "wk.id "+
                                 "FROM projetobd.whisky AS wk, " + 
                                 "projetobd.historico AS h, " +
                                 "projetobd.loja AS lj " +
@@ -92,8 +106,33 @@ public class PgWhiskyDAO implements WhiskyDAO {
     }
 
     @Override
-    public Whisky read(String arg0) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public Whisky read(String id) throws SQLException {
+        Whisky whisky = new Whisky();
+
+        try (PreparedStatement statement = connection.prepareStatement(READ_QUERY)) {
+            statement.setInt(1, Integer.parseInt(id));
+            try (ResultSet result = statement.executeQuery()) {
+                if (result.next()) {
+                    whisky.setNome(result.getString("nome"));
+                    whisky.setDestilariaNome(result.getString("destilaria_nome"));
+                    whisky.setIdade(result.getString("idade"));
+                    whisky.setPaisOrigemNome(result.getString("pais_origem_nome"));
+                    whisky.setTeorAlcolico(result.getString("teor_alcolico"));
+                } else {
+                    throw new SQLException("Erro ao visualizar: site não encontrado.");
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+            
+            if (ex.getMessage().equals("Erro ao visualizar: usuário não encontrado.")) {
+                throw ex;
+            } else {
+                throw new SQLException("Erro ao visualizar usuário.");
+            }
+        }
+
+        return whisky;
     }
 
     @Override
@@ -122,6 +161,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
                 Whisky whisky = new Whisky();
                 whisky.setNome(result.getString("nome"));
                 whisky.setPrecoSemDesconto(result.getString("preco_sem_desconto"));
+                whisky.setId(Integer.parseInt(result.getString("id")));
                 System.out.println(result.getString("preco_sem_desconto"));
                 whiskyList.add(whisky);
             }
@@ -131,6 +171,32 @@ public class PgWhiskyDAO implements WhiskyDAO {
             throw new SQLException("Erro ao listar usuários.");
         }
 
+        return whiskyList;
+    }
+    
+    public List<Whisky> listAllHistorico(String nome) throws SQLException {
+        List<Whisky> whiskyList = new ArrayList<>();
+        try (PreparedStatement statement = connection.prepareStatement(GET_HISTORY)){
+            statement.setString(1, nome);
+            ResultSet result = statement.executeQuery();
+            while (result.next()) {
+                Whisky whisky = new Whisky();
+                whisky.setNome(result.getString("nome"));
+                whisky.setPrecoSemDesconto(result.getString("preco_sem_desconto"));
+                whisky.setId(Integer.parseInt(result.getString("id")));
+                Timestamp timestamp = Timestamp.valueOf(result.getString("acessado_em"));
+                whisky.setAcessadoEm(timestamp);
+
+                System.out.println(whisky.getAcessadoEm());
+                whiskyList.add(whisky);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+
+            throw new SQLException("Erro ao listar usuários.");
+        }
+//        retornar uma lista com os dados do whisky e as datas  
+        
         return whiskyList;
     }
 
