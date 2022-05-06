@@ -21,12 +21,6 @@
         <div class="container"> 
             <table  class="table table-hover">
                  <thead>
-                     <tr>
-                        <th>
-                          <div>Pesquisa</div>
-                          <div><input/></div>
-                        </th>
-                    </tr>
                         <tr>
                             <th class="col-lg-1 h4">Nome</th>
                             <th class="col-lg-3 h4">Idade</th>

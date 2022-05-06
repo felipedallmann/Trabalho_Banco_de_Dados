@@ -24,8 +24,9 @@
                      <tr>
                         <th>
                           <div>Pesquisa</div>
-                          <form class="" action="${pageContext.servletContext.contextPath}/loja/produtos/whiskyPesquisa?nome=" method="GET">
-                          <div><input type="text" name="Name"/></div>
+                          <form class="" action="${pageContext.servletContext.contextPath}/loja/produtos/whiskyPesquisa?" method="GET">
+                          <div><input type="text" name="whisky_nome"/></div>
+                          <div><input type="hidden" name="loja_nome" value="${loja_nome}"/></div>
                           <div><input type ="submit" value="Search"></div>
                           </form>
                         </th>
