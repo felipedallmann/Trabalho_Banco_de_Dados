@@ -2,6 +2,7 @@ package model;
 
 import com.google.gson.annotations.SerializedName;
 import java.sql.Date;
+import java.sql.Timestamp;
 
 /**
  *
@@ -19,6 +20,15 @@ public class Whisky {
     private String precoSemDesconto;
     @SerializedName("Preço com oferta")
     private String precoComDesconto;
+    private transient Timestamp acessadoEm;
+
+    public Timestamp getAcessadoEm() {
+        return acessadoEm;
+    }
+
+    public void setAcessadoEm(Timestamp acessadoEm) {
+        this.acessadoEm = acessadoEm;
+    }
 
     public String getDestilariaNome() {
         return destilariaNome;
