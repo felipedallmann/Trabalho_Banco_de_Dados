@@ -58,7 +58,16 @@ public class PgWhiskyDAO implements WhiskyDAO {
                                 "FROM projetobd.whisky AS wk, " + 
                                 "projetobd.historico AS h, " +
                                 "projetobd.loja AS lj " +
-                                "WHERE lj.nome = ? AND h.whisky_id = wk.id AND h.loja_nome = lj.nome AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico)";
+                                "WHERE lj.nome = ? AND h.whisky_id = wk.id AND h.loja_nome = lj.nome AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico as h WHERE h.whisky_id = wk.id)";
+    
+        private static final String GET_PRODUCTS_SEARCH =
+                                "SELECT DISTINCT wk.nome, " +
+                                "h.preco_sem_desconto, " +
+                                "wk.id "+
+                                "FROM projetobd.whisky AS wk, " + 
+                                "projetobd.historico AS h, " +
+                                "projetobd.loja AS lj " +
+                                "WHERE lj.nome = ? AND LOWER(wk.nome) LIKE LOWER(?) AND h.whisky_id = wk.id AND h.loja_nome = lj.nome AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico as h WHERE h.whisky_id = wk.id)";
     
     private static final String GET_HISTORY =
                                 "SELECT wk.nome, " +
@@ -68,7 +77,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
                                 "FROM projetobd.whisky AS wk, " + 
                                 "projetobd.historico AS h, " +
                                 "projetobd.loja AS lj " +
-                                "WHERE lj.nome = ? AND h.whisky_id = wk.id AND h.loja_nome = lj.nome;";
+                                "WHERE lj.nome = ? AND h.whisky_id = ? AND wk.id = ? AND h.loja_nome = lj.nome;";
 
     public PgWhiskyDAO(Connection connection) {
         this.connection = connection;
@@ -174,10 +183,12 @@ public class PgWhiskyDAO implements WhiskyDAO {
         return whiskyList;
     }
     
-    public List<Whisky> listAllHistorico(String nome) throws SQLException {
+    public List<Whisky> listAllHistorico(String nome, String id) throws SQLException {
         List<Whisky> whiskyList = new ArrayList<>();
         try (PreparedStatement statement = connection.prepareStatement(GET_HISTORY)){
             statement.setString(1, nome);
+            statement.setInt(2, Integer.parseInt(id));
+            statement.setInt(3, Integer.parseInt(id));
             ResultSet result = statement.executeQuery();
             while (result.next()) {
                 Whisky whisky = new Whisky();
@@ -186,8 +197,6 @@ public class PgWhiskyDAO implements WhiskyDAO {
                 whisky.setId(Integer.parseInt(result.getString("id")));
                 Timestamp timestamp = Timestamp.valueOf(result.getString("acessado_em"));
                 whisky.setAcessadoEm(timestamp);
-
-                System.out.println(whisky.getAcessadoEm());
                 whiskyList.add(whisky);
             }
         } catch (SQLException ex) {
@@ -199,5 +208,28 @@ public class PgWhiskyDAO implements WhiskyDAO {
         
         return whiskyList;
     }
+    
+    public List<Whisky> listSearch(String whisky_nome, String loja_nome) throws SQLException {
+        List<Whisky> whiskyList = new ArrayList<>();
 
+        try (PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS_SEARCH)){
+            statement.setString(1, loja_nome);
+            statement.setString(2, "%"+whisky_nome+"%");
+            ResultSet result = statement.executeQuery();
+            while (result.next()) {
+                Whisky whisky = new Whisky();
+                whisky.setNome(result.getString("nome"));
+                whisky.setPrecoSemDesconto(result.getString("preco_sem_desconto"));
+                whisky.setId(Integer.parseInt(result.getString("id")));
+                System.out.println(result.getString("preco_sem_desconto"));
+                whiskyList.add(whisky);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+
+            throw new SQLException("Erro ao listar usuários.");
+        }
+
+        return whiskyList;
+    }
 }
