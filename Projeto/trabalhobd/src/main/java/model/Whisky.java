@@ -1,18 +1,13 @@
 package model;
 
 import com.google.gson.annotations.SerializedName;
-import java.sql.Date;
 import java.sql.Timestamp;
 
-/**
- *
- * @author olavo
- */
 public class Whisky {
     private transient int id;
     private transient String nome;
     private transient String idade;
-    @SerializedName("Teor alcoólico") 
+    @SerializedName("Teor alcoólico")
     private String teorAlcolico;
     private transient String destilariaNome;
     private transient String paisOrigemNome;
@@ -103,10 +98,11 @@ public class Whisky {
 
     public void setPaisOrigemNome(String paisOrigemNome) {
         this.paisOrigemNome = paisOrigemNome;
-    }    
-    
+    }
+
     @Override
     public String toString() {
-        return "Whisky{" + "id=" + id + ", idade=" + idade + ", nome=" + nome + ", teor_alcolico=" + teorAlcolico + ", destilaria_nome=" + destilariaNome + ", pais_origem_nome=" + paisOrigemNome + '}';
+        return "Whisky{" + "id=" + id + ", idade=" + idade + ", nome=" + nome + ", teor_alcolico=" + teorAlcolico
+                + ", destilaria_nome=" + destilariaNome + ", pais_origem_nome=" + paisOrigemNome + '}';
     }
 }

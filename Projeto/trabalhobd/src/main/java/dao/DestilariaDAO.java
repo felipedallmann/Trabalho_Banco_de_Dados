@@ -25,24 +25,23 @@ public class DestilariaDAO implements DAO<Destilaria> {
     private static final String CREATE_QUERY = "INSERT INTO projetobd.destilaria(nome, pais_origem_nome) " +
             "VALUES(?, ?);";
 
-    private static final String READ_QUERY = "SELECT url, nome " +
-            "FROM projetobd.loja " +
-            "WHERE nome = ?;";
+    // private static final String READ_QUERY = "SELECT url, nome " +
+    // "FROM projetobd.loja " +
+    // "WHERE nome = ?;";
 
-    private static final String UPDATE_QUERY = "UPDATE projetobd.loja " +
-            "SET url = ?" +
-            "WHERE nome = ?;";
+    // private static final String UPDATE_QUERY = "UPDATE projetobd.loja " +
+    // "SET url = ?" +
+    // "WHERE nome = ?;";
 
-    private static final String DELETE_QUERY = "DELETE FROM projetobd.loja " +
-            "WHERE nome = ?;";
+    // private static final String DELETE_QUERY = "DELETE FROM projetobd.loja " +
+    // "WHERE nome = ?;";
 
-    private static final String ALL_QUERY = 
-            "SELECT nome, pais_origem_nome " +
+    private static final String ALL_QUERY = "SELECT nome, pais_origem_nome " +
             "FROM projetobd.destilaria; ";
 
-    private static final String GET_BY_NAME_QUERY = "SELECT nome, url" +
-            "FROM projetobd.loja " +
-            "WHERE nome = ?;";
+    // private static final String GET_BY_NAME_QUERY = "SELECT nome, url" +
+    // "FROM projetobd.loja " +
+    // "WHERE nome = ?;";
 
     public DestilariaDAO(Connection connection) {
         this.connection = connection;
@@ -96,7 +95,7 @@ public class DestilariaDAO implements DAO<Destilaria> {
         List<Destilaria> destilariaList = new ArrayList<>();
 
         try (PreparedStatement statement = connection.prepareStatement(ALL_QUERY);
-             ResultSet result = statement.executeQuery()) {
+                ResultSet result = statement.executeQuery()) {
             while (result.next()) {
                 Destilaria destilaria = new Destilaria();
                 destilaria.setNome(result.getString("nome"));

@@ -22,10 +22,6 @@ import model.PaisDeOrigem;
 import model.Script;
 import model.Whisky;
 
-/**
- *
- * @author olavo
- */
 public class PgScriptDAO implements ScriptDAO {
     private final Connection connection;
 
@@ -36,9 +32,9 @@ public class PgScriptDAO implements ScriptDAO {
             "FROM projetobd.script " +
             "WHERE loja_nome = ? AND data_insercao = ?;";
 
-    private static final String UPDATE_QUERY = "UPDATE j2ee.website " +
-            "SET url = ?, nome = ?" +
-            "WHERE id = ?;";
+    // private static final String UPDATE_QUERY = "UPDATE j2ee.website " +
+    // "SET url = ?, nome = ?" +
+    // "WHERE id = ?;";
 
     private static final String DELETE_QUERY = "DELETE FROM projetobd.script " +
             "WHERE loja_nome = ? AND data_insercao = ?;";

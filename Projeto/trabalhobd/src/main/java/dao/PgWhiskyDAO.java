@@ -1,88 +1,70 @@
 package dao;
 
-import com.google.gson.Gson;
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.Destilaria;
-import model.Historico;
-import model.Ingrediente;
-import model.PaisDeOrigem;
-import model.Script;
+
 import model.Whisky;
 
-/**
- *
- * @author olavo
- */
 public class PgWhiskyDAO implements WhiskyDAO {
     private final Connection connection;
 
     private static final String CREATE_QUERY = "INSERT INTO projetobd.script(loja_nome, data_insercao, codigo) " +
             "VALUES(?, ?, ?);";
 
-    private static final String READ_QUERY = 
-            "SELECT * " +
+    private static final String READ_QUERY = "SELECT * " +
             "FROM projetobd.whisky " +
             "WHERE id = ?;";
 
-    private static final String UPDATE_QUERY = "UPDATE j2ee.website " +
-            "SET url = ?, nome = ?" +
-            "WHERE id = ?;";
+    // private static final String UPDATE_QUERY = "UPDATE j2ee.website " +
+    // "SET url = ?, nome = ?" +
+    // "WHERE id = ?;";
 
-    private static final String DELETE_QUERY = "DELETE FROM projetobd.script " +
-            "WHERE loja_nome = ? AND data_insercao = ?;";
+    // private static final String DELETE_QUERY = "DELETE FROM projetobd.script " +
+    // "WHERE loja_nome = ? AND data_insercao = ?;";
 
-    private static final String ALL_QUERY = "SELECT loja_nome, data_insercao, codigo " +
-            "FROM projetobd.script " +
-            "WHERE loja_nome = ? " +
-            "ORDER BY data_insercao;";
-    
-    private static final String GET_PRODUCTS =
-                                "SELECT DISTINCT wk.nome, " +
-                                "h.preco_sem_desconto, " +
-                                "wk.id "+
-                                "FROM projetobd.whisky AS wk, " + 
-                                "projetobd.historico AS h, " +
-                                "projetobd.loja AS lj " +
-                                "WHERE lj.nome = ? AND h.whisky_id = wk.id AND h.loja_nome = lj.nome AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico as h WHERE h.whisky_id = wk.id)";
-    
-        private static final String GET_PRODUCTS_SEARCH =
-                                "SELECT DISTINCT wk.nome, " +
-                                "h.preco_sem_desconto, " +
-                                "wk.id "+
-                                "FROM projetobd.whisky AS wk, " + 
-                                "projetobd.historico AS h, " +
-                                "projetobd.loja AS lj " +
-                                "WHERE lj.nome = ? AND LOWER(wk.nome) LIKE LOWER(?) AND h.whisky_id = wk.id AND h.loja_nome = lj.nome AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico as h WHERE h.whisky_id = wk.id)";
-    
-    private static final String GET_HISTORY =
-                                "SELECT wk.nome, " +
-                                "h.preco_sem_desconto, " +
-                                "h.acessado_em, "+
-                                "wk.id "+
-                                "FROM projetobd.whisky AS wk, " + 
-                                "projetobd.historico AS h, " +
-                                "projetobd.loja AS lj " +
-                                "WHERE lj.nome = ? AND h.whisky_id = ? AND wk.id = ? AND h.loja_nome = lj.nome;";
+    // private static final String ALL_QUERY = "SELECT loja_nome, data_insercao,
+    // codigo " +
+    // "FROM projetobd.script " +
+    // "WHERE loja_nome = ? " +
+    // "ORDER BY data_insercao;";
+
+    private static final String GET_PRODUCTS = "SELECT DISTINCT wk.nome, " +
+            "h.preco_sem_desconto, " +
+            "wk.id " +
+            "FROM projetobd.whisky AS wk, " +
+            "projetobd.historico AS h, " +
+            "projetobd.loja AS lj " +
+            "WHERE lj.nome = ? AND h.whisky_id = wk.id AND h.loja_nome = lj.nome AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico as h WHERE h.whisky_id = wk.id)";
+
+    private static final String GET_PRODUCTS_SEARCH = "SELECT DISTINCT wk.nome, " +
+            "h.preco_sem_desconto, " +
+            "wk.id " +
+            "FROM projetobd.whisky AS wk, " +
+            "projetobd.historico AS h, " +
+            "projetobd.loja AS lj " +
+            "WHERE lj.nome = ? AND LOWER(wk.nome) LIKE LOWER(?) AND h.whisky_id = wk.id AND h.loja_nome = lj.nome AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico as h WHERE h.whisky_id = wk.id)";
+
+    private static final String GET_HISTORY = "SELECT wk.nome, " +
+            "h.preco_sem_desconto, " +
+            "h.acessado_em, " +
+            "wk.id " +
+            "FROM projetobd.whisky AS wk, " +
+            "projetobd.historico AS h, " +
+            "projetobd.loja AS lj " +
+            "WHERE lj.nome = ? AND h.whisky_id = ? AND wk.id = ? AND h.loja_nome = lj.nome;";
 
     public PgWhiskyDAO(Connection connection) {
         this.connection = connection;
     }
-@Override
+
+    @Override
     public void create(Whisky whisky) throws SQLException {
         if (whisky.getNome() == null || whisky.getNome().isBlank()) {
             Logger.getLogger(WhiskyDAO.class.getName()).log(Level.WARNING,
@@ -133,7 +115,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
             }
         } catch (SQLException ex) {
             Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
-            
+
             if (ex.getMessage().equals("Erro ao visualizar: usuário não encontrado.")) {
                 throw ex;
             } else {
@@ -163,7 +145,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
     public List<Whisky> listAll(String nome) throws SQLException {
         List<Whisky> whiskyList = new ArrayList<>();
 
-        try (PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS)){
+        try (PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS)) {
             statement.setString(1, nome);
             ResultSet result = statement.executeQuery();
             while (result.next()) {
@@ -182,10 +164,10 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
         return whiskyList;
     }
-    
+
     public List<Whisky> listAllHistorico(String nome, String id) throws SQLException {
         List<Whisky> whiskyList = new ArrayList<>();
-        try (PreparedStatement statement = connection.prepareStatement(GET_HISTORY)){
+        try (PreparedStatement statement = connection.prepareStatement(GET_HISTORY)) {
             statement.setString(1, nome);
             statement.setInt(2, Integer.parseInt(id));
             statement.setInt(3, Integer.parseInt(id));
@@ -204,17 +186,17 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
             throw new SQLException("Erro ao listar usuários.");
         }
-//        retornar uma lista com os dados do whisky e as datas  
-        
+        // retornar uma lista com os dados do whisky e as datas
+
         return whiskyList;
     }
-    
+
     public List<Whisky> listSearch(String whisky_nome, String loja_nome) throws SQLException {
         List<Whisky> whiskyList = new ArrayList<>();
 
-        try (PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS_SEARCH)){
+        try (PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS_SEARCH)) {
             statement.setString(1, loja_nome);
-            statement.setString(2, "%"+whisky_nome+"%");
+            statement.setString(2, "%" + whisky_nome + "%");
             ResultSet result = statement.executeQuery();
             while (result.next()) {
                 Whisky whisky = new Whisky();

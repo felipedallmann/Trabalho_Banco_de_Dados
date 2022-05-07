@@ -1,10 +1,5 @@
 package controller;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import dao.DAO;
-import dao.DAOFactory;
-import dao.ScriptDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Date;
@@ -13,12 +8,20 @@ import java.sql.Timestamp;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import dao.DAO;
+import dao.DAOFactory;
+import dao.ScriptDAO;
 import model.Script;
 
 @WebServlet(name = "scriptController", urlPatterns = {
@@ -127,9 +130,12 @@ public class ScriptController extends HttpServlet {
                     dao = daoFactory.getScriptDAO();
                     String lojaNome = request.getParameter("lojaNome");
                     System.out.println(request.getParameter("lojaNome"));
-                    System.out.println(request.getParameter("dataInsercao"));
-                    Timestamp dataInsercao = Timestamp.valueOf(request.getParameter("dataInsercao"));
-                    dao.run(lojaNome, dataInsercao);
+                    // Timestamp dataInsercao =
+                    // Timestamp.valueOf(request.getParameter("dataInsercao"));
+                    // System.out.println(request.getParameter("dataInsercao"));
+                    // TODO
+                    // dao.run(lojaNome, dataInsercao);
+                    dao.run(lojaNome, new Timestamp(System.currentTimeMillis()));
                     response.sendRedirect(request.getContextPath() + "/script?=" + lojaNome);
                 } catch (ClassNotFoundException | IOException | SQLException ex) {
                     request.getSession().setAttribute("error", ex.getMessage());
