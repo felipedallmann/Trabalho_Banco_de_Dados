@@ -264,7 +264,7 @@ public class PgScriptDAO implements ScriptDAO {
                     historico.setWhiskyId(whisky.getId());
                     historico.setAcessadoEm(new Timestamp(System.currentTimeMillis()));
 
-                    HistoricoDAO dao = daoFactory.getHistoricoDAO();
+                    PgHistoricoDAO dao = daoFactory.getHistoricoDAO();
                     dao.create(historico);
 
                     // dao.create(ingrediente);

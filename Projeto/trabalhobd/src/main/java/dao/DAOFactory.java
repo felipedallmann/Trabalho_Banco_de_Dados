@@ -14,7 +14,7 @@ public abstract class DAOFactory implements AutoCloseable {
     public abstract DestilariaDAO getDestilariaDAO();
     public abstract PgWhiskyDAO getWhiskyDAO();
     public abstract PaisDeOrigemDAO getPaisDeOrigemDAO();
-    public abstract HistoricoDAO getHistoricoDAO();
+    public abstract PgHistoricoDAO getHistoricoDAO();
 
     public static DAOFactory getInstance() throws ClassNotFoundException, IOException, SQLException {
         Connection connection = ConnectionFactory.getInstance().getConnection();

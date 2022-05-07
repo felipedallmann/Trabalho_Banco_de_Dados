@@ -35,6 +35,17 @@ public class PgWhiskyDAO implements WhiskyDAO {
     // "WHERE loja_nome = ? " +
     // "ORDER BY data_insercao;";
 
+    private static final String GET_QTD = "SELECT count(*) qtd FROM projetobd.whisky;";
+
+    private static final String ALL_QUERY = "SELECT DISTINCT wk.nome, " +
+            "h.preco_sem_desconto, " +
+            "h.loja_nome, " +
+            "wk.id " +
+            "FROM projetobd.whisky AS wk, " +
+            "projetobd.historico AS h, " +
+            "projetobd.loja AS lj " +
+            "WHERE wk.id = h.whisky_id AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico as hi WHERE hi.whisky_id = wk.id)";
+
     private static final String GET_PRODUCTS = "SELECT DISTINCT wk.nome, " +
             "h.preco_sem_desconto, " +
             "wk.id " +
@@ -136,9 +147,45 @@ public class PgWhiskyDAO implements WhiskyDAO {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    public int getQtd() throws SQLException {
+        int qtd;
+        try (PreparedStatement statement = connection.prepareStatement(GET_QTD)) {
+            try (ResultSet result = statement.executeQuery()) {
+                if (result.next()) {
+                    qtd = Integer.parseInt(result.getString("qtd"));
+                } else {
+                    throw new SQLException("Erro ao visualizar: site não encontrado.");
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+
+            throw new SQLException("Erro ao listar usuários.");
+        }
+
+        return qtd;
+    }
+
     @Override
     public List<Whisky> all() throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet.");
+        List<Whisky> whiskyList = new ArrayList<>();
+        try (PreparedStatement statement = connection.prepareStatement(ALL_QUERY)) {
+            ResultSet result = statement.executeQuery();
+            while (result.next()) {
+                Whisky whisky = new Whisky();
+                whisky.setNome(result.getString("nome"));
+                whisky.setPrecoSemDesconto(result.getString("preco_sem_desconto"));
+                whisky.setLojaNome(result.getString("loja_nome"));
+                whisky.setId(Integer.parseInt(result.getString("id")));
+                whiskyList.add(whisky);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+
+            throw new SQLException("Erro ao listar usuários.");
+        }
+
+        return whiskyList;
     }
 
     @Override

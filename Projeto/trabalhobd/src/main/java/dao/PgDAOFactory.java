@@ -47,7 +47,7 @@ public class PgDAOFactory extends DAOFactory {
     }
 
     @Override
-    public HistoricoDAO getHistoricoDAO() {
-        return new HistoricoDAO(this.connection);
+    public PgHistoricoDAO getHistoricoDAO() {
+        return new PgHistoricoDAO(this.connection);
     }
 }
