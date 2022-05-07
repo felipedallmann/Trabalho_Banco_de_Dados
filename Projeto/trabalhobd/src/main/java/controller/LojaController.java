@@ -105,13 +105,17 @@ public class LojaController extends HttpServlet {
                     whiskydao = daoFactory.getWhiskyDAO();
                     String id = request.getParameter("id");
                     String nome = request.getParameter("nome");
+                    
                     // OBTENDO WHISKY ESPECIFICO
                     Whisky whisky = whiskydao.read(id);
                     // OBTENDO HISTÓRICO DE UM WHISKY ESPECIFICO
                     List<Whisky> whiskyList = whiskydao.listAllHistorico(nome, id);
-
+                    Double maiorPreco = whiskydao.getMaiorPreco(id);
+                    Double menorPreco = whiskydao.getMenorPreco(id);
                     request.setAttribute("whisky", whisky);
                     request.setAttribute("whiskyList", whiskyList);
+                    request.setAttribute("maiorPreco", maiorPreco);
+                    request.setAttribute("menorPreco", menorPreco);
 
                 } catch (ClassNotFoundException | IOException | SQLException ex) {
                     request.getSession().setAttribute("error", ex.getMessage());
