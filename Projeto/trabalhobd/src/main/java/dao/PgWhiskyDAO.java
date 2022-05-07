@@ -70,6 +70,9 @@ public class PgWhiskyDAO implements WhiskyDAO {
             "projetobd.historico AS h, " +
             "projetobd.loja AS lj " +
             "WHERE lj.nome = ? AND h.whisky_id = ? AND wk.id = ? AND h.loja_nome = lj.nome;";
+    
+     private static final String GET_MAIOR_PRECO = "SELECT MAX(CAST(preco_sem_desconto as float)) maiorPreco FROM projetobd.historico WHERE whisky_id = ?";
+     private static final String GET_MENOR_PRECO = "SELECT MIN(CAST(preco_sem_desconto as float)) menorPreco FROM projetobd.historico WHERE whisky_id = ?";
 
     public PgWhiskyDAO(Connection connection) {
         this.connection = connection;
@@ -260,5 +263,45 @@ public class PgWhiskyDAO implements WhiskyDAO {
         }
 
         return whiskyList;
+    }
+    
+    public Double getMaiorPreco(String id) throws SQLException {
+        Double maiorPreco;
+        try (PreparedStatement statement = connection.prepareStatement(GET_MAIOR_PRECO)) {
+            statement.setInt(1, Integer.parseInt(id));
+            try (ResultSet result = statement.executeQuery()) {
+                if (result.next()) {
+                    maiorPreco = result.getDouble("maiorPreco");
+                } else {
+                    throw new SQLException("Erro ao visualizar: site não encontrado.");
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+
+            throw new SQLException("Erro ao listar usuários.");
+        }
+
+        return maiorPreco;
+    }
+    
+    public Double getMenorPreco(String id) throws SQLException {
+        Double menorPreco;
+        try (PreparedStatement statement = connection.prepareStatement(GET_MENOR_PRECO)) {
+            statement.setInt(1, Integer.parseInt(id));
+            try (ResultSet result = statement.executeQuery()) {
+                if (result.next()) {
+                    menorPreco = result.getDouble("menorPreco");
+                } else {
+                    throw new SQLException("Erro ao visualizar: site não encontrado.");
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+
+            throw new SQLException("Erro ao listar usuários.");
+        }
+
+        return menorPreco;
     }
 }
