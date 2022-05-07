@@ -23,6 +23,8 @@
                     <th class="col-lg-2 h4 ">Pais de origem</th>
                     <th class="col-lg-2 h4 ">Teor alcoolico</th>
                     <th class="col-lg-2 h4 ">Loja nome</th>
+                    <th class="col-lg-2 h4 ">Maior preço</th>
+                    <th class="col-lg-2 h4 ">Menor preço</th>
                 </tr>
             </thead>
             <tbody var="whisky" items="${requestScope.whisky}">
@@ -56,6 +58,16 @@
                     <td var="loja_nome" items="${requestScope.whisky}">
                         <span class="h4">
                             <c:out value="${whisky.teorAlcolico}" /></span>
+                    </td>
+                    
+                    <td var="maiorPreco" items="${requestScope.maiorPreco}">
+                        <span class="h4">
+                            <c:out value="${maiorPreco}" /></span>
+                    </td>
+                    
+                    <td var="menorPreco" items="${requestScope.menorPreco}">
+                        <span class="h4">
+                            <c:out value="${menorPreco}" /></span>
                     </td>
                 </tr>
             </tbody>
