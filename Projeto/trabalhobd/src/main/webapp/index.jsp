@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+    <%@include file="/view/include/head.jsp"  %> 
     <title>[WebSite App] Tela inicial</title>
   </head>
   <body>
@@ -19,6 +19,10 @@
           <h2 class="form-signin-heading">Mostrar sites cadastrados</h2>
         </a>
       </p>
+      
+      <a class="btn btn-lg btn-primary" href="${pageContext.servletContext.contextPath}/destilarias">
+        Destilarias
+      </a>
     </div>
   </body>
 </html>
