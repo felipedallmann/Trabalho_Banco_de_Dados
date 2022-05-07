@@ -16,9 +16,18 @@ public class Whisky {
     @SerializedName("Preço com oferta")
     private String precoComDesconto;
     private transient Timestamp acessadoEm;
+    private transient String lojaNome;
 
     public Timestamp getAcessadoEm() {
         return acessadoEm;
+    }
+
+    public String getLojaNome() {
+        return lojaNome;
+    }
+
+    public void setLojaNome(String lojaNome) {
+        this.lojaNome = lojaNome;
     }
 
     public void setAcessadoEm(Timestamp acessadoEm) {
