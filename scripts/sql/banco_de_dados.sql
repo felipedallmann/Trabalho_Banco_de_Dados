@@ -34,7 +34,8 @@ CREATE TABLE IF NOT EXISTS projetobd.whisky
     CONSTRAINT fk_whisky_destilaria FOREIGN KEY (destilaria_nome)
         REFERENCES projetobd.destilaria (nome),
     CONSTRAINT fk_whisky_pais_origem FOREIGN KEY (pais_origem_nome)
-        REFERENCES projetobd.pais_origem (nome)
+        REFERENCES projetobd.pais_origem (nome),
+    CONSTRAINT uq_whisky_nome UNIQUE(nome)
 );
 
 CREATE TABLE IF NOT EXISTS projetobd.historico
@@ -87,3 +88,4 @@ CREATE TABLE IF NOT EXISTS projetobd.execucao_scripts
     CONSTRAINT fk_execucao_scripts_script_loja_nome FOREIGN KEY (script_loja_nome, script_data_insercao)
 		REFERENCES projetobd.script(loja_nome, data_insercao)
 );
+
