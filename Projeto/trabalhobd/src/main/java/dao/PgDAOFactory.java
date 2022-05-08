@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package dao;
 
 import java.sql.Connection;
 
-/**
- *
- * @author dskaster
- */
 public class PgDAOFactory extends DAOFactory {
 
     public PgDAOFactory(Connection connection) {
@@ -49,5 +41,10 @@ public class PgDAOFactory extends DAOFactory {
     @Override
     public PgHistoricoDAO getHistoricoDAO() {
         return new PgHistoricoDAO(this.connection);
+    }
+
+    @Override
+    public DestilariaUtilizaIngredienteDAO getDestilariaUtilizaIngredienteDAO() {
+       return new DestilariaUtilizaIngredienteDAO(this.connection);
     }
 }

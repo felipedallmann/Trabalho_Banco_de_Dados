@@ -34,4 +34,9 @@ public class Script {
         this.codigo = codigo;
     }
 
+    @Override
+    public String toString() {
+        return "Script [codigo=" + codigo + ", dataInsercao=" + dataInsercao + ", lojaNome=" + lojaNome + "]";
+    }
+
 }

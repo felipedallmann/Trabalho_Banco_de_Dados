@@ -57,7 +57,7 @@ public class Historico {
 
     @Override
     public String toString() {
-        return "Whisky{" + "whiskyId=" + whiskyId + ", lojaNome=" + lojaNome + ", acessadoEm=" + acessadoEm
+        return "Historico{" + "whiskyId=" + whiskyId + ", lojaNome=" + lojaNome + ", acessadoEm=" + acessadoEm
                 + ", precoSemDesconto=" + precoSemDesconto + ", precoComDesconto=" + precoComDesconto + '}';
     }
 }

@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Destilaria;
+import model.DestilariaUtilizaIngrediente;
 import model.Historico;
 import model.Ingrediente;
 import model.PaisDeOrigem;
@@ -198,83 +199,90 @@ public class PgScriptDAO implements ScriptDAO {
         for (File file : directoryListing) {
             System.out.println(file);
 
-            try {
+            try (DAOFactory daoFactory = DAOFactory.getInstance()) {
                 String content = new String(Files.readAllBytes(file.toPath()), StandardCharsets.UTF_8);
 
                 Gson gson = new Gson();
-                // Lê o whisky
-                Whisky whisky = gson.fromJson(content, Whisky.class);
-                System.out.println(whisky.toString());
 
                 // Lê o ingrediente
                 Ingrediente ingrediente = gson.fromJson(content, Ingrediente.class);
                 System.out.println(ingrediente.toString());
+                // Registra o ingrediente
+                try {
+                    IngredienteDAO dao = daoFactory.getIngredienteDAO();
+                    dao.create(ingrediente);
+                } catch (SQLException ex) {
+                    Logger.getLogger(IngredienteDAO.class.getName()).log(Level.SEVERE,
+                            "DAO: Erro ao criar registro de destilaria");
+                }
 
                 // Lê o pais de origem
                 PaisDeOrigem pais = gson.fromJson(content, PaisDeOrigem.class);
                 System.out.println(pais.toString());
+                // Registra o pais de origem
+                try {
+                    PaisDeOrigemDAO dao = daoFactory.getPaisDeOrigemDAO();
+                    dao.create(pais);
+                } catch (SQLException ex) {
+                    Logger.getLogger(IngredienteDAO.class.getName()).log(Level.SEVERE,
+                            "DAO: Erro ao criar registro de destilaria");
+                }
+                
 
                 // Lê a destilaria
                 Destilaria destilaria = gson.fromJson(content, Destilaria.class);
                 System.out.println(destilaria.toString());
-
-                // Lê o histórico
-                Historico historico = gson.fromJson(content, Historico.class);
-                System.out.println(historico.toString());
-
-                // Registra o ingrediente
-                try (DAOFactory daoFactory = DAOFactory.getInstance()) {
-                    IngredienteDAO dao = daoFactory.getIngredienteDAO();
-                    dao.create(ingrediente);
-                } catch (ClassNotFoundException | IOException | SQLException ex) {
-                    Logger.getLogger(IngredienteDAO.class.getName()).log(Level.SEVERE,
-                            "DAO: Erro ao criar registro de destilaria");
-                }
-
-                // Registra o pais de origem
-                try (DAOFactory daoFactory = DAOFactory.getInstance()) {
-                    PaisDeOrigemDAO dao = daoFactory.getPaisDeOrigemDAO();
-                    dao.create(pais);
-                } catch (ClassNotFoundException | IOException | SQLException ex) {
-                    Logger.getLogger(IngredienteDAO.class.getName()).log(Level.SEVERE,
-                            "DAO: Erro ao criar registro de destilaria");
-                }
-
                 // Registra a destilaria
-                try (DAOFactory daoFactory = DAOFactory.getInstance()) {
+                try {
                     DestilariaDAO dao = daoFactory.getDestilariaDAO();
                     dao.create(destilaria);
-                } catch (ClassNotFoundException | IOException | SQLException ex) {
+                } catch (SQLException ex) {
                     Logger.getLogger(DestilariaDAO.class.getName()).log(Level.SEVERE,
                             "DAO: Erro ao criar registro de destilaria");
                 }
+                
+                // Lê a relação destilaria x ingrediente
+                DestilariaUtilizaIngrediente dui = new DestilariaUtilizaIngrediente(destilaria, ingrediente);
+                System.out.println(dui.toString());
+                // Registra a relação destilaria x ingrediente
+                try {
+                    DestilariaUtilizaIngredienteDAO dao = daoFactory.getDestilariaUtilizaIngredienteDAO();
+                    dao.create(dui);
+                } catch (SQLException ex) {
+                    Logger.getLogger(IngredienteDAO.class.getName()).log(Level.SEVERE,
+                            "DAO: Erro ao criar a relação destilaria x ingrediente");
+                }
 
+                // Lê o whisky
+                Whisky whisky = gson.fromJson(content, Whisky.class);
                 // Registra o whisky
-                try (DAOFactory daoFactory = DAOFactory.getInstance()) {
+                try {
+                    whisky.setPaisOrigemNome(pais.getNome());
+                    whisky.setDestilariaNome(destilaria.getNome());
                     PgWhiskyDAO dao = daoFactory.getWhiskyDAO();
                     dao.create(whisky);
-                } catch (ClassNotFoundException | IOException | SQLException ex) {
+                } catch (SQLException ex) {
                     Logger.getLogger(WhiskyDAO.class.getName()).log(Level.SEVERE,
                             "DAO: Erro ao criar registro de whisky");
                 }
-
+                    
+                // Lê o histórico
+                Historico historico = gson.fromJson(content, Historico.class);
                 // Registra o histórico
-                try (DAOFactory daoFactory = DAOFactory.getInstance()) {
-                    historico.setLojaNome(destilaria.getNome());
+                try {
+                    historico.setLojaNome(lojaNome);
                     historico.setWhiskyId(whisky.getId());
                     historico.setAcessadoEm(new Timestamp(System.currentTimeMillis()));
 
                     PgHistoricoDAO dao = daoFactory.getHistoricoDAO();
                     dao.create(historico);
-
-                    // dao.create(ingrediente);
-                } catch (ClassNotFoundException | IOException | SQLException ex) {
+                } catch (SQLException ex) {
                     Logger.getLogger(IngredienteDAO.class.getName()).log(Level.SEVERE,
                             "DAO: Erro ao criar registro de destilaria");
                 }
-            } catch (IOException ex) {
+            } catch (ClassNotFoundException | IOException ex) {
                 Logger.getLogger(PgScriptDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
-                throw new SQLException("Erro ao abrir arquivo: " + file);
+                throw new RuntimeException("Erro executar script!");
             }
         }
     }

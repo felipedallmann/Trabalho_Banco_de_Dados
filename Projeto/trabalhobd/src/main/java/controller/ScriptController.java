@@ -129,7 +129,7 @@ public class ScriptController extends HttpServlet {
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
                     dao = daoFactory.getScriptDAO();
                     String lojaNome = request.getParameter("lojaNome");
-                    System.out.println(request.getParameter("lojaNome"));
+                    System.out.println(lojaNome);
                     // Timestamp dataInsercao =
                     // Timestamp.valueOf(request.getParameter("dataInsercao"));
                     // System.out.println(request.getParameter("dataInsercao"));

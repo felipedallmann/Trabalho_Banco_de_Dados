@@ -12,6 +12,7 @@ public abstract class DAOFactory implements AutoCloseable {
     public abstract ScriptDAO getScriptDAO();
     public abstract IngredienteDAO getIngredienteDAO();
     public abstract DestilariaDAO getDestilariaDAO();
+    public abstract DestilariaUtilizaIngredienteDAO getDestilariaUtilizaIngredienteDAO();
     public abstract PgWhiskyDAO getWhiskyDAO();
     public abstract PaisDeOrigemDAO getPaisDeOrigemDAO();
     public abstract PgHistoricoDAO getHistoricoDAO();

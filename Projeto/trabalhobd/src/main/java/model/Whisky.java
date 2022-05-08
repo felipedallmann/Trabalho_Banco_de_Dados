@@ -5,7 +5,8 @@ import java.sql.Timestamp;
 
 public class Whisky {
     private transient int id;
-    private transient String nome;
+    @SerializedName("Nome")
+    private String nome;
     private transient String idade;
     @SerializedName("Teor alcoólico")
     private String teorAlcolico;
