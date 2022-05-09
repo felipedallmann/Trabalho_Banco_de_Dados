@@ -1,13 +1,12 @@
 {
-  "ABV": " 43%",
-  "Data": "13/02/2022",
-  "Descrição": "Suntory The Chita",
-  "Destilaria": " Chita",
-  "Idade": " Sem idade declarada (NAS)",
-  "País": " Japão",
-  "Preço sem oferta": "R$385,00",
-  "Preço com oferta": "",
-  "Tipo": " Single Grain Whisky",
-  "Título": "Suntory The Chita (700ml)",
-  "Nome": "Suntory The Chita (700ml)"
+    "ABV": "43%",
+    "Data": "09/05/2022",
+    "Descrição": "Suntory The Chita",
+    "Destilaria": "Chita",
+    "Idade": "Sem idade declarada (NAS)",
+    "Nome": "Suntory The Chita (700ml)",
+    "País": "Japão",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "420.00",
+    "Tipo": "Single Grain Whisky"
 }

@@ -1,13 +1,12 @@
 {
-  "ABV": " 45%",
-  "Data": "13/02/2022",
-  "Descrição": "Bulleit Bourbon",
-  "Idade": " Sem idade declarada (NAS)",
-  "Marca": " Bulleit",
-  "País/Região": " Estados Unidos – Kentucky",
-  "Preço sem oferta": "R$181,00",
-  "Preço com oferta": "",
-  "Tipo": " Bourbon Whiskey",
-  "Título": "Bulleit Bourbon (750ml)",
-  "Nome": "Bulleit Bourbon (750ml)"
+    "ABV": "45%",
+    "Data": "09/05/2022",
+    "Descrição": "Bulleit Bourbon",
+    "Idade": "Sem idade declarada (NAS)",
+    "Marca": "Bulleit",
+    "Nome": "Bulleit Bourbon (750ml)",
+    "País/Região": "Estados Unidos – Kentucky",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "138.00",
+    "Tipo": "Bourbon Whiskey"
 }

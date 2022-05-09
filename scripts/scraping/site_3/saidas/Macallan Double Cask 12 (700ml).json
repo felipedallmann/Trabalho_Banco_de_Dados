@@ -1,13 +1,12 @@
 {
-  "ABV": " 40%",
-  "Data": "13/02/2022",
-  "Descrição": "Macallan Double Cask 12",
-  "Destilaria": " The Macallan",
-  "Idade": " 12 anos",
-  "País/Região": " Escócia – Speyside",
-  "Preço sem oferta": "R$866,00",
-  "Preço com oferta": "",
-  "Tipo": " Single Malt",
-  "Título": "Macallan Double Cask 12 (700ml)",
-  "Nome": "Macallan Double Cask 12 (700ml)"
+    "ABV": "40%",
+    "Data": "09/05/2022",
+    "Descrição": "Macallan Double Cask 12",
+    "Destilaria": "The Macallan",
+    "Idade": "12 anos",
+    "Nome": "Macallan Double Cask 12 (700ml)",
+    "País/Região": "Escócia – Speyside",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "866.00",
+    "Tipo": "Single Malt"
 }

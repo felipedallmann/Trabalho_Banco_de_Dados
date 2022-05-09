@@ -1,13 +1,12 @@
 {
-  "ABV": " 40%",
-  "Data": "13/02/2022",
-  "Descrição": "Singleton não é uma destilaria, mas sim um grupo de destilarias que, na concepção da Diageo, são perfeitos para os iniciantes no mundo dos single malt. A destilaria Dufftown é uma das maiores em volume de produção do portfólio da Diageo – perdendo apenas para a Caol Ila e a gigante Roseisle. Apesar disso, menos de 5% de sua produção é engarrafada como single malt. O restante é destinado a blends, especialmente o conhecido Bell’s. A maturação do Singleton of Dufftown acontece em barricas de carvalho americano de ex-bourbon whiskey com uma proporção de carvalho europeu.",
-  "Destilaria": " Dufftown",
-  "Idade": " 12 anos",
-  "País/Região": " Escócia – Speyside",
-  "Preço sem oferta": "R$160,00",
-  "Preço com oferta": "",
-  "Tipo": " Single Malt",
-  "Título": "Singleton of Dufftown (750ml)",
-  "Nome": "Singleton of Dufftown (750ml)"
+    "ABV": "40%",
+    "Data": "09/05/2022",
+    "Descrição": "Singleton não é uma destilaria, mas sim um grupo de destilarias que, na concepção da Diageo, são perfeitos para os iniciantes no mundo dos single malt. A destilaria Dufftown é uma das maiores em volume de produção do portfólio da Diageo – perdendo apenas para a Caol Ila e a gigante Roseisle. Apesar disso, menos de 5% de sua produção é engarrafada como single malt. O restante é destinado a blends, especialmente o conhecido Bell’s. A maturação do Singleton of Dufftown acontece em barricas de carvalho americano de ex-bourbon whiskey com uma proporção de carvalho europeu.",
+    "Destilaria": "Dufftown",
+    "Idade": "12 anos",
+    "Nome": "Singleton of Dufftown (750ml)",
+    "País/Região": "Escócia – Speyside",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "160.00",
+    "Tipo": "Single Malt"
 }

@@ -1,13 +1,12 @@
 {
-  "ABV": " 40%",
-  "Data": "13/02/2022",
-  "Descrição": "Cardhu 12",
-  "Destilaria": " Cardhu",
-  "Idade": " 12 anos",
-  "País/Região": " Escócia – Speyside",
-  "Preço sem oferta": "R$440,00",
-  "Preço com oferta": "",
-  "Tipo": " Single Malt",
-  "Título": "Cardhu 12 (1000ml)",
-  "Nome": "Cardhu 12 (1000ml)"
+    "ABV": "40%",
+    "Data": "09/05/2022",
+    "Descrição": "Cardhu 12",
+    "Destilaria": "Cardhu",
+    "Idade": "12 anos",
+    "Nome": "Cardhu 12 (1000ml)",
+    "País/Região": "Escócia – Speyside",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "390.00",
+    "Tipo": "Single Malt"
 }

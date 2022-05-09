@@ -1,15 +1,16 @@
 {
-  "Categoria": "Whisky",
-  "Data": "13/02/2022",
-  "Descrição": "Whisky Johnnie Walker Black Label 4,5 Litros. Poucas Unidades!!!É proibida a venda de bebidas alcoólicas para menores de 18 anos.",
-  "Fabricante": "Johnnie Walker",
-  "Id do produto": "338",
-  "Marcadores": [
-    "Origem: Escócia",
-    "Categoria: Deluxe (12 anos)",
-    "Graduação: 40% vol.",
-    "Volume: 4500 ml."
-  ],
-  "Preço com oferta": "1199.9",
-  "Preço sem oferta": "1199.9"
+    "Categoria": "Whisky",
+    "Data": "09/05/2022",
+    "Descrição": "Whisky Johnnie Walker Black Label 4,5 Litros. Poucas Unidades!!!É proibida a venda de bebidas alcoólicas para menores de 18 anos.",
+    "Fabricante": "Johnnie Walker",
+    "Id do produto": "338",
+    "Marcadores": [
+        "Origem: Escócia",
+        "Categoria: Deluxe (12 anos)",
+        "Graduação: 40% vol.",
+        "Volume: 4500 ml."
+    ],
+    "Nome": "Whisky Johnnie Walker Black Label 4,5 Litros",
+    "Preço com oferta": "1199.9",
+    "Preço sem oferta": "1199.9"
 }

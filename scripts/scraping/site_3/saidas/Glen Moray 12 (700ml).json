@@ -1,13 +1,12 @@
 {
-  "ABV": " 40%",
-  "Data": "13/02/2022",
-  "Descrição": "Glen Moray 12",
-  "Destilaria": " Glen Moray",
-  "Idade": " Sem idade declarada (NAS)",
-  "País/Região": " Escócia – Speyside",
-  "Preço sem oferta": "R$270,00",
-  "Preço com oferta": "",
-  "Tipo": " Single Malt",
-  "Título": "Glen Moray 12 (700ml)",
-  "Nome": "Glen Moray 12 (700ml)"
+    "ABV": "40%",
+    "Data": "09/05/2022",
+    "Descrição": "Glen Moray 12",
+    "Destilaria": "Glen Moray",
+    "Idade": "Sem idade declarada (NAS)",
+    "Nome": "Glen Moray 12 (700ml)",
+    "País/Região": "Escócia – Speyside",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "270.00",
+    "Tipo": "Single Malt"
 }

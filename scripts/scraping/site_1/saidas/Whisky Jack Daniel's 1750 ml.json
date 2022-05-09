@@ -1,15 +1,15 @@
 {
-  "Categoria": "Whisky",
-  "Data": "13/02/2022",
-  "Descrição": "Whisky Jack Daniel's 1750 ml. Poucas Unidades. Aproveite!Linda garrafa no tamanho especial.",
-  "Fabricante": "Jack Daniels",
-  "Id do produto": "962",
-  "Marcadores": [
-    "Importado dos EUA.",
-    "Graduação alcoólica: 40% vol.",
-    "Volume: 1750 ml (vidro)."
-  ],
-  "Preço com oferta": "249.9",
-  "Preço sem oferta": "249.9",
-  "Nome": "Whisky Jack Daniel's 1750 ml"
+    "Categoria": "Whisky",
+    "Data": "09/05/2022",
+    "Descrição": "Whisky Jack Daniel's 1750 ml. Poucas Unidades. Aproveite!Linda garrafa no tamanho especial.",
+    "Fabricante": "Jack Daniels",
+    "Id do produto": "962",
+    "Marcadores": [
+        "Importado dos EUA.",
+        "Graduação alcoólica: 40% vol.",
+        "Volume: 1750 ml (vidro)."
+    ],
+    "Nome": "Whisky Jack Daniel's 1750 ml",
+    "Preço com oferta": "249.9",
+    "Preço sem oferta": "249.9"
 }

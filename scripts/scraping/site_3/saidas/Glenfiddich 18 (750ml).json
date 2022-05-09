@@ -1,13 +1,12 @@
 {
-  "ABV": " 40%",
-  "Data": "13/02/2022",
-  "Descrição": "Glenfiddich 18",
-  "Destilaria": " Glenfiddich",
-  "Idade": " 18 anos",
-  "País/Região": " Escócia – Speyside",
-  "Preço sem oferta": "R$1.010,00",
-  "Preço com oferta": "",
-  "Tipo": " Single Malt Whisky",
-  "Título": "Glenfiddich 18 (750ml)",
-  "Nome": "Glenfiddich 18 (750ml)"
+    "ABV": "40%",
+    "Data": "09/05/2022",
+    "Descrição": "Glenfiddich 18",
+    "Destilaria": "Glenfiddich",
+    "Idade": "18 anos",
+    "Nome": "Glenfiddich 18 (750ml)",
+    "País/Região": "Escócia – Speyside",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "1010.00",
+    "Tipo": "Single Malt Whisky"
 }

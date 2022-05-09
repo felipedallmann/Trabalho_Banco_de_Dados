@@ -1,11 +1,14 @@
 {
-  "Categoria": "Whisky",
-  "Data": "13/02/2022",
-  "Descrição": "Kit Promocional Whisky GP Gran Par, exclusividade Casa da Bebida: - 02 Garrafas do Whisky GP Gran Par de 1000 ml. - 02 Copos do Whisky GP Gran Par.Blended Whisky Top entre os Premium nacionais, Gran Par é elaborado com o legítimo malte whisky envelhecido.É produzido com o puro malte e destilados nacionais de origem nobre.Gran Par tem características únicas, um whisky macio que está conquistando consumidores em todo o mundo. Surpreenda-se com a qualidade e o preço de Gran Par. Um Whisky perfeito para você. Gran Par é um dos Whiskies mais vendidos no Chile.É proibida a venda de bebidas alcoólicas para menores de 18 anos.",
-  "Fabricante": "Gran Par",
-  "Id do produto": "362",
-  "Marcadores": ["Teor alcoólico: 40%", "Volume - 1000 ml (Vidro)"],
-  "Preço com oferta": "59.9",
-  "Preço sem oferta": "89.9",
-  "Nome": "Kit 02 Whisky GP Gran Par + 02 Copos"
+    "Categoria": "Whisky",
+    "Data": "09/05/2022",
+    "Descrição": "Kit Promocional Whisky GP Gran Par, exclusividade Casa da Bebida: - 02 Garrafas do Whisky GP Gran Par de 1000 ml. - 02 Copos do Whisky GP Gran Par.Blended Whisky Top entre os Premium nacionais, Gran Par é elaborado com o legítimo malte whisky envelhecido.É produzido com o puro malte e destilados nacionais de origem nobre.Gran Par tem características únicas, um whisky macio que está conquistando consumidores em todo o mundo. Surpreenda-se com a qualidade e o preço de Gran Par. Um Whisky perfeito para você. Gran Par é um dos Whiskies mais vendidos no Chile.É proibida a venda de bebidas alcoólicas para menores de 18 anos.",
+    "Fabricante": "Gran Par",
+    "Id do produto": "362",
+    "Marcadores": [
+        "Teor alcoólico: 40%",
+        "Volume - 1000 ml (Vidro)"
+    ],
+    "Nome": "Kit 02 Whisky GP Gran Par + 02 Copos",
+    "Preço com oferta": "59.9",
+    "Preço sem oferta": "89.9"
 }

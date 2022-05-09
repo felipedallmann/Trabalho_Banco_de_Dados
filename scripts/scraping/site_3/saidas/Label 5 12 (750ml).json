@@ -1,13 +1,12 @@
 {
-  "ABV": "40%",
-  "Data": "13/02/2022",
-  "Descrição": "O nono whisky mais vendido no mudo, com mais de trinta milhões de garrafas vendidas mundialmente. O label 5 pertence à La Martiniquaise, e tem como base um single malt excepcional – Glen Moray. O Label 5 é um whisky adocicado, leve, com notas de malte e gengibre. É um produto de entrada interessantíssimo.",
-  "Idade": "12 anos",
-  "Marca": "Label 5",
-  "País/Região": "Escócia – N/A",
-  "Preço sem oferta": "R$109,00",
-  "Preço com oferta": "",
-  "Tipo": "Blended Whisky",
-  "Título": "Label 5 12 (750ml)",
-  "Nome": "Label 5 12 (750ml)"
+    "ABV": "40%",
+    "Data": "09/05/2022",
+    "Descrição": "O nono whisky mais vendido no mudo, com mais de trinta milhões de garrafas vendidas mundialmente. O label 5 pertence à La Martiniquaise, e tem como base um single malt excepcional – Glen Moray. O Label 5 é um whisky adocicado, leve, com notas de malte e gengibre. É um produto de entrada interessantíssimo.",
+    "Idade": "12 anos",
+    "Marca": "Label 5",
+    "Nome": "Label 5 12 (750ml)",
+    "País/Região": "Escócia – N/A",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "109.00",
+    "Tipo": "Blended Whisky"
 }

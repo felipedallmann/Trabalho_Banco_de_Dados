@@ -1,13 +1,12 @@
 {
-  "ABV": "40%",
-  "Data": "13/02/2022",
-  "Descrição": "O Red Label é o whisky escocês mais consumido no mundo, da marca de whiskies escoceses mais consumida no mundo. Precisa de mais credenciais?",
-  "Idade": "Sem idade declarada (NAS)",
-  "Marca": "Johnnie Walker",
-  "País/Região": "Escócia – N/A",
-  "Preço sem oferta": "R$98,00",
-  "Preço com oferta": "",
-  "Tipo": "Blended Whisky",
-  "Título": "Johnnie Walker Red Label (750ml)",
-  "Nome": "Johnnie Walker Red Label (750ml)"
+    "ABV": "40%",
+    "Data": "09/05/2022",
+    "Descrição": "O Red Label é o whisky escocês mais consumido no mundo, da marca de whiskies escoceses mais consumida no mundo. Precisa de mais credenciais?",
+    "Idade": "Sem idade declarada (NAS)",
+    "Marca": "Johnnie Walker",
+    "Nome": "Johnnie Walker Red Label (750ml)",
+    "País/Região": "Escócia – N/A",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "98.00",
+    "Tipo": "Blended Whisky"
 }

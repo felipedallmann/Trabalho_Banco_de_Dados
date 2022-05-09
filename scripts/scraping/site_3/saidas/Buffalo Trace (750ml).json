@@ -1,13 +1,12 @@
 {
-  "ABV": " 45%",
-  "Data": "13/02/2022",
-  "Descrição": "Buffalo Trace",
-  "Destilaria": " Buffalo Trace",
-  "Idade": " Sem idade declarada (NAS)",
-  "País/Região": " Estados Unidos – Kentucky",
-  "Preço sem oferta": "R$177,00",
-  "Preço com oferta": "",
-  "Tipo": " Bourbon",
-  "Título": "Buffalo Trace (750ml)",
-  "Nome": "Buffalo Trace (750ml)"
+    "ABV": "45%",
+    "Data": "09/05/2022",
+    "Descrição": "Buffalo Trace",
+    "Destilaria": "Buffalo Trace",
+    "Idade": "Sem idade declarada (NAS)",
+    "Nome": "Buffalo Trace (750ml)",
+    "País/Região": "Estados Unidos – Kentucky",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "185.00",
+    "Tipo": "Bourbon"
 }

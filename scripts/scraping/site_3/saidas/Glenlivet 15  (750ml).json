@@ -1,13 +1,12 @@
 {
-  "ABV": " 43%",
-  "Data": "13/02/2022",
-  "Descrição": "Glenlivet 15",
-  "Destilaria": " The Glenlivet",
-  "Idade": " 15 anos",
-  "País/Região": " Escócia – Speyside",
-  "Preço sem oferta": "R$470,00",
-  "Preço com oferta": "",
-  "Tipo": " Single Malt",
-  "Título": "Glenlivet 15  (750ml)",
-  "Nome": "Glenlivet 15  (750ml)"
+    "ABV": "43%",
+    "Data": "09/05/2022",
+    "Descrição": "Glenlivet 15",
+    "Destilaria": "The Glenlivet",
+    "Idade": "15 anos",
+    "Nome": "Glenlivet 15  (750ml)",
+    "País/Região": "Escócia – Speyside",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "470.00",
+    "Tipo": "Single Malt"
 }

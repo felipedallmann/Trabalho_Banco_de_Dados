@@ -1,13 +1,12 @@
 {
-  "ABV": "40%",
-  "Data": "13/02/2022",
-  "Descrição": "Old Parr 12",
-  "Idade": "12 anos",
-  "Marca": "Old Parr",
-  "País/Região": "Escócia – N/A",
-  "Preço sem oferta": "R$116,00",
-  "Preço com oferta": "",
-  "Tipo": "Blended Whisky",
-  "Título": "Old Parr 12 (750ml)",
-  "Nome": "Old Parr 12 (750ml)"
+    "ABV": "40%",
+    "Data": "09/05/2022",
+    "Descrição": "Old Parr 12",
+    "Idade": "12 anos",
+    "Marca": "Old Parr",
+    "Nome": "Old Parr 12 (750ml)",
+    "País/Região": "Escócia – N/A",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "116.00",
+    "Tipo": "Blended Whisky"
 }

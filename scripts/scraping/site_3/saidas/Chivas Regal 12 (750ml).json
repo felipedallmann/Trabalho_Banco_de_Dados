@@ -1,13 +1,12 @@
 {
-  "ABV": "40%",
-  "Data": "13/02/2022",
-  "Descrição": "Um dos blended whiskies mais clássicos do mundo. O Chivas 12 é a espinha dorsal da linha Chivas Regal, e tem em seu coração o single malt Strathisla, bem como Longmorn. Notas florais, de baunilha, mel, caramelo. Adocicado e extremamente bebível.",
-  "Idade": "12 anos",
-  "Marca": "Chivas Regal",
-  "País/Região": "Escócia – N/A",
-  "Preço sem oferta": "R$133,00",
-  "Preço com oferta": "",
-  "Tipo": "Blended Whisky",
-  "Título": "Chivas Regal 12 (750ml)",
-  "Nome": "Chivas Regal 12 (750ml)"
+    "ABV": "40%",
+    "Data": "09/05/2022",
+    "Descrição": "Um dos blended whiskies mais clássicos do mundo. O Chivas 12 é a espinha dorsal da linha Chivas Regal, e tem em seu coração o single malt Strathisla, bem como Longmorn. Notas florais, de baunilha, mel, caramelo. Adocicado e extremamente bebível.",
+    "Idade": "12 anos",
+    "Marca": "Chivas Regal",
+    "Nome": "Chivas Regal 12 (750ml)",
+    "País/Região": "Escócia – N/A",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "133.00",
+    "Tipo": "Blended Whisky"
 }

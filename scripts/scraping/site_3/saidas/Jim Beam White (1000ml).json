@@ -1,12 +1,11 @@
 {
-  "ABV": " 40%",
-  "Data": "13/02/2022",
-  "Descrição": "Jim Beam White",
-  "Idade": " Sem idade declarada (NAS)",
-  "País/Região": " Estados Unidos – N/A",
-  "Preço sem oferta": "R$99,00",
-  "Preço com oferta": "",
-  "Tipo": " Kentucky Straight Bourbon",
-  "Título": "Jim Beam White (1000ml)",
-  "Nome": "Jim Beam White (1000ml)"
+    "ABV": "40%",
+    "Data": "09/05/2022",
+    "Descrição": "Jim Beam White",
+    "Idade": "Sem idade declarada (NAS)",
+    "Nome": "Jim Beam White (1000ml)",
+    "País/Região": "Estados Unidos – N/A",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "99.00",
+    "Tipo": "Kentucky Straight Bourbon"
 }

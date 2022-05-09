@@ -1,13 +1,12 @@
 {
-  "ABV": " 40,5%",
-  "Data": "13/02/2022",
-  "Descrição": "Wild Turkey 81 aka Bourbon",
-  "Idade": " Sem idade declarada (NAS)",
-  "Marca": " Wild Turkey",
-  "País/Região": " Estados Unidos – Kentucky",
-  "Preço sem oferta": "R$200,00",
-  "Preço com oferta": "",
-  "Tipo": " Bourbon Whiskey",
-  "Título": "Wild Turkey Bourbon (1000ml)",
-  "Nome": "Wild Turkey Bourbon (1000ml)"
+    "ABV": "40,5%",
+    "Data": "09/05/2022",
+    "Descrição": "Wild Turkey 81 aka Bourbon",
+    "Idade": "Sem idade declarada (NAS)",
+    "Marca": "Wild Turkey",
+    "Nome": "Wild Turkey Bourbon (1000ml)",
+    "País/Região": "Estados Unidos – Kentucky",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "200.00",
+    "Tipo": "Bourbon Whiskey"
 }

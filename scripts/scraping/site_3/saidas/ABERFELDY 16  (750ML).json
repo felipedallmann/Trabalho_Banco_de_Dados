@@ -1,13 +1,12 @@
 {
-  "ABV": " 40%",
-  "Data": "13/02/2022",
-  "Descrição": "Aberfeldy 16",
-  "Destilaria": " Aberfeldy",
-  "Idade": " 16 anos",
-  "País/Região": " Escócia – Highlands",
-  "Preço sem oferta": "R$350,00",
-  "Preço com oferta": "",
-  "Tipo": " Single Malt",
-  "Título": "ABERFELDY 16  (750ML)",
-  "Nome": "ABERFELDY 16  (750ML)"
+    "ABV": "40%",
+    "Data": "09/05/2022",
+    "Descrição": "Aberfeldy 16",
+    "Destilaria": "Aberfeldy",
+    "Idade": "16 anos",
+    "Nome": "ABERFELDY 16  (750ML)",
+    "País/Região": "Escócia – Highlands",
+    "Preço com oferta": 0,
+    "Preço sem oferta": "350.00",
+    "Tipo": "Single Malt"
 }
