@@ -47,6 +47,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
     private static final String ALL_QUERY = "SELECT DISTINCT wk.nome, "
             + "h.preco_sem_desconto, "
+            + "h.preco_com_desconto, "
             + "h.loja_nome, "
             + "wk.id "
             + "FROM projetobd.whisky AS wk, "
@@ -56,6 +57,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
     private static final String GET_PRODUCTS = "SELECT DISTINCT wk.nome, "
             + "h.preco_sem_desconto, "
+            + "h.preco_com_desconto, "
             + "wk.id "
             + "FROM projetobd.whisky AS wk, "
             + "projetobd.historico AS h, "
@@ -64,6 +66,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
     private static final String GET_PRODUCTS_SEARCH = "SELECT DISTINCT wk.nome, "
             + "h.preco_sem_desconto, "
+            + "h.preco_com_desconto, "
             + "wk.id "
             + "FROM projetobd.whisky AS wk, "
             + "projetobd.historico AS h, "
@@ -83,6 +86,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
     
     private static final String GET_HISTORY = "SELECT wk.nome, "
             + "h.preco_sem_desconto, "
+            + "h.preco_com_desconto, "
             + "h.acessado_em, "
             + "wk.id "
             + "FROM projetobd.whisky AS wk, "
@@ -90,9 +94,8 @@ public class PgWhiskyDAO implements WhiskyDAO {
             + "projetobd.loja AS lj "
             + "WHERE lj.nome = ? AND h.whisky_id = ? AND wk.id = ? AND h.loja_nome = lj.nome;";
 
-    private static final String GET_MAIOR_PRECO = "SELECT MAX(CAST(preco_sem_desconto as float)) maiorPreco FROM projetobd.historico WHERE whisky_id = ?";
-    private static final String GET_MENOR_PRECO = "SELECT MIN(CAST(preco_sem_desconto as float)) menorPreco FROM projetobd.historico WHERE whisky_id = ?";
-
+    private static final String GET_MAIOR_PRECO = "SELECT MAX(value) maiorPreco FROM (SELECT MAX(CAST(preco_com_desconto as float)) AS value FROM projetobd.historico WHERE whisky_id = ?  UNION SELECT MAX(CAST(preco_sem_desconto as float)) AS value FROM projetobd.historico WHERE whisky_id = ? ) AS ma";
+    private static final String GET_MENOR_PRECO = "SELECT MIN(value) menorPreco FROM (SELECT MIN(NULLIF(CAST(preco_com_desconto as float), 0)) AS value FROM projetobd.historico WHERE whisky_id = ?  UNION SELECT MIN(NULLIF(CAST(preco_sem_desconto as float), 0)) AS value FROM projetobd.historico WHERE whisky_id = ? ) AS mi";
     public PgWhiskyDAO(Connection connection) {
         this.connection = connection;
     }
@@ -199,6 +202,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
                 Whisky whisky = new Whisky();
                 whisky.setNome(result.getString("nome"));
                 whisky.setPrecoSemDesconto(result.getString("preco_sem_desconto"));
+                whisky.setPrecoComDesconto(result.getString("preco_com_desconto"));
                 whisky.setLojaNome(result.getString("loja_nome"));
                 whisky.setId(Integer.parseInt(result.getString("id")));
                 whiskyList.add(whisky);
@@ -223,6 +227,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
                 Whisky whisky = new Whisky();
                 whisky.setNome(result.getString("nome"));
                 whisky.setPrecoSemDesconto(result.getString("preco_sem_desconto"));
+                whisky.setPrecoComDesconto(result.getString("preco_com_desconto"));
                 whisky.setId(Integer.parseInt(result.getString("id")));
                 System.out.println(result.getString("preco_sem_desconto"));
                 whiskyList.add(whisky);
@@ -247,6 +252,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
                 Whisky whisky = new Whisky();
                 whisky.setNome(result.getString("nome"));
                 whisky.setPrecoSemDesconto(result.getString("preco_sem_desconto"));
+                whisky.setPrecoComDesconto(result.getString("preco_com_desconto"));
                 whisky.setId(Integer.parseInt(result.getString("id")));
                 Timestamp timestamp = Timestamp.valueOf(result.getString("acessado_em"));
                 whisky.setAcessadoEm(timestamp);
@@ -273,6 +279,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
                 Whisky whisky = new Whisky();
                 whisky.setNome(result.getString("nome"));
                 whisky.setPrecoSemDesconto(result.getString("preco_sem_desconto"));
+                whisky.setPrecoComDesconto(result.getString("preco_com_desconto"));
                 whisky.setId(Integer.parseInt(result.getString("id")));
                 System.out.println(result.getString("preco_sem_desconto"));
                 whiskyList.add(whisky);
@@ -316,6 +323,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
         Double maiorPreco;
         try ( PreparedStatement statement = connection.prepareStatement(GET_MAIOR_PRECO)) {
             statement.setInt(1, Integer.parseInt(id));
+            statement.setInt(2, Integer.parseInt(id));
             try ( ResultSet result = statement.executeQuery()) {
                 if (result.next()) {
                     maiorPreco = result.getDouble("maiorPreco");
@@ -336,6 +344,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
         Double menorPreco;
         try ( PreparedStatement statement = connection.prepareStatement(GET_MENOR_PRECO)) {
             statement.setInt(1, Integer.parseInt(id));
+            statement.setInt(2, Integer.parseInt(id));
             try ( ResultSet result = statement.executeQuery()) {
                 if (result.next()) {
                     menorPreco = result.getDouble("menorPreco");

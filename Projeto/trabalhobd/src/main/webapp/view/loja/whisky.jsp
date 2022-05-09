@@ -61,8 +61,8 @@
                     <td>
                         <span class="h4">
                             <c:choose>
-                                <c:when test="${whisky.teorAlcolico > 0}">
-                                    <c:out value="${whisky.teorAlcolico}"  /> %
+                                <c:when test="${whisky.teorAlcolico != null}">
+                                    <c:out value="${whisky.teorAlcolico}"/>
                                 </c:when>
                                 <c:otherwise>                   
                                     Desconhecido
@@ -97,7 +97,8 @@
             <thead>
                 <tr>
                     <th class="col-md-8 h1">Histórico</th>
-                    <th class="col-md-8 h1">Preco</th>
+                    <th class="col-md-8 h1">Preço sem desconto</th>
+                    <th class="col-md-8 h1">Preço com desconto</th>
                     <th class="col-md-8 h1">Data</th>
                 </tr>
             </thead>
@@ -113,6 +114,11 @@
                         <td>
                             <span class="h4">
                                 <c:out value="${whiskyItem.precoSemDesconto}" /></span>
+                        </td>
+                        
+                        <td>
+                            <span class="h4">
+                                <c:out value="${whiskyItem.precoComDesconto}" /></span>
                         </td>
 
                         <td>

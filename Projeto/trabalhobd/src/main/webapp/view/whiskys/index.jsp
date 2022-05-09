@@ -73,7 +73,8 @@
             <thead>
                 <tr>
                     <th class="col-xs-5 h3">Nome do whisky</th>
-                    <th class="col-xs-5 h5 ">Preço do whisky</th>
+                    <th class="col-xs-5 h5 ">Preço sem desconto</th>
+                    <th class="col-xs-5 h5 ">Preço com desconto</th>
                     <th class="col-xs-5 h5 ">Loja nome</th>
                 </tr>
 
@@ -92,6 +93,11 @@
                         <td>
                             <span class="h4">
                                 <c:out value="${whisky.precoSemDesconto}" /></span>
+                        </td>
+
+                        <td>
+                            <span class="h4">
+                                <c:out value="${whisky.precoComDesconto}" /></span>
                         </td>
 
                         <td>

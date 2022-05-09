@@ -29,7 +29,8 @@
                 </tr>
                 <tr>
                     <th class="col-lg-5 h4">Nome do whisky</th>
-                    <th class="col-lg-2 h6 ">Preço do whisky</th>
+                    <th class="col-lg-2 h6 ">Preço sem desconto </th>
+                    <th class="col-lg-2 h6 ">Preço com desconto </th>
                     <th class="col-lg-2 h6 ">Loja nome</th>
                 </tr>
             </thead>
@@ -48,6 +49,11 @@
                         <td>
                             <span class="h4">
                                 <c:out value="${whisky.precoSemDesconto}" /></span>
+                        </td>
+
+                        <td>
+                            <span class="h4">
+                                <c:out value="${whisky.precoComDesconto}" /></span>
                         </td>
 
                         <td var="loja_nome" items="${requestScope.loja_nome}">
