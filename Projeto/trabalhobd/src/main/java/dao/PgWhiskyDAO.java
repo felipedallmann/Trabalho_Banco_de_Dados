@@ -47,6 +47,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
     private static final String ALL_QUERY = "SELECT DISTINCT wk.nome, "
             + "h.preco_sem_desconto, "
+            + "h.preco_com_desconto, "
             + "h.loja_nome, "
             + "wk.id "
             + "FROM projetobd.whisky AS wk, "
@@ -56,6 +57,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
     private static final String GET_PRODUCTS = "SELECT DISTINCT wk.nome, "
             + "h.preco_sem_desconto, "
+            + "h.preco_com_desconto, "
             + "wk.id "
             + "FROM projetobd.whisky AS wk, "
             + "projetobd.historico AS h, "
@@ -64,14 +66,26 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
     private static final String GET_PRODUCTS_SEARCH = "SELECT DISTINCT wk.nome, "
             + "h.preco_sem_desconto, "
+            + "h.preco_com_desconto, "
             + "wk.id "
             + "FROM projetobd.whisky AS wk, "
             + "projetobd.historico AS h, "
             + "projetobd.loja AS lj "
             + "WHERE lj.nome = ? AND LOWER(wk.nome) LIKE LOWER(?) AND h.whisky_id = wk.id AND h.loja_nome = lj.nome AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico as h WHERE h.whisky_id = wk.id)";
 
+    private static final String GET_PRODUCTS_SEARCH_ALL = "SELECT DISTINCT wk.nome, "
+            + "h.preco_sem_desconto, "
+            + "h.preco_com_desconto, "
+            + "lj.nome as nome_loja, "
+            + "wk.id "
+            + "FROM projetobd.whisky AS wk, "
+            + "projetobd.historico AS h, "
+            + "projetobd.loja AS lj "
+            + "WHERE LOWER(wk.nome) LIKE LOWER(?) AND h.whisky_id = wk.id AND h.loja_nome = lj.nome AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico as h WHERE h.whisky_id = wk.id)";
+
     private static final String GET_HISTORY = "SELECT wk.nome, "
             + "h.preco_sem_desconto, "
+            + "h.preco_com_desconto, "
             + "h.acessado_em, "
             + "wk.id "
             + "FROM projetobd.whisky AS wk, "
@@ -93,14 +107,8 @@ public class PgWhiskyDAO implements WhiskyDAO {
                     "Whisky não criado já que possui nome nulo!");
             return;
         }
-        if (whisky.getestilariaNome() != null && whisky.getestilariaNome().isBlank()) {
-            whisky.setDestilariaNome(null);
-        }
-        if (whisky.getPaisOrigemNome() != null && whisky.getPaisOrigemNome().isBlank()) {
-            whisky.setPaisOrigemNome(null);
-        }
 
-        try (PreparedStatement statement = connection.prepareStatement(CREATE_QUERY)) {
+        try ( PreparedStatement statement = connection.prepareStatement(CREATE_QUERY)) {
             System.out.println("Criando novo registro de whisky: " + whisky);
             statement.setString(1, whisky.getNome());
             statement.setString(2, whisky.getIdade());
@@ -212,6 +220,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
                 Whisky whisky = new Whisky();
                 whisky.setNome(result.getString("nome"));
                 whisky.setPrecoSemDesconto(result.getString("preco_sem_desconto"));
+                whisky.setPrecoComDesconto(result.getString("preco_com_desconto"));
                 whisky.setId(Integer.parseInt(result.getString("id")));
                 System.out.println(result.getString("preco_sem_desconto"));
                 whiskyList.add(whisky);
@@ -236,6 +245,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
                 Whisky whisky = new Whisky();
                 whisky.setNome(result.getString("nome"));
                 whisky.setPrecoSemDesconto(result.getString("preco_sem_desconto"));
+                whisky.setPrecoComDesconto(result.getString("preco_com_desconto"));
                 whisky.setId(Integer.parseInt(result.getString("id")));
                 Timestamp timestamp = Timestamp.valueOf(result.getString("acessado_em"));
                 whisky.setAcessadoEm(timestamp);
@@ -263,7 +273,34 @@ public class PgWhiskyDAO implements WhiskyDAO {
                 Whisky whisky = new Whisky();
                 whisky.setNome(result.getString("nome"));
                 whisky.setPrecoSemDesconto(result.getString("preco_sem_desconto"));
+                whisky.setPrecoComDesconto(result.getString("preco_com_desconto"));
                 whisky.setId(Integer.parseInt(result.getString("id")));
+                System.out.println(result.getString("preco_sem_desconto"));
+                whiskyList.add(whisky);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+
+            throw new SQLException("Erro ao listar usuários.");
+        }
+
+        return whiskyList;
+    }
+    
+    public List<Whisky> listSearchAll(String whisky_nome) throws SQLException {
+        List<Whisky> whiskyList = new ArrayList<>();
+
+        try ( PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS_SEARCH_ALL)) {
+            String whisky_nome_espaco = whisky_nome.replace(' ', '%');
+            statement.setString(1, "%" + whisky_nome_espaco + "%");
+            ResultSet result = statement.executeQuery();
+            while (result.next()) {
+                Whisky whisky = new Whisky();
+                whisky.setNome(result.getString("nome"));
+                whisky.setPrecoSemDesconto(result.getString("preco_sem_desconto"));
+                whisky.setPrecoComDesconto(result.getString("preco_com_desconto"));
+                whisky.setId(Integer.parseInt(result.getString("id")));
+                whisky.setLojaNome(result.getString("nome_loja"));
                 System.out.println(result.getString("preco_sem_desconto"));
                 whiskyList.add(whisky);
             }
