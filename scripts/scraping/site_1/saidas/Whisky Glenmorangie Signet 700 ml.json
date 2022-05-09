@@ -5,14 +5,14 @@
     "Fabricante": "Glenmorangie",
     "Id do produto": "976",
     "Marcadores": [
-        "Importado da Escócia.",
         "Highland Single Malt.",
-        "Graduação alcoólica: 46% vol.",
         "Idade: Superior a 30 anos.",
         "Volume: 700 ml.",
         "Filtro não frio."
     ],
     "Nome": "Whisky Glenmorangie Signet 700 ml",
-    "Preço com oferta": "1499.9",
-    "Preço sem oferta": "1499.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "14999",
+    "Preço sem oferta": "14999",
+    "Teor alcoólico": "46"
 }

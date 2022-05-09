@@ -5,7 +5,6 @@
     "Fabricante": "Glenmorangie",
     "Id do produto": "707",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single malt.",
         "Graduação: 46% vol.",
         "Volume: 750 ml.",
@@ -16,6 +15,8 @@
         "Conclusão: Espetacular. Bastante complexo com diversos sabores que se harmonizam de forma excepcional."
     ],
     "Nome": "Whisky Glenmorangie Nectar Dor 750 ml",
-    "Preço com oferta": "759.9",
-    "Preço sem oferta": "799.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "7599",
+    "Preço sem oferta": "7999",
+    "Teor alcoólico": "0"
 }

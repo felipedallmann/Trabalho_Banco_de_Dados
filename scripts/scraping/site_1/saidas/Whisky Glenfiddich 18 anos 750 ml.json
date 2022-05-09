@@ -5,12 +5,12 @@
     "Fabricante": "Glenfiddich",
     "Id do produto": "248",
     "Marcadores": [
-        "Origem: Escócia",
         "Categoria: 18 anos",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Glenfiddich 18 anos 750 ml",
-    "Preço com oferta": "829.9",
-    "Preço sem oferta": "999.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "8299",
+    "Preço sem oferta": "9999",
+    "Teor alcoólico": "40"
 }

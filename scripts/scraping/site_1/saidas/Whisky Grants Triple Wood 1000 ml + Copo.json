@@ -5,11 +5,11 @@
     "Fabricante": "Grant's",
     "Id do produto": "5010327000497",
     "Marcadores": [
-        "Volume: 1000 ml.",
-        "Graduação alcoólica: 40% vol.",
-        "Origem: Escócia."
+        "Volume: 1000 ml."
     ],
     "Nome": "Whisky Grants Triple Wood 1000 ml + Copo",
-    "Preço com oferta": "73.5",
-    "Preço sem oferta": "99.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "735",
+    "Preço sem oferta": "999",
+    "Teor alcoólico": "40"
 }

@@ -5,7 +5,6 @@
     "Fabricante": "Label 5",
     "Id do produto": "1202",
     "Marcadores": [
-        "Importado da Escócia.",
         "Graduação: 40% vol.",
         "Volume: 750 ml.",
         "A cor é amarelo dourado profundo e o nariz tem aromas imediatos de frutas secas e cereais maltados. O cereal dá uma borda agridoce que complementa as notas distintas de passas, sultana e casca de laranja cristalizada. Abaixo estão outros aromas de caramelo, baunilha, mel e muita canela.",
@@ -13,6 +12,8 @@
         "O acabamento é de comprimento decente e os cereais agridoces, o tempero aquecedor de madeira e as notas de gengibre duram mais tempo. Os elementos açucarados e frutados mais longos, mas eventualmente desaparecem para dar ao uísque uma deliciosa conclusão de secagem."
     ],
     "Nome": "Whisky Label 5 Gold Heritage 750 ml",
-    "Preço com oferta": "199.9",
-    "Preço sem oferta": "299.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1999",
+    "Preço sem oferta": "2999",
+    "Teor alcoólico": "0"
 }

@@ -5,12 +5,12 @@
     "Fabricante": "Glenfiddich",
     "Id do produto": "247",
     "Marcadores": [
-        "Origem: Escócia",
         "Categoria: 15 anos",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 750 ml"
     ],
     "Nome": "Whisky Glenfiddich 15 anos 750 ml",
-    "Preço com oferta": "549.9",
-    "Preço sem oferta": "599.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "5499",
+    "Preço sem oferta": "5999",
+    "Teor alcoólico": "40"
 }

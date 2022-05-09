@@ -5,12 +5,12 @@
     "Fabricante": "Singleton",
     "Id do produto": "5000281050171",
     "Marcadores": [
-        "País de Origem: Escócia.",
         "Single Malt Scotch Whisky.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Singleton 12 Anos Dufftown 700 ml",
-    "Preço com oferta": "199.9",
-    "Preço sem oferta": "249.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1999",
+    "Preço sem oferta": "2499",
+    "Teor alcoólico": "40"
 }

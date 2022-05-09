@@ -9,10 +9,11 @@
         "01 Whisky Glenfiddich 15 anos de 200 ml.",
         "01 Whisky Glenfiddich 18 anos de 200 ml.",
         "01 Taça Personalizada Glenfiddich 200ml.",
-        "Origem: Escócia.",
         "Graduação: 40% vol."
     ],
     "Nome": "Glenfiddich Explorer's Collection c Taça",
-    "Preço com oferta": "599.9",
-    "Preço sem oferta": "699.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "5999",
+    "Preço sem oferta": "6999",
+    "Teor alcoólico": "0"
 }

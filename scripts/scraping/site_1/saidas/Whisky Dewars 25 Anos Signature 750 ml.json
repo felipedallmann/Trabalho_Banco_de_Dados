@@ -5,11 +5,11 @@
     "Fabricante": "Dewars",
     "Id do produto": "1163",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Dewars 25 Anos Signature 750 ml",
-    "Preço com oferta": "999.9",
-    "Preço sem oferta": "1199.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "9999",
+    "Preço sem oferta": "11999",
+    "Teor alcoólico": "40"
 }

@@ -5,11 +5,12 @@
     "Fabricante": "Jameson",
     "Id do produto": "1806",
     "Marcadores": [
-        "Origem: Irlanda.",
         "Graduação: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Kit Jameson 1000 ml + Copo",
-    "Preço com oferta": "119.9",
-    "Preço sem oferta": "149.9"
+    "Origem": "Irlanda",
+    "Preço com oferta": "1199",
+    "Preço sem oferta": "1499",
+    "Teor alcoólico": "0"
 }

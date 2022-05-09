@@ -5,12 +5,12 @@
     "Fabricante": "Macallan",
     "Id do produto": "1093",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single Malt.",
-        "Graduação Alcoólica: 43,8% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Macallan Terra 700 ml",
-    "Preço com oferta": "1199.9",
-    "Preço sem oferta": "1499.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "11999",
+    "Preço sem oferta": "14999",
+    "Teor alcoólico": "43.8"
 }

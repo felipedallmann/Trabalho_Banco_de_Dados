@@ -5,12 +5,13 @@
     "Fabricante": "Buchanan's",
     "Id do produto": "50196081",
     "Marcadores": [
-        "Origem: Escócia",
         "Categoria: Standard",
         "Graduação: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Black & White 1000 ml",
-    "Preço com oferta": "79.9",
-    "Preço sem oferta": "99.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "799",
+    "Preço sem oferta": "999",
+    "Teor alcoólico": "0"
 }

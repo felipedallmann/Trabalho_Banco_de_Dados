@@ -5,13 +5,13 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "765",
     "Marcadores": [
-        "Importado da Escócia.",
         "Kit com 12 unidades de 50 ml cada.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 50 ml por unidade.",
         "Garrafinha de Plástico*."
     ],
     "Nome": "Kit 12 Miniatura Johnnie Walker Red Label 50 ml",
-    "Preço com oferta": "119.9",
-    "Preço sem oferta": "119.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1199",
+    "Preço sem oferta": "1199",
+    "Teor alcoólico": "40"
 }

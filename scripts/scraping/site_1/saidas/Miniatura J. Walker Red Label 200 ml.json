@@ -5,11 +5,12 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "929",
     "Marcadores": [
-        "Importado da Escócia.",
         "Graduação: 40% vol.",
         "Volume: 200 ml."
     ],
     "Nome": "Miniatura J. Walker Red Label 200 ml",
-    "Preço com oferta": "39.9",
-    "Preço sem oferta": "49.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "399",
+    "Preço sem oferta": "499",
+    "Teor alcoólico": "0"
 }

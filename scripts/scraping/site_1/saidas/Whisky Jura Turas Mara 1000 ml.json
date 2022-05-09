@@ -5,12 +5,13 @@
     "Fabricante": "Jura",
     "Id do produto": "853",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single malt.",
         "Graduação: 42% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Jura Turas Mara 1000 ml",
-    "Preço com oferta": "399.9",
-    "Preço sem oferta": "399.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "3999",
+    "Preço sem oferta": "3999",
+    "Teor alcoólico": "0"
 }

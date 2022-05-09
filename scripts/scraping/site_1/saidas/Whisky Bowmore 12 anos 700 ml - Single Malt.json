@@ -6,11 +6,11 @@
     "Id do produto": "850483000055",
     "Marcadores": [
         "Volume: 700 ml.",
-        "Graduação alcoólica: 40% vol.",
-        "País de origem: Escócia.",
         "Tipo: Single Malt."
     ],
     "Nome": "Whisky Bowmore 12 anos 700 ml - Single Malt",
-    "Preço com oferta": "509.9",
-    "Preço sem oferta": "509.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "5099",
+    "Preço sem oferta": "5099",
+    "Teor alcoólico": "40"
 }

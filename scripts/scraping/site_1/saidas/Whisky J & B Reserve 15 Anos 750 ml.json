@@ -5,11 +5,11 @@
     "Fabricante": "J & B",
     "Id do produto": "111",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky J & B Reserve 15 Anos 750 ml",
-    "Preço com oferta": "349.9",
-    "Preço sem oferta": "349.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "3499",
+    "Preço sem oferta": "3499",
+    "Teor alcoólico": "40"
 }

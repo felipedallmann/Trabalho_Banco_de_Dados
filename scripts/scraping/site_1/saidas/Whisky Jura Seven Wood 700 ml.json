@@ -5,11 +5,11 @@
     "Fabricante": "Jura",
     "Id do produto": "5013967012523",
     "Marcadores": [
-        "Volume: 700 ml.",
-        "Graduação alcoólica: 42% vol.",
-        "País de origem: Escócia."
+        "Volume: 700 ml."
     ],
     "Nome": "Whisky Jura Seven Wood 700 ml",
-    "Preço com oferta": "599.9",
-    "Preço sem oferta": "699.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "5999",
+    "Preço sem oferta": "6999",
+    "Teor alcoólico": "42"
 }

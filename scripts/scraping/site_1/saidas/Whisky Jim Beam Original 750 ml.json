@@ -5,7 +5,6 @@
     "Fabricante": "Jim Beam",
     "Id do produto": "1578",
     "Marcadores": [
-        "Origem: Estados Unidos",
         "Categoria: Standard",
         "Graduação: 40% vol.",
         "Volume: 750 ml.",
@@ -17,6 +16,8 @@
         "Cor: palha dourada."
     ],
     "Nome": "Whisky Jim Beam Original 750 ml",
-    "Preço com oferta": "79.9",
-    "Preço sem oferta": "99.9"
+    "Origem": "Estados Unidos",
+    "Preço com oferta": "799",
+    "Preço sem oferta": "999",
+    "Teor alcoólico": "0"
 }

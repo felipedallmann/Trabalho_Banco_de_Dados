@@ -5,12 +5,13 @@
     "Fabricante": "Glenmorangie",
     "Id do produto": "871",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single malt.",
         "Graduação: 43% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Glenmorangie 18 anos 700 ml",
-    "Preço com oferta": "999.9",
-    "Preço sem oferta": "999.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "9999",
+    "Preço sem oferta": "9999",
+    "Teor alcoólico": "0"
 }

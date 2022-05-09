@@ -5,11 +5,11 @@
     "Fabricante": "Macallan",
     "Id do produto": "1092",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação Alcoólica: 44,9% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Macallan Enigma 700 ml",
-    "Preço com oferta": "1799.9",
-    "Preço sem oferta": "2499.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "17999",
+    "Preço sem oferta": "24999",
+    "Teor alcoólico": "44.9"
 }

@@ -5,12 +5,12 @@
     "Fabricante": "Old Parr",
     "Id do produto": "557",
     "Marcadores": [
-        "Origem: Escócia",
         "Categoria: 18 anos.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Old Parr 18 anos 750 ml",
-    "Preço com oferta": "379.9",
-    "Preço sem oferta": "499.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "3799",
+    "Preço sem oferta": "4999",
+    "Teor alcoólico": "40"
 }

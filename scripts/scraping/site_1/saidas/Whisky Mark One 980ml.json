@@ -6,10 +6,11 @@
     "Id do produto": "7891121503005",
     "Marcadores": [
         "Volume: 980 ml.",
-        "Graduação Alcóolica: 40% Vol.",
-        "Origem: Nacional."
+        "Graduação Alcóolica: 40% Vol."
     ],
     "Nome": "Whisky Mark One 980ml",
-    "Preço com oferta": "39.9",
-    "Preço sem oferta": "39.9"
+    "Origem": "Brasil",
+    "Preço com oferta": "399",
+    "Preço sem oferta": "399",
+    "Teor alcoólico": "0"
 }

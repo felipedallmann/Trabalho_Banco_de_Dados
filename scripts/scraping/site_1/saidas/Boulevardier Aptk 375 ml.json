@@ -6,12 +6,12 @@
     "Id do produto": "2492",
     "Marcadores": [
         "Volume: 375 ml.",
-        "Graduação alcoólica: 27% vol.",
-        "Origem: Nacional.",
         "Ingredientes: BULLEIT Bourbon, Amaro, Vermute.",
         "após aberto, conservar em geladeira ( 5ºC )."
     ],
     "Nome": "Boulevardier Aptk 375 ml",
-    "Preço com oferta": "99.9",
-    "Preço sem oferta": "119.9"
+    "Origem": "Brasil",
+    "Preço com oferta": "999",
+    "Preço sem oferta": "1199",
+    "Teor alcoólico": "27"
 }

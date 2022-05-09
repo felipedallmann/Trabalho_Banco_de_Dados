@@ -5,12 +5,13 @@
     "Fabricante": "Jura",
     "Id do produto": "854",
     "Marcadores": [
-        "País de Origem: Escócia.",
         "Single malt.",
         "Graduação: 43% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Jura Superstition 700 ml",
-    "Preço com oferta": "299.9",
-    "Preço sem oferta": "299.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "2999",
+    "Preço sem oferta": "2999",
+    "Teor alcoólico": "0"
 }

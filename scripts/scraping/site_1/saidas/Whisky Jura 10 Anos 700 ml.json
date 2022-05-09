@@ -5,12 +5,13 @@
     "Fabricante": "Jura",
     "Id do produto": "5013967012486",
     "Marcadores": [
-        "País de Origem: Escócia.",
         "Single malt.",
         "Graduação: 40% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Jura 10 Anos 700 ml",
-    "Preço com oferta": "299.9",
-    "Preço sem oferta": "369.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "2999",
+    "Preço sem oferta": "3699",
+    "Teor alcoólico": "0"
 }

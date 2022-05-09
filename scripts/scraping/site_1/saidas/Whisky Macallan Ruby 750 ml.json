@@ -5,12 +5,12 @@
     "Fabricante": "Macallan",
     "Id do produto": "702",
     "Marcadores": [
-        "Importado da Escócia.",
         "Categoria: Superior à 21 anos.",
-        "Graduação Alcoólica: 43% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Macallan Ruby 750 ml",
-    "Preço com oferta": "1499.9",
-    "Preço sem oferta": "1499.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "14999",
+    "Preço sem oferta": "14999",
+    "Teor alcoólico": "43"
 }

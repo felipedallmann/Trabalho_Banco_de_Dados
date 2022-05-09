@@ -5,11 +5,11 @@
     "Fabricante": "Sir Edwards",
     "Id do produto": "586",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Sir Edwards 1000 ml",
-    "Preço com oferta": "79.9",
-    "Preço sem oferta": "89.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "799",
+    "Preço sem oferta": "899",
+    "Teor alcoólico": "40"
 }

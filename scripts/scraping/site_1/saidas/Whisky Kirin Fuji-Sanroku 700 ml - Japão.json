@@ -6,10 +6,11 @@
     "Id do produto": "1135",
     "Marcadores": [
         "Whisky Importado do Japão.",
-        "Teor Alcoólico: 50% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Kirin Fuji-Sanroku 700 ml - Japão",
-    "Preço com oferta": "499.9",
-    "Preço sem oferta": "799.9"
+    "Origem": "",
+    "Preço com oferta": "4999",
+    "Preço sem oferta": "7999",
+    "Teor alcoólico": "50"
 }

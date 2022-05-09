@@ -5,11 +5,11 @@
     "Fabricante": "Macallan",
     "Id do produto": "5010314301712",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação Alcoólica: 43% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Macallan Rare Cask 700 ml",
-    "Preço com oferta": "4059.9",
-    "Preço sem oferta": "4399.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "40599",
+    "Preço sem oferta": "43999",
+    "Teor alcoólico": "43"
 }

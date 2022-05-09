@@ -5,12 +5,12 @@
     "Fabricante": "Glenfiddich",
     "Id do produto": "7312040551798",
     "Marcadores": [
-        "Importado da Escócia",
         "Single Malt.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Glenfiddich 12 anos 1000ml",
-    "Preço com oferta": "299.9",
-    "Preço sem oferta": "299.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "2999",
+    "Preço sem oferta": "2999",
+    "Teor alcoólico": "40"
 }

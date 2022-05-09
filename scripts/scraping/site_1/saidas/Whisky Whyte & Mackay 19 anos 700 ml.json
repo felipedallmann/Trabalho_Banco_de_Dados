@@ -5,11 +5,11 @@
     "Fabricante": "Whyte Mackay",
     "Id do produto": "567",
     "Marcadores": [
-        "Origem: Escócia.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Whyte & Mackay 19 anos 700 ml",
-    "Preço com oferta": "399.9",
-    "Preço sem oferta": "399.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "3999",
+    "Preço sem oferta": "3999",
+    "Teor alcoólico": "40"
 }

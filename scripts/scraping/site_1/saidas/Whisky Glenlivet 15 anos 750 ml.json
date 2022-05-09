@@ -5,9 +5,7 @@
     "Fabricante": "Glenlivet",
     "Id do produto": "80432100783",
     "Marcadores": [
-        "Importado da Escócia.",
         "Speyside Single Malt.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 750 ml.",
         "- Aparência: Âmbar.",
         "- Olfato: Especiarias, pimenta-do-reino, cedro, baunilha, pêssego e damasco.",
@@ -16,6 +14,8 @@
         "- Conclusão: Frutado e complexo. Os maltes envelhecidos em barris de carvalho limousin fornecem uma dimensão bastante frutada a este single malt."
     ],
     "Nome": "Whisky Glenlivet 15 anos 750 ml",
-    "Preço com oferta": "399.9",
-    "Preço sem oferta": "499.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "3999",
+    "Preço sem oferta": "4999",
+    "Teor alcoólico": "40"
 }

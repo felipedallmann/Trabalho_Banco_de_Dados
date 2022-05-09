@@ -5,12 +5,12 @@
     "Fabricante": "Macallan",
     "Id do produto": "1095",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single Malt.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Macallan Quest 700 ml",
-    "Preço com oferta": "499.9",
-    "Preço sem oferta": "699.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "4999",
+    "Preço sem oferta": "6999",
+    "Teor alcoólico": "40"
 }

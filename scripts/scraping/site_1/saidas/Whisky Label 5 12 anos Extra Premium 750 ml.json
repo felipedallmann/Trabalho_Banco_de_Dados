@@ -5,7 +5,6 @@
     "Fabricante": "Label 5",
     "Id do produto": "925",
     "Marcadores": [
-        "Importado da Escócia.",
         "Graduação: 40% vol.",
         "Volume: 750 ml.",
         "Aparência: Âmbar médio",
@@ -14,6 +13,8 @@
         "Final: Longo, generoso e intenso."
     ],
     "Nome": "Whisky Label 5 12 anos Extra Premium 750 ml",
-    "Preço com oferta": "149.9",
-    "Preço sem oferta": "149.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1499",
+    "Preço sem oferta": "1499",
+    "Teor alcoólico": "0"
 }

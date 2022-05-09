@@ -5,11 +5,11 @@
     "Fabricante": "Grant's",
     "Id do produto": "1177",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Grants Family Reserve 750 ml",
-    "Preço com oferta": "69.9",
-    "Preço sem oferta": "79.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "699",
+    "Preço sem oferta": "799",
+    "Teor alcoólico": "40"
 }

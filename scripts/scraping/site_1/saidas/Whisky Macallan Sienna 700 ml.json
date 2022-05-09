@@ -5,12 +5,12 @@
     "Fabricante": "Macallan",
     "Id do produto": "701",
     "Marcadores": [
-        "Importado da Escócia.",
         "Categoria: 18 anos",
-        "Graduação Alcoólica: 43% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Macallan Sienna 700 ml",
-    "Preço com oferta": "999.9",
-    "Preço sem oferta": "1199.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "9999",
+    "Preço sem oferta": "11999",
+    "Teor alcoólico": "43"
 }

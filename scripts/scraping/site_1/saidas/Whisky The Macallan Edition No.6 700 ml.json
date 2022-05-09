@@ -6,13 +6,13 @@
     "Id do produto": "2570",
     "Marcadores": [
         "Volume: 700ml.",
-        "Graduação alcoólica: 48,6% vol.",
-        "Importado da Escócia.",
         "Nota olfativa: Frutas frescas ricas, noz-moscada, gengibre, chocolate, caramelo, baunilha e carvalho.",
         "Nota gustativa: Ameixa e laranja doce, canela, noz-moscada, carvalho equilibrado, toffee e aveia.",
         "Final: Longa fruta fresca com especiarias transformando-se em chocolate cremoso e aveia torrada."
     ],
     "Nome": "Whisky The Macallan Edition No.6 700 ml",
-    "Preço com oferta": "999.9",
-    "Preço sem oferta": "1199.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "9999",
+    "Preço sem oferta": "11999",
+    "Teor alcoólico": "48.6"
 }

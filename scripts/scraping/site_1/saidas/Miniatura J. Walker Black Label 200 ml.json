@@ -5,12 +5,13 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "928",
     "Marcadores": [
-        "Importado da Escócia.",
         "Categoria: Deluxe (12 anos)",
         "Graduação: 40% vol.",
         "Volume: 200 ml."
     ],
     "Nome": "Miniatura J. Walker Black Label 200 ml",
-    "Preço com oferta": "49.9",
-    "Preço sem oferta": "59.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "499",
+    "Preço sem oferta": "599",
+    "Teor alcoólico": "0"
 }

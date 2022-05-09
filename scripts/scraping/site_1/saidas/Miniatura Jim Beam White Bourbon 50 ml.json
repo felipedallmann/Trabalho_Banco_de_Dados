@@ -5,7 +5,6 @@
     "Fabricante": "Jim Beam",
     "Id do produto": "870",
     "Marcadores": [
-        "Origem: Estados Unidos",
         "Categoria: Standard",
         "Graduação: 40% vol.",
         "Volume: 50 ml.",
@@ -17,6 +16,8 @@
         "Cor: palha dourada"
     ],
     "Nome": "Miniatura Jim Beam White Bourbon 50 ml",
-    "Preço com oferta": "19.9",
-    "Preço sem oferta": "24.9"
+    "Origem": "Estados Unidos",
+    "Preço com oferta": "199",
+    "Preço sem oferta": "249",
+    "Teor alcoólico": "0"
 }

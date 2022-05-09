@@ -8,12 +8,13 @@
         "Contém:",
         "01 Whisky Jim Beam 1000 ml.",
         "01 Copo Highball em Acrílico.",
-        "Origem: Estados Unidos.",
         "Categoria: Standard.",
         "Graduação: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Jim Beam Original 1000ml + Copo Highball",
-    "Preço com oferta": "99.9",
-    "Preço sem oferta": "129.9"
+    "Origem": "Estados Unidos",
+    "Preço com oferta": "999",
+    "Preço sem oferta": "1299",
+    "Teor alcoólico": "0"
 }

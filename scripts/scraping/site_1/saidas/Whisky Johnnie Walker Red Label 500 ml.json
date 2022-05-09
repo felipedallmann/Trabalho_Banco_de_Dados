@@ -5,11 +5,11 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "5000267014401",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 500 ml."
     ],
     "Nome": "Whisky Johnnie Walker Red Label 500 ml",
-    "Preço com oferta": "59.9",
-    "Preço sem oferta": "69.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "599",
+    "Preço sem oferta": "699",
+    "Teor alcoólico": "40"
 }

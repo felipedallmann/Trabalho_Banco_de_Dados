@@ -5,12 +5,13 @@
     "Fabricante": "Jameson",
     "Id do produto": "5011007003029",
     "Marcadores": [
-        "Origem: Irlanda.",
         "Categoria: 8 anos.",
         "Graduação: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Jameson 750 ml",
-    "Preço com oferta": "89.9",
-    "Preço sem oferta": "99.9"
+    "Origem": "Irlanda",
+    "Preço com oferta": "899",
+    "Preço sem oferta": "999",
+    "Teor alcoólico": "0"
 }

@@ -6,12 +6,13 @@
     "Id do produto": "7891050000101",
     "Marcadores": [
         "Volume: 1000 ml.",
-        "Graduação alcoólica: 40% vol.",
         "País: Escócia.",
         "Sabor: Suave, macio e cremoso, com um sutil sabor de nozes.",
         "Aroma: Uma doçura aromática com um frutado suave e cremoso e aroma de nozes."
     ],
     "Nome": "Whisky Passport 1000 ml",
-    "Preço com oferta": "49.9",
-    "Preço sem oferta": "69.9"
+    "Origem": "",
+    "Preço com oferta": "499",
+    "Preço sem oferta": "699",
+    "Teor alcoólico": "40"
 }

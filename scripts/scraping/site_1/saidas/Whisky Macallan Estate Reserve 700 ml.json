@@ -5,8 +5,6 @@
     "Fabricante": "Macallan",
     "Id do produto": "1152",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação Alcoólica: 45,7% vol.",
         "Volume: 700 ml.",
         "COR: Âmbar escuro",
         "OLFATO: Frutas macias, gengibre, baunilha, fudge e frutas cítricas.",
@@ -14,6 +12,8 @@
         "FINAL: Longo com madeira doce cítrica e carvalho."
     ],
     "Nome": "Whisky Macallan Estate Reserve 700 ml",
-    "Preço com oferta": "1699.9",
-    "Preço sem oferta": "1999.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "16999",
+    "Preço sem oferta": "19999",
+    "Teor alcoólico": "45.7"
 }

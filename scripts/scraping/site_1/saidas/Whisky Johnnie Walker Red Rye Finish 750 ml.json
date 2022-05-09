@@ -5,11 +5,12 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "930",
     "Marcadores": [
-        "Importado da Escócia.",
         "Graduação: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Johnnie Walker Red Rye Finish 750 ml",
-    "Preço com oferta": "119.9",
-    "Preço sem oferta": "169.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1199",
+    "Preço sem oferta": "1699",
+    "Teor alcoólico": "0"
 }

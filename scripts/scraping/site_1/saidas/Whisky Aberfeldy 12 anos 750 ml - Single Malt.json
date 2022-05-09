@@ -5,12 +5,12 @@
     "Fabricante": "Aberfeldy",
     "Id do produto": "5000277003457",
     "Marcadores": [
-        "Importado da Escócia.",
         "Highland Single Malt.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Aberfeldy 12 anos 750 ml - Single Malt",
-    "Preço com oferta": "219.9",
-    "Preço sem oferta": "299.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "2199",
+    "Preço sem oferta": "2999",
+    "Teor alcoólico": "40"
 }

@@ -5,11 +5,11 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "793",
     "Marcadores": [
-        "País de Origem: Escócia.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky The John Walker 750 ml",
-    "Preço com oferta": "19999.9",
-    "Preço sem oferta": "23999.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "199999",
+    "Preço sem oferta": "239999",
+    "Teor alcoólico": "40"
 }

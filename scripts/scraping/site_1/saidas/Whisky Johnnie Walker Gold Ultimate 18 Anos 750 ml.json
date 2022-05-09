@@ -5,12 +5,13 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "5000267165806",
     "Marcadores": [
-        "Importado da Escócia.",
         "Categoria: Super Deluxe (18 anos).",
         "Graduação: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Johnnie Walker Gold Ultimate 18 Anos 750 ml",
-    "Preço com oferta": "499.9",
-    "Preço sem oferta": "659.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "4999",
+    "Preço sem oferta": "6599",
+    "Teor alcoólico": "0"
 }

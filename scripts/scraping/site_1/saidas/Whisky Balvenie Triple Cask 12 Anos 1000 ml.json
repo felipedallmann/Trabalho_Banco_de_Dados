@@ -5,13 +5,13 @@
     "Fabricante": "Balvenie",
     "Id do produto": "715",
     "Marcadores": [
-        "Importado da Escócia.",
         "Categoria: Single Malt.",
         "Trilpe Cask: Sherry, Bourbon e Tradicional.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 700 ml + 300 ml Bônus = 1000 ml."
     ],
     "Nome": "Whisky Balvenie Triple Cask 12 Anos 1000 ml",
-    "Preço com oferta": "799.9",
-    "Preço sem oferta": "899.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "7999",
+    "Preço sem oferta": "8999",
+    "Teor alcoólico": "40"
 }

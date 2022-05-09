@@ -5,11 +5,11 @@
     "Fabricante": "Macallan",
     "Id do produto": "1073",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação Alcoólica: 43% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Macallan 21 anos - Fine Oak - Triple Cask Matured 700 ml",
-    "Preço com oferta": "6499.9",
-    "Preço sem oferta": "6999.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "64999",
+    "Preço sem oferta": "69999",
+    "Teor alcoólico": "43"
 }

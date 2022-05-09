@@ -5,9 +5,7 @@
     "Fabricante": "William Peel",
     "Id do produto": "979",
     "Marcadores": [
-        "Importado da Escócia.",
         "Speyside Single Malt.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 700 ml.",
         "Totalmente amadurecido.",
         "Qualidade garantida.",
@@ -15,6 +13,8 @@
         "Sob a supervisão do governo britânico."
     ],
     "Nome": "Whisky William Peel 12 anos Old Rare 700 ml - Single Malt",
-    "Preço com oferta": "199.9",
-    "Preço sem oferta": "199.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1999",
+    "Preço sem oferta": "1999",
+    "Teor alcoólico": "40"
 }

@@ -5,12 +5,13 @@
     "Fabricante": "Jura",
     "Id do produto": "560",
     "Marcadores": [
-        "País de Origem: Escócia.",
         "Single malt.",
         "Graduação: 44% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Jura 21 anos 700 ml",
-    "Preço com oferta": "899.9",
-    "Preço sem oferta": "1199.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "8999",
+    "Preço sem oferta": "11999",
+    "Teor alcoólico": "0"
 }

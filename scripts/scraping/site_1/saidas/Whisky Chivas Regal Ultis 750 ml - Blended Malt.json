@@ -5,12 +5,12 @@
     "Fabricante": "Chivas",
     "Id do produto": "1096",
     "Marcadores": [
-        "Importado da Escócia.",
         "Blended de Malt Scotch Whisky.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Chivas Regal Ultis 750 ml - Blended Malt",
-    "Preço com oferta": "1299.9",
-    "Preço sem oferta": "1599.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "12999",
+    "Preço sem oferta": "15999",
+    "Teor alcoólico": "40"
 }

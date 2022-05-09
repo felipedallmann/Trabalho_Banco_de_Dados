@@ -5,11 +5,11 @@
     "Fabricante": "Grant's",
     "Id do produto": "1772",
     "Marcadores": [
-        "Origem: Escócia",
-        "Teor Alcoólico: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Grant's 750 ml + Copo",
-    "Preço com oferta": "79.9",
-    "Preço sem oferta": "99.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "799",
+    "Preço sem oferta": "999",
+    "Teor alcoólico": "40"
 }

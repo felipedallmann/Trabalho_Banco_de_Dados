@@ -5,11 +5,11 @@
     "Fabricante": "Macallan",
     "Id do produto": "975",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Macallan Select Oak 1000 ml",
-    "Preço com oferta": "699.9",
-    "Preço sem oferta": "899.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "6999",
+    "Preço sem oferta": "8999",
+    "Teor alcoólico": "40"
 }

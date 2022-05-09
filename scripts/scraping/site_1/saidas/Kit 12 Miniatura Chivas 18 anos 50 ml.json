@@ -5,12 +5,12 @@
     "Fabricante": "Chivas",
     "Id do produto": "1149",
     "Marcadores": [
-        "Importado da Escócia.",
         "Kit com 12 unidades de 50 ml cada.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 50 ml por unidade."
     ],
     "Nome": "Kit 12 Miniatura Chivas 18 anos 50 ml",
-    "Preço com oferta": "429.9",
-    "Preço sem oferta": "478.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "4299",
+    "Preço sem oferta": "4789",
+    "Teor alcoólico": "40"
 }

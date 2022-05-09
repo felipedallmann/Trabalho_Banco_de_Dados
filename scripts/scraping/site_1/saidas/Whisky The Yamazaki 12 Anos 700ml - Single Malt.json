@@ -5,14 +5,14 @@
     "Fabricante": "Suntory",
     "Id do produto": "2855",
     "Marcadores": [
-        "Origem: Japão.",
         "Tipo: Single Malt.",
-        "Graduação alcoólica: 43%.",
         "Volume: 700ml.",
         "Aroma predominantemente de nozes e banana, com um leve toque cítrico.",
         "Sabor frutado e doce, com nozes e frutas. Há também um forte sabor de baunilha, que fica ainda mais claro com o gosto residual."
     ],
     "Nome": "Whisky The Yamazaki 12 Anos 700ml - Single Malt",
-    "Preço com oferta": "1367.9",
-    "Preço sem oferta": "1499.9"
+    "Origem": "Japão",
+    "Preço com oferta": "13679",
+    "Preço sem oferta": "14999",
+    "Teor alcoólico": "43"
 }

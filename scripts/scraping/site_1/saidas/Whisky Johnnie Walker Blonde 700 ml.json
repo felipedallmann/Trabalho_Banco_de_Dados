@@ -5,11 +5,11 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "2390",
     "Marcadores": [
-        "Volume: 700 ml.",
-        "Graduação alcoólica: 40% vol.",
-        "País de origem: Escócia."
+        "Volume: 700 ml."
     ],
     "Nome": "Whisky Johnnie Walker Blonde 700 ml",
-    "Preço com oferta": "99.9",
-    "Preço sem oferta": "99.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "999",
+    "Preço sem oferta": "999",
+    "Teor alcoólico": "40"
 }

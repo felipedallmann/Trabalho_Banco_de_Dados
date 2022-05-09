@@ -6,12 +6,12 @@
     "Id do produto": "5013967012462",
     "Marcadores": [
         "Volume: 700 ml.",
-        "Graduação alcoólica: 40% vol.",
-        "País de origem: Escócia.",
         "Nota olfativa: O nariz abre com pêssego claro e um toque de fumaça.",
         "Nota gustativa: No paladar é equilibrado com uma grande profundidade de sabor, notas de alcaçuz e laranja cristalizada emergem antes que uma fumaça sutil desça no final."
     ],
     "Nome": "Whisky Jura Journey 700 ml",
-    "Preço com oferta": "279.9",
-    "Preço sem oferta": "329.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "2799",
+    "Preço sem oferta": "3299",
+    "Teor alcoólico": "40"
 }

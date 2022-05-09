@@ -5,9 +5,7 @@
     "Fabricante": "Tomatin",
     "Id do produto": "964",
     "Marcadores": [
-        "Importado da Escócia.",
         "Highland Single Malt.",
-        "Graduação alcoólica: 43% vol.",
         "Volume: 700 ml.",
         "GOLD 2017 San Francisco WSC",
         "DOUBLE GOLD 2016 San Francisco WSC",
@@ -20,6 +18,8 @@
         "Jim Murray's Whisky Bible 2017 91.5/100"
     ],
     "Nome": "Whisky Tomatin 12 anos 700 ml - Single Malt",
-    "Preço com oferta": "249.9",
-    "Preço sem oferta": "349.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "2499",
+    "Preço sem oferta": "3499",
+    "Teor alcoólico": "43"
 }

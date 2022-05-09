@@ -5,7 +5,6 @@
     "Fabricante": "Glenmorangie",
     "Id do produto": "706",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single malt.",
         "Graduação: 43% vol.",
         "Volume: 750 ml.",
@@ -18,6 +17,8 @@
         "Conclusão: Suave e delicado, mas rico e complexo em sabores e aromas. Um grande Single Malt."
     ],
     "Nome": "Whisky Glenmorangie 10 anos + Miniatura do Nectar Dor 12 anos",
-    "Preço com oferta": "429.9",
-    "Preço sem oferta": "499.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "4299",
+    "Preço sem oferta": "4999",
+    "Teor alcoólico": "0"
 }

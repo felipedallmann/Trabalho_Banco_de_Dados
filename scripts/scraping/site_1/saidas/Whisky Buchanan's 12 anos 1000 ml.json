@@ -5,10 +5,11 @@
     "Fabricante": "Buchanan's",
     "Id do produto": "50196364",
     "Marcadores": [
-        "Graduação alcoólica: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Buchanan's 12 anos 1000 ml",
-    "Preço com oferta": "219.9",
-    "Preço sem oferta": "249.9"
+    "Origem": "",
+    "Preço com oferta": "2199",
+    "Preço sem oferta": "2499",
+    "Teor alcoólico": "40"
 }

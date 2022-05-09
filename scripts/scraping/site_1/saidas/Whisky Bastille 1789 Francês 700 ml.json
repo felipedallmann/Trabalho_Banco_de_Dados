@@ -5,11 +5,11 @@
     "Fabricante": "Bastille",
     "Id do produto": "995",
     "Marcadores": [
-        "Importado da França.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Bastille 1789 Francês 700 ml",
-    "Preço com oferta": "249.9",
-    "Preço sem oferta": "249.9"
+    "Origem": "França",
+    "Preço com oferta": "2499",
+    "Preço sem oferta": "2499",
+    "Teor alcoólico": "40"
 }

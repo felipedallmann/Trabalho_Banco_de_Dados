@@ -5,12 +5,12 @@
     "Fabricante": "Dewars",
     "Id do produto": "559",
     "Marcadores": [
-        "Origem: Escócia.",
         "Categoria: Mínimo de 25 anos.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Dewars Signature 750 ml",
-    "Preço com oferta": "999.9",
-    "Preço sem oferta": "1699.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "9999",
+    "Preço sem oferta": "16999",
+    "Teor alcoólico": "40"
 }

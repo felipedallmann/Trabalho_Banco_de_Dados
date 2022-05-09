@@ -5,11 +5,11 @@
     "Fabricante": "Whyte Mackay",
     "Id do produto": "566",
     "Marcadores": [
-        "Origem: Escócia.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Whyte & Mackay 13 anos 1000 ml",
-    "Preço com oferta": "199.9",
-    "Preço sem oferta": "249.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1999",
+    "Preço sem oferta": "2499",
+    "Teor alcoólico": "40"
 }

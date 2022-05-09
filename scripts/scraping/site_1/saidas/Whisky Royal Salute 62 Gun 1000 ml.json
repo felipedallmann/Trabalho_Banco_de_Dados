@@ -6,13 +6,14 @@
     "Id do produto": "922",
     "Marcadores": [
         "Envelhecimento: Minimo de 40 anos.",
-        "Graduação Alcoólica: 43% vol.",
         "Volume: 1000 ml.",
         "Origem: Escócia",
         "Destilaria: Strathisla Destillery.",
         "Produtor: Chivas Brothers Ltd."
     ],
     "Nome": "Whisky Royal Salute 62 Gun 1000 ml",
-    "Preço com oferta": "19999.9",
-    "Preço sem oferta": "19999.9"
+    "Origem": "",
+    "Preço com oferta": "199999",
+    "Preço sem oferta": "199999",
+    "Teor alcoólico": "43"
 }

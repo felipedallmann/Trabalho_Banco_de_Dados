@@ -5,12 +5,13 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "5000267107776",
     "Marcadores": [
-        "Origem: Escócia",
         "Categoria: Super Deluxe (15 anos).",
         "Graduação: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Johnnie Walker Gold 200 anos Limited Edition 750 ml",
-    "Preço com oferta": "249.9",
-    "Preço sem oferta": "349.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "2499",
+    "Preço sem oferta": "3499",
+    "Teor alcoólico": "0"
 }

@@ -5,12 +5,12 @@
     "Fabricante": "Macallan",
     "Id do produto": "1094",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single Malt.",
-        "Graduação Alcoólica: 41,3% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Macallan Lumina 700 ml",
-    "Preço com oferta": "799.9",
-    "Preço sem oferta": "999.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "7999",
+    "Preço sem oferta": "9999",
+    "Teor alcoólico": "41.3"
 }

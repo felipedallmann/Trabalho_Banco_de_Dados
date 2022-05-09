@@ -5,10 +5,11 @@
     "Fabricante": "Ballantine's",
     "Id do produto": "5010106110164",
     "Marcadores": [
-        "Teor alcoólico 40% vol.",
         "Volume: 750 ml (vidro)."
     ],
     "Nome": "Whisky Ballantine's 17 anos 750 ml",
-    "Preço com oferta": "299.9",
-    "Preço sem oferta": "319.9"
+    "Origem": "",
+    "Preço com oferta": "2999",
+    "Preço sem oferta": "3199",
+    "Teor alcoólico": "40"
 }

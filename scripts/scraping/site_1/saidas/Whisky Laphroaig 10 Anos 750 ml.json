@@ -5,11 +5,11 @@
     "Fabricante": "Laphroaig",
     "Id do produto": "5010019640253",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação Alcoólica: 43% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Laphroaig 10 Anos 750 ml",
-    "Preço com oferta": "419.9",
-    "Preço sem oferta": "549.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "4199",
+    "Preço sem oferta": "5499",
+    "Teor alcoólico": "43"
 }

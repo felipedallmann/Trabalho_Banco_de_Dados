@@ -5,12 +5,12 @@
     "Fabricante": "Chivas",
     "Id do produto": "822",
     "Marcadores": [
-        "Importado da Escócia.",
         "Kit com 12 unidades de 50 ml cada.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 50 ml por unidade."
     ],
     "Nome": "Kit 12 Miniatura Chivas Regal 12 anos 50 ml",
-    "Preço com oferta": "143.9",
-    "Preço sem oferta": "299.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1439",
+    "Preço sem oferta": "2999",
+    "Teor alcoólico": "40"
 }

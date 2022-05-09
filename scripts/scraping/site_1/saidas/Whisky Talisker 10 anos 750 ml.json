@@ -5,12 +5,12 @@
     "Fabricante": "Talisker",
     "Id do produto": "872",
     "Marcadores": [
-        "País de Origem: Escócia.",
         "Single Malt Scotch Whisky.",
-        "Graduação alcoólica: 45,8% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Talisker 10 anos 750 ml",
-    "Preço com oferta": "399.9",
-    "Preço sem oferta": "449.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "3999",
+    "Preço sem oferta": "4499",
+    "Teor alcoólico": "45.8"
 }

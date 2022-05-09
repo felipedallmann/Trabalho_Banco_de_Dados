@@ -5,11 +5,12 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "2120",
     "Marcadores": [
-        "Importado da Escócia.",
         "Graduação: 51% vol.",
         "Volume: 750 ml"
     ],
     "Nome": "Whisky Johnnie Walker OLD HIGHLAND 750 ml",
-    "Preço com oferta": "469.9",
-    "Preço sem oferta": "499.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "4699",
+    "Preço sem oferta": "4999",
+    "Teor alcoólico": "0"
 }

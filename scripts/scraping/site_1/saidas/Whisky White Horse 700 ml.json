@@ -5,11 +5,11 @@
     "Fabricante": "White Horse",
     "Id do produto": "5000265101943",
     "Marcadores": [
-        "Origem: Escócia.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky White Horse 700 ml",
-    "Preço com oferta": "51.9",
-    "Preço sem oferta": "69.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "519",
+    "Preço sem oferta": "699",
+    "Teor alcoólico": "40"
 }

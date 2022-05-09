@@ -5,13 +5,14 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "321",
     "Marcadores": [
-        "Origem: Escócia.",
         "Categoria: Super Deluxe (18 anos).",
         "Graduação: 40% vol.",
         "Volume: 200 ml.",
         "É proibida a venda de bebidas para menores de 18 anos."
     ],
     "Nome": "Whisky Johnnie Walker Gold Label 200 ml",
-    "Preço com oferta": "149.9",
-    "Preço sem oferta": "149.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1499",
+    "Preço sem oferta": "1499",
+    "Teor alcoólico": "0"
 }

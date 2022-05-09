@@ -5,11 +5,11 @@
     "Fabricante": "White Horse",
     "Id do produto": "5000265001335",
     "Marcadores": [
-        "Origem: Escócia.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky White Horse 1000 ml",
-    "Preço com oferta": "79.9",
-    "Preço sem oferta": "99.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "799",
+    "Preço sem oferta": "999",
+    "Teor alcoólico": "40"
 }

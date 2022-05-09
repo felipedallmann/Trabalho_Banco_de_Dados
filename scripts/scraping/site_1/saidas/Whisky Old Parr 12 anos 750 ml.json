@@ -5,12 +5,12 @@
     "Fabricante": "Old Parr",
     "Id do produto": "5000281003160",
     "Marcadores": [
-        "Importado da Escócia",
         "Categoria: Deluxe 12 anos.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Old Parr 12 anos 750 ml",
-    "Preço com oferta": "119.9",
-    "Preço sem oferta": "149.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1199",
+    "Preço sem oferta": "1499",
+    "Teor alcoólico": "40"
 }

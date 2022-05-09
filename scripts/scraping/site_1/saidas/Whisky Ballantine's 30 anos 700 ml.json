@@ -5,11 +5,11 @@
     "Fabricante": "Ballantine's",
     "Id do produto": "41",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Teor alcoólico 40% vol.",
         "Volume: 750 ml (vidro)."
     ],
     "Nome": "Whisky Ballantine's 30 anos 700 ml",
-    "Preço com oferta": "1999.9",
-    "Preço sem oferta": "2499.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "19999",
+    "Preço sem oferta": "24999",
+    "Teor alcoólico": "40"
 }

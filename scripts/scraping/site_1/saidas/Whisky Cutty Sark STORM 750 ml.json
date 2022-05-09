@@ -5,12 +5,12 @@
     "Fabricante": "Cutty Sark",
     "Id do produto": "892",
     "Marcadores": [
-        "Importado da Escócia.",
         "Blended Scotch Whisky.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Cutty Sark STORM 750 ml",
-    "Preço com oferta": "119.9",
-    "Preço sem oferta": "119.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1199",
+    "Preço sem oferta": "1199",
+    "Teor alcoólico": "40"
 }

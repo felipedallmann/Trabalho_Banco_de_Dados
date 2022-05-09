@@ -5,12 +5,12 @@
     "Fabricante": "Tamnavulin",
     "Id do produto": "5013967011557",
     "Marcadores": [
-        "Importado da Escócia.",
         "Speyside Single Malt.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Tamnavulin Double Cask 700 ml - Single Malt",
-    "Preço com oferta": "209.9",
-    "Preço sem oferta": "299.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "2099",
+    "Preço sem oferta": "2999",
+    "Teor alcoólico": "40"
 }

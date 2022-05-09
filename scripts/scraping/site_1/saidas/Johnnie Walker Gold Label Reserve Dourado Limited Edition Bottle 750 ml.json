@@ -5,13 +5,14 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "753",
     "Marcadores": [
-        "Origem: Escócia",
         "Categoria: Super Deluxe (15 anos).",
         "Graduação: 40% vol.",
         "Volume: 750 ml.",
         "É proibida a venda de bebidas para menores de 18 anos."
     ],
     "Nome": "Johnnie Walker Gold Label Reserve Dourado Limited Edition Bottle 750 ml",
-    "Preço com oferta": "299.9",
-    "Preço sem oferta": "349.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "2999",
+    "Preço sem oferta": "3499",
+    "Teor alcoólico": "0"
 }

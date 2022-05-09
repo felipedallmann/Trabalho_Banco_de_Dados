@@ -5,12 +5,13 @@
     "Fabricante": "Buchanan's",
     "Id do produto": "554",
     "Marcadores": [
-        "Origem: Escócia",
         "Categoria: Super Deluxe.",
         "Graduação: 40% vol.",
         "Volume: 750ml"
     ],
     "Nome": "Whisky Buchanan's Red Seal 750 ml",
-    "Preço com oferta": "1199.9",
-    "Preço sem oferta": "1799.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "11999",
+    "Preço sem oferta": "17999",
+    "Teor alcoólico": "0"
 }

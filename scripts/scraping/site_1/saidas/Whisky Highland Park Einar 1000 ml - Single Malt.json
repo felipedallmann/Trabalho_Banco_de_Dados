@@ -5,12 +5,12 @@
     "Fabricante": "Highland Park",
     "Id do produto": "1102",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single Malt.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Highland Park Einar 1000 ml - Single Malt",
-    "Preço com oferta": "499.9",
-    "Preço sem oferta": "499.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "4999",
+    "Preço sem oferta": "4999",
+    "Teor alcoólico": "40"
 }

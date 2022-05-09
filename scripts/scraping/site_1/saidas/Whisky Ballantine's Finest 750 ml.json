@@ -5,10 +5,11 @@
     "Fabricante": "Ballantine's",
     "Id do produto": "5010106111451",
     "Marcadores": [
-        "Teor alcoólico 40% vol.",
         "Volume: 1000 ml (vidro)."
     ],
     "Nome": "Whisky Ballantine's Finest 750 ml",
-    "Preço com oferta": "73.5",
-    "Preço sem oferta": "89.9"
+    "Origem": "",
+    "Preço com oferta": "735",
+    "Preço sem oferta": "899",
+    "Teor alcoólico": "40"
 }

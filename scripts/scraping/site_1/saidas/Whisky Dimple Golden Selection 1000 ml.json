@@ -5,12 +5,12 @@
     "Fabricante": "Dimple",
     "Id do produto": "5000281039428",
     "Marcadores": [
-        "Importado da Escócia.",
         "Categoria: Super Deluxe (15 anos).",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Dimple Golden Selection 1000 ml",
-    "Preço com oferta": "449.9",
-    "Preço sem oferta": "549.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "4499",
+    "Preço sem oferta": "5499",
+    "Teor alcoólico": "40"
 }

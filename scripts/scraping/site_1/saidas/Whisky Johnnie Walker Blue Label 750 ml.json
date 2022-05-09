@@ -5,11 +5,12 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "5000267114279",
     "Marcadores": [
-        "Origem: Escócia.",
         "Graduação: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Johnnie Walker Blue Label 750 ml",
-    "Preço com oferta": "1199.9",
-    "Preço sem oferta": "1199.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "11999",
+    "Preço sem oferta": "11999",
+    "Teor alcoólico": "0"
 }

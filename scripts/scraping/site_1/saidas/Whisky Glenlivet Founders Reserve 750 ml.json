@@ -5,12 +5,12 @@
     "Fabricante": "Glenlivet",
     "Id do produto": "1138",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single Malt.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Glenlivet Founders Reserve 750 ml",
-    "Preço com oferta": "199.9",
-    "Preço sem oferta": "269.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1999",
+    "Preço sem oferta": "2699",
+    "Teor alcoólico": "40"
 }

@@ -5,9 +5,7 @@
     "Fabricante": "Glenlivet",
     "Id do produto": "1312",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single Malt.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 1000 ml.",
         "Cor: Âmbar",
         "Olfato: pomar de frutas e notas suaves de creme e caramelo.",
@@ -15,6 +13,8 @@
         "Final equilibrado e complexo."
     ],
     "Nome": "Whisky Glenlivet Master Distillers Reserve Solera Vatted 1000 ml",
-    "Preço com oferta": "499.9",
-    "Preço sem oferta": "699.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "4999",
+    "Preço sem oferta": "6999",
+    "Teor alcoólico": "40"
 }

@@ -5,11 +5,11 @@
     "Fabricante": "Cutty Sark",
     "Id do produto": "653",
     "Marcadores": [
-        "Importado da Escócia",
-        "Graduação Alcoólica: 40% Vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Cutty Sark 12 anos 1000 ml",
-    "Preço com oferta": "179.9",
-    "Preço sem oferta": "249.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1799",
+    "Preço sem oferta": "2499",
+    "Teor alcoólico": "40"
 }

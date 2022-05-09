@@ -5,12 +5,13 @@
     "Fabricante": "Glenfiddich",
     "Id do produto": "5010327045214",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single malt.",
         "Graduação: 43% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Glenfiddich Excellence 26 anos 700 ml",
-    "Preço com oferta": "4999.9",
-    "Preço sem oferta": "6999.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "49999",
+    "Preço sem oferta": "69999",
+    "Teor alcoólico": "0"
 }

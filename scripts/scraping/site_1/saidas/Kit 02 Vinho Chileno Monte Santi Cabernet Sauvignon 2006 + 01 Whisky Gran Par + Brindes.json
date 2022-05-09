@@ -8,16 +8,16 @@
         "Tipo: Tinto Seco.",
         "Uva: Cabernet Sauvignon.",
         "Safra: 2006.",
-        "País de Origem: Chile.",
         "Varietal Selection.",
         "Graduação Alcóolica: 13 % Vol.",
         "Volume: 750 ml.",
         "Prazo de Validade: Indeterminado.",
         "Harmonização: Carnes vermelhas, massas e queijos.",
-        "Teor alcoólico: 40%",
         "Volume - 1000 ml (Vidro)"
     ],
     "Nome": "Kit 02 Vinho Chileno Monte Santi Cabernet Sauvignon 2006 + 01 Whisky Gran Par + Brindes",
-    "Preço com oferta": "69.9",
-    "Preço sem oferta": "120"
+    "Origem": "Chile",
+    "Preço com oferta": "699",
+    "Preço sem oferta": "120",
+    "Teor alcoólico": "40"
 }

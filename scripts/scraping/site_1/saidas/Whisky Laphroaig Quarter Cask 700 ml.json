@@ -5,11 +5,11 @@
     "Fabricante": "Laphroaig",
     "Id do produto": "751",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação Alcoólica: 48% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Laphroaig Quarter Cask 700 ml",
-    "Preço com oferta": "499.9",
-    "Preço sem oferta": "499.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "4999",
+    "Preço sem oferta": "4999",
+    "Teor alcoólico": "48"
 }

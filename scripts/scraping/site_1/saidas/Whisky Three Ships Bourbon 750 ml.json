@@ -5,12 +5,12 @@
     "Fabricante": "Three Ships",
     "Id do produto": "651",
     "Marcadores": [
-        "Importado da África do Sul.",
         "Bourbon Premium.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Three Ships Bourbon 750 ml",
-    "Preço com oferta": "249.9",
-    "Preço sem oferta": "269.9"
+    "Origem": "África do Sul",
+    "Preço com oferta": "2499",
+    "Preço sem oferta": "2699",
+    "Teor alcoólico": "40"
 }

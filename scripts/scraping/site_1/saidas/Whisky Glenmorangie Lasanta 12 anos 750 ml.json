@@ -5,12 +5,12 @@
     "Fabricante": "Glenmorangie",
     "Id do produto": "709",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single Malt.",
-        "Graduação Alcoólica: 43% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Glenmorangie Lasanta 12 anos 750 ml",
-    "Preço com oferta": "519.9",
-    "Preço sem oferta": "610.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "5199",
+    "Preço sem oferta": "6109",
+    "Teor alcoólico": "43"
 }

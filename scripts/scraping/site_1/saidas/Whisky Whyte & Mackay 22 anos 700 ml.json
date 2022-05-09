@@ -5,11 +5,12 @@
     "Fabricante": "Whyte Mackay",
     "Id do produto": "568",
     "Marcadores": [
-        "Origem: Escócia.",
         "Graduação Alcólica: 43% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Whyte & Mackay 22 anos 700 ml",
-    "Preço com oferta": "599.9",
-    "Preço sem oferta": "599.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "5999",
+    "Preço sem oferta": "5999",
+    "Teor alcoólico": "0"
 }

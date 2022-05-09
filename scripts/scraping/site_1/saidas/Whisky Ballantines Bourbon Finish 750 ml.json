@@ -6,13 +6,13 @@
     "Id do produto": "5000299628096",
     "Marcadores": [
         "Volume: 750 ml.",
-        "Graduação alcoólica: 40% vol.",
-        "País de origem: Escócia.",
         "Nota gustativa: Maçãs Vermelhas com pêras maduras e caramelo cremoso.",
         "Nota olfativa: Maçãs caramelizadas doces e macias misturadas com mel e baunilha finalizadas com suaves notas florais.",
         "Nota visual: Ouro profundo."
     ],
     "Nome": "Whisky Ballantines Bourbon Finish 750 ml",
-    "Preço com oferta": "69.9",
-    "Preço sem oferta": "99.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "699",
+    "Preço sem oferta": "999",
+    "Teor alcoólico": "40"
 }

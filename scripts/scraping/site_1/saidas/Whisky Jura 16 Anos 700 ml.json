@@ -5,12 +5,13 @@
     "Fabricante": "Jura",
     "Id do produto": "552",
     "Marcadores": [
-        "País de Origem: Escócia.",
         "Single malt.",
         "Graduação: 40% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Jura 16 Anos 700 ml",
-    "Preço com oferta": "349.9",
-    "Preço sem oferta": "349.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "3499",
+    "Preço sem oferta": "3499",
+    "Teor alcoólico": "0"
 }

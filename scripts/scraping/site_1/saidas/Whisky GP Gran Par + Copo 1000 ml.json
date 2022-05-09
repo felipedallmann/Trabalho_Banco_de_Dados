@@ -5,10 +5,11 @@
     "Fabricante": "Gran Par",
     "Id do produto": "80",
     "Marcadores": [
-        "Teor alcoólico: 40%",
         "Volume - 1000 ml (Vidro)"
     ],
     "Nome": "Whisky GP Gran Par + Copo 1000 ml",
-    "Preço com oferta": "29.9",
-    "Preço sem oferta": "44.9"
+    "Origem": "",
+    "Preço com oferta": "299",
+    "Preço sem oferta": "449",
+    "Teor alcoólico": "40"
 }

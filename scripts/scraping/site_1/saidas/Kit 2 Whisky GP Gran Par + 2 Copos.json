@@ -5,10 +5,11 @@
     "Fabricante": "Gran Par",
     "Id do produto": "233",
     "Marcadores": [
-        "Teor alcoólico: 40%",
         "Volume - 1000 ml (Vidro)"
     ],
     "Nome": "Kit 2 Whisky GP Gran Par + 2 Copos",
-    "Preço com oferta": "59.9",
-    "Preço sem oferta": "89.9"
+    "Origem": "",
+    "Preço com oferta": "599",
+    "Preço sem oferta": "899",
+    "Teor alcoólico": "40"
 }

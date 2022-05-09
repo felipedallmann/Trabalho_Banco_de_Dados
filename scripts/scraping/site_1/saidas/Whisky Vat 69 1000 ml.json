@@ -5,11 +5,11 @@
     "Fabricante": "Vat 69",
     "Id do produto": "774",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Teor alcoólico 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Vat 69 1000 ml",
-    "Preço com oferta": "69.9",
-    "Preço sem oferta": "79.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "699",
+    "Preço sem oferta": "799",
+    "Teor alcoólico": "40"
 }

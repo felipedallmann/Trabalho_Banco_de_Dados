@@ -6,7 +6,6 @@
     "Id do produto": "859141004091",
     "Marcadores": [
         "Volume: 750 ml.",
-        "Graduação alcoólica: 40% vol.",
         "Tipo: Single Malt (NAS).",
         "Destilaria: Auchentoshan.",
         "Região: Lowlands.",
@@ -14,6 +13,8 @@
         "Sabor: Caramelo, mel, baunilha. Pouco oleoso, com um fundo vegetal bem interessante. Final médio, com canela, pimenta do reino e mais baunilha."
     ],
     "Nome": "Whisky Auchentoshan American Oak 750ml",
-    "Preço com oferta": "319.9",
-    "Preço sem oferta": "319.9"
+    "Origem": "",
+    "Preço com oferta": "3199",
+    "Preço sem oferta": "3199",
+    "Teor alcoólico": "40"
 }

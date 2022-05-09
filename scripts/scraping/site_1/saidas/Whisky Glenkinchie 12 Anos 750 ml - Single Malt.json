@@ -5,12 +5,12 @@
     "Fabricante": "Glenkinchie",
     "Id do produto": "873",
     "Marcadores": [
-        "País de Origem: Escócia.",
         "Single Malt Scotch Whisky.",
-        "Graduação alcoólica: 43% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Glenkinchie 12 Anos 750 ml - Single Malt",
-    "Preço com oferta": "369.9",
-    "Preço sem oferta": "399.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "3699",
+    "Preço sem oferta": "3999",
+    "Teor alcoólico": "43"
 }

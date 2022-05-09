@@ -12,10 +12,11 @@
         "Colocado dentro do barril e engarrafado a 50% de teor alcoólico numa forma que todo o rico sabor encontra seu caminho para o seu copo.",
         "O resultado é um delicioso e complexo whiskey.",
         "Importado dos EUA.",
-        "Graduação alcoólica: 50% vol.",
         "Volume: 1000 ml (vidro)."
     ],
     "Nome": "Whisky Jack Daniels 150 anos 1000 ml",
-    "Preço com oferta": "899.9",
-    "Preço sem oferta": "999.9"
+    "Origem": "",
+    "Preço com oferta": "8999",
+    "Preço sem oferta": "9999",
+    "Teor alcoólico": "50"
 }

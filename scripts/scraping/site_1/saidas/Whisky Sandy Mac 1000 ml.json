@@ -5,11 +5,11 @@
     "Fabricante": "Sandy Mac",
     "Id do produto": "585",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Sandy Mac 1000 ml",
-    "Preço com oferta": "99.9",
-    "Preço sem oferta": "119.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "999",
+    "Preço sem oferta": "1199",
+    "Teor alcoólico": "40"
 }

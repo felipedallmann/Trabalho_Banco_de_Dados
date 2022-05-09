@@ -5,12 +5,13 @@
     "Fabricante": "Dalmore",
     "Id do produto": "550",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single malt.",
         "Graduação: 43% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Dalmore 18 Anos 700 ml",
-    "Preço com oferta": "1899.9",
-    "Preço sem oferta": "1999.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "18999",
+    "Preço sem oferta": "19999",
+    "Teor alcoólico": "0"
 }

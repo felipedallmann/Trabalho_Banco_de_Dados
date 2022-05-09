@@ -5,12 +5,12 @@
     "Fabricante": "Aberfeldy",
     "Id do produto": "80480006167",
     "Marcadores": [
-        "Importado da Escócia.",
         "Highland Single Malt.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Aberfeldy 16 anos 750 ml - Single Malt",
-    "Preço com oferta": "419.9",
-    "Preço sem oferta": "499.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "4199",
+    "Preço sem oferta": "4999",
+    "Teor alcoólico": "40"
 }

@@ -5,12 +5,12 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "899",
     "Marcadores": [
-        "Importado da Escócia.",
         "Categoria: Deluxe (12 anos)",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 3000 ml."
     ],
     "Nome": "Whisky Johnnie Walker Black Label 3 Litros",
-    "Preço com oferta": "799.9",
-    "Preço sem oferta": "799.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "7999",
+    "Preço sem oferta": "7999",
+    "Teor alcoólico": "40"
 }

@@ -5,12 +5,12 @@
     "Fabricante": "Highland Park",
     "Id do produto": "1101",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single Malt.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Highland Park Harald 700 ml - Single Malt",
-    "Preço com oferta": "699.9",
-    "Preço sem oferta": "899.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "6999",
+    "Preço sem oferta": "8999",
+    "Teor alcoólico": "40"
 }

@@ -5,11 +5,12 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "116",
     "Marcadores": [
-        "Origem: Escócia.",
         "Graduação: 40% vol.",
         "Volume: 200 ml."
     ],
     "Nome": "Johnnie Walker Blue Label 200ml",
-    "Preço com oferta": "299.9",
-    "Preço sem oferta": "349.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "2999",
+    "Preço sem oferta": "3499",
+    "Teor alcoólico": "0"
 }

@@ -9,10 +9,11 @@
         "Marca - Code Nine.",
         "Tipo - Single Malt Whisky.",
         "Idade - NAS (sem declaração de idade).",
-        "Graduação alcoólica - 43% vol.",
         "Volume: 750ml."
     ],
     "Nome": "Whisky Code Nine Single Malt 750 ml",
-    "Preço com oferta": "149.9",
-    "Preço sem oferta": "149.9"
+    "Origem": "",
+    "Preço com oferta": "1499",
+    "Preço sem oferta": "1499",
+    "Teor alcoólico": "43"
 }

@@ -5,12 +5,12 @@
     "Fabricante": "Aberfeldy",
     "Id do produto": "969",
     "Marcadores": [
-        "Importado da Escócia.",
         "Highland Single Malt.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Aberfeldy 18 anos 1000 ml - Single Malt",
-    "Preço com oferta": "599.9",
-    "Preço sem oferta": "999.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "5999",
+    "Preço sem oferta": "9999",
+    "Teor alcoólico": "40"
 }

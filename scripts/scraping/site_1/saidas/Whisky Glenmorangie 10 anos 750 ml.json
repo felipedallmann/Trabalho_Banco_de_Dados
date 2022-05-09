@@ -5,7 +5,6 @@
     "Fabricante": "Glenmorangie",
     "Id do produto": "15010494560555",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single malt.",
         "Graduação: 43% vol.",
         "Volume: 750 ml.",
@@ -18,6 +17,8 @@
         "Conclusão: Suave e delicado, mas rico e complexo em sabores e aromas. Um grande Single Malt."
     ],
     "Nome": "Whisky Glenmorangie 10 anos 750 ml",
-    "Preço com oferta": "399.9",
-    "Preço sem oferta": "549.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "3999",
+    "Preço sem oferta": "5499",
+    "Teor alcoólico": "0"
 }

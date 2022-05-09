@@ -5,11 +5,11 @@
     "Fabricante": "Dewars",
     "Id do produto": "8141013878",
     "Marcadores": [
-        "Origem: Escócia.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Dewars White Label 750 ml",
-    "Preço com oferta": "73.5",
-    "Preço sem oferta": "99.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "735",
+    "Preço sem oferta": "999",
+    "Teor alcoólico": "40"
 }

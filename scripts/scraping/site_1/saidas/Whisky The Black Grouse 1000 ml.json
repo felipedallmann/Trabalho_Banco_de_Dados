@@ -5,12 +5,13 @@
     "Fabricante": "The Famous Grouse",
     "Id do produto": "282",
     "Marcadores": [
-        "Importado da Escócia.",
         "Blended Standard Scotch",
         "Graduação: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky The Black Grouse 1000 ml",
-    "Preço com oferta": "99.9",
-    "Preço sem oferta": "149.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "999",
+    "Preço sem oferta": "1499",
+    "Teor alcoólico": "0"
 }

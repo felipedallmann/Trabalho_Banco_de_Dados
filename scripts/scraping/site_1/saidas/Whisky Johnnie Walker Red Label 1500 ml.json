@@ -5,11 +5,11 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "754",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 1500 ml."
     ],
     "Nome": "Whisky Johnnie Walker Red Label 1500 ml",
-    "Preço com oferta": "169.9",
-    "Preço sem oferta": "169.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1699",
+    "Preço sem oferta": "1699",
+    "Teor alcoólico": "40"
 }

@@ -5,11 +5,11 @@
     "Fabricante": "White Horse",
     "Id do produto": "28",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação alcoólica 40% vol.",
         "Volume - 1000 ml (vidro)."
     ],
     "Nome": "Whisky Logan 12 anos 1000 ml",
-    "Preço com oferta": "199.9",
-    "Preço sem oferta": "199.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1999",
+    "Preço sem oferta": "1999",
+    "Teor alcoólico": "40"
 }

@@ -5,12 +5,13 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "816",
     "Marcadores": [
-        "Origem: Escócia",
         "Categoria: Super Deluxe (15 anos).",
         "Graduação: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Johnnie Walker Gold Label Reserve Celebration Case 750 ml",
-    "Preço com oferta": "369.9",
-    "Preço sem oferta": "399.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "3699",
+    "Preço sem oferta": "3999",
+    "Teor alcoólico": "0"
 }

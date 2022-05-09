@@ -5,11 +5,11 @@
     "Fabricante": "Jim Beam",
     "Id do produto": "2110",
     "Marcadores": [
-        "Volume: 700 ml.",
-        "Graduação alcoólica: 40% vol.",
-        "Origem: Estados Unidos."
+        "Volume: 700 ml."
     ],
     "Nome": "Whiskey Jim Beam Rye 700 ml",
-    "Preço com oferta": "144.9",
-    "Preço sem oferta": "179.9"
+    "Origem": "Estados Unidos",
+    "Preço com oferta": "1449",
+    "Preço sem oferta": "1799",
+    "Teor alcoólico": "40"
 }

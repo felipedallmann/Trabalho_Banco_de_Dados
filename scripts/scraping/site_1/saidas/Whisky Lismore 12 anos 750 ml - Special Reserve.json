@@ -5,11 +5,11 @@
     "Fabricante": "Lismore",
     "Id do produto": "998",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Lismore 12 anos 750 ml - Special Reserve",
-    "Preço com oferta": "169.9",
-    "Preço sem oferta": "199.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1699",
+    "Preço sem oferta": "1999",
+    "Teor alcoólico": "40"
 }

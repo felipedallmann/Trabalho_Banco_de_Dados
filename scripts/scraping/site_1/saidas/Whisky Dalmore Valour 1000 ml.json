@@ -5,12 +5,13 @@
     "Fabricante": "Dalmore",
     "Id do produto": "852",
     "Marcadores": [
-        "Importado da Escócia.",
         "Single malt.",
         "Graduação: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Dalmore Valour 1000 ml",
-    "Preço com oferta": "499.9",
-    "Preço sem oferta": "799.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "4999",
+    "Preço sem oferta": "7999",
+    "Teor alcoólico": "0"
 }

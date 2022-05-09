@@ -5,12 +5,12 @@
     "Fabricante": "Dewars",
     "Id do produto": "1222",
     "Marcadores": [
-        "Origem: Escócia.",
         "Categoria: 30 anos.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Dewars 30 anos 700 ml",
-    "Preço com oferta": "2799.9",
-    "Preço sem oferta": "2999.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "27999",
+    "Preço sem oferta": "29999",
+    "Teor alcoólico": "40"
 }

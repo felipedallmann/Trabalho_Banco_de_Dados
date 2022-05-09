@@ -5,14 +5,14 @@
     "Fabricante": "Hankey Bannister",
     "Id do produto": "963",
     "Marcadores": [
-        "Importado da Escócia.",
         "Volume: 700 ml.",
-        "Graduação alcoólica: 40% vol.",
         "Cor: Amber dourado profundo.",
         "Olfato: Maçã verde e cítrica com notas de baunilha e toffee.",
         "Sabor: Um paladar verdadeiramente rico e complexo com maçã limão, laranja e verde refrescante, perfeitamente equilibrado com caramelo aveludado e mel, com toques de baunilha e coco. O acabamento é incrivelmente duradouro e picante."
     ],
     "Nome": "Whisky Hankey Bannister 25 anos 700 ml",
-    "Preço com oferta": "1199.9",
-    "Preço sem oferta": "1999.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "11999",
+    "Preço sem oferta": "19999",
+    "Teor alcoólico": "40"
 }

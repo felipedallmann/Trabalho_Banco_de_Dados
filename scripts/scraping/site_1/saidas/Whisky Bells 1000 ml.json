@@ -5,10 +5,11 @@
     "Fabricante": "Bells",
     "Id do produto": "775",
     "Marcadores": [
-        "Teor alcoólico 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Bells 1000 ml",
-    "Preço com oferta": "49.9",
-    "Preço sem oferta": "59.9"
+    "Origem": "",
+    "Preço com oferta": "499",
+    "Preço sem oferta": "599",
+    "Teor alcoólico": "40"
 }

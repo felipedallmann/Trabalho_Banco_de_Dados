@@ -5,12 +5,13 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "338",
     "Marcadores": [
-        "Origem: Escócia",
         "Categoria: Deluxe (12 anos)",
         "Graduação: 40% vol.",
         "Volume: 4500 ml."
     ],
     "Nome": "Whisky Johnnie Walker Black Label 4,5 Litros",
-    "Preço com oferta": "1199.9",
-    "Preço sem oferta": "1199.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "11999",
+    "Preço sem oferta": "11999",
+    "Teor alcoólico": "0"
 }

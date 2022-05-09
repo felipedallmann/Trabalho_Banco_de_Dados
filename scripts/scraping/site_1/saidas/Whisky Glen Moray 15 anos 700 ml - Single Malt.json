@@ -5,12 +5,12 @@
     "Fabricante": "Glen Moray",
     "Id do produto": "1099",
     "Marcadores": [
-        "Importado da Escócia.",
         "Speyside Single Malt.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Glen Moray 15 anos 700 ml - Single Malt",
-    "Preço com oferta": "399.9",
-    "Preço sem oferta": "499.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "3999",
+    "Preço sem oferta": "4999",
+    "Teor alcoólico": "40"
 }

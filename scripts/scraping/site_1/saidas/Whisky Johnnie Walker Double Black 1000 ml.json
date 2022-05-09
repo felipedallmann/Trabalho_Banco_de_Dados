@@ -5,12 +5,13 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "5000267112077",
     "Marcadores": [
-        "Origem: Escócia",
         "Categoria: Deluxe (12 anos)",
         "Graduação: 40% vol.",
         "Volume: 1000 ml"
     ],
     "Nome": "Whisky Johnnie Walker Double Black 1000 ml",
-    "Preço com oferta": "229.9",
-    "Preço sem oferta": "249.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "2299",
+    "Preço sem oferta": "2499",
+    "Teor alcoólico": "0"
 }

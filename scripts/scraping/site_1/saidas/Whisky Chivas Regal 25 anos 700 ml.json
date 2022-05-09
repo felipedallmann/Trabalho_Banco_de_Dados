@@ -5,7 +5,6 @@
     "Fabricante": "Chivas",
     "Id do produto": "324",
     "Marcadores": [
-        "Origem: Escócia.",
         "Graduação: 40% vol.",
         "Volume: 700 ml.",
         "Cor: Rico Dourado.",
@@ -14,6 +13,8 @@
         "Final: Suave, arredondado e luxuosamente longo."
     ],
     "Nome": "Whisky Chivas Regal 25 anos 700 ml",
-    "Preço com oferta": "2499.9",
-    "Preço sem oferta": "2999.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "24999",
+    "Preço sem oferta": "29999",
+    "Teor alcoólico": "0"
 }

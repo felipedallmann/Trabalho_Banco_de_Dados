@@ -5,11 +5,11 @@
     "Fabricante": "Chivas",
     "Id do produto": "898",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Chivas Regal Extra 750 ml",
-    "Preço com oferta": "149.9",
-    "Preço sem oferta": "169.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1499",
+    "Preço sem oferta": "1699",
+    "Teor alcoólico": "40"
 }

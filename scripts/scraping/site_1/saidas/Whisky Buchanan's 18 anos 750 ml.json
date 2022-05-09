@@ -5,12 +5,13 @@
     "Fabricante": "Buchanan's",
     "Id do produto": "32",
     "Marcadores": [
-        "Origem: Escócia",
         "Categoria: Super Deluxe (18 Anos)",
         "Graduação: 40% vol.",
         "Volume: 750 ml"
     ],
     "Nome": "Whisky Buchanan's 18 anos 750 ml",
-    "Preço com oferta": "499.9",
-    "Preço sem oferta": "799.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "4999",
+    "Preço sem oferta": "7999",
+    "Teor alcoólico": "0"
 }

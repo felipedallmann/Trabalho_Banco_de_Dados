@@ -5,12 +5,12 @@
     "Fabricante": "Tobermory",
     "Id do produto": "678",
     "Marcadores": [
-        "Importado da Escócia.",
         "Categoria: Single Malt 15 anos.",
-        "Graduação Alcoólica: 46,3% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Tobermory 15 anos 700 ml",
-    "Preço com oferta": "799.9",
-    "Preço sem oferta": "799.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "7999",
+    "Preço sem oferta": "7999",
+    "Teor alcoólico": "46.3"
 }

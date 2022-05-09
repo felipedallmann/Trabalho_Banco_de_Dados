@@ -5,12 +5,12 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "1846",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 1000 ml.",
         "É proibida a venda de bebidas para menores de 18 anos."
     ],
     "Nome": "Whisky Johnnie Walker Red 200 anos Limited Edition 1000 ml",
-    "Preço com oferta": "119.9",
-    "Preço sem oferta": "119.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1199",
+    "Preço sem oferta": "1199",
+    "Teor alcoólico": "40"
 }

@@ -5,12 +5,12 @@
     "Fabricante": "Old Parr",
     "Id do produto": "758",
     "Marcadores": [
-        "Importado da Escócia.",
         "Categoria: Deluxe.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Old Parr Silver 1000 ml",
-    "Preço com oferta": "169.9",
-    "Preço sem oferta": "179.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1699",
+    "Preço sem oferta": "1799",
+    "Teor alcoólico": "40"
 }

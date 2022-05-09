@@ -5,9 +5,7 @@
     "Fabricante": "Tomatin",
     "Id do produto": "965",
     "Marcadores": [
-        "Importado da Escócia.",
         "Highland Single Malt.",
-        "Graduação alcoólica: 43% vol.",
         "Volume: 700 ml.",
         "SILVER 2016 IWSC",
         "SILVER 2016 San Francisco WSC",
@@ -21,6 +19,8 @@
         "Jim Murray's Whisky Bible 2016 94.5/100"
     ],
     "Nome": "Whisky Tomatin Legacy 700 ml - Single Malt - 2 copos",
-    "Preço com oferta": "249.9",
-    "Preço sem oferta": "349.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "2499",
+    "Preço sem oferta": "3499",
+    "Teor alcoólico": "43"
 }

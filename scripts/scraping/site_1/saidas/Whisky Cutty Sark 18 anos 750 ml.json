@@ -5,12 +5,12 @@
     "Fabricante": "Cutty Sark",
     "Id do produto": "654",
     "Marcadores": [
-        "Importado da Escócia.",
         "Whisky Premium.",
-        "Graduação Alcoólica: 40% Vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Cutty Sark 18 anos 750 ml",
-    "Preço com oferta": "399.9",
-    "Preço sem oferta": "399.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "3999",
+    "Preço sem oferta": "3999",
+    "Teor alcoólico": "40"
 }

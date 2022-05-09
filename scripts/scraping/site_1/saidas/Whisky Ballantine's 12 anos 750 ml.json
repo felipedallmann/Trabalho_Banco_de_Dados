@@ -5,11 +5,11 @@
     "Fabricante": "Ballantine's",
     "Id do produto": "5010106113530",
     "Marcadores": [
-        "Importado da Escócia.",
-        "Teor alcoólico 40% vol.",
         "Volume: 750 ml (vidro)."
     ],
     "Nome": "Whisky Ballantine's 12 anos 750 ml",
-    "Preço com oferta": "99.9",
-    "Preço sem oferta": "129.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "999",
+    "Preço sem oferta": "1299",
+    "Teor alcoólico": "40"
 }

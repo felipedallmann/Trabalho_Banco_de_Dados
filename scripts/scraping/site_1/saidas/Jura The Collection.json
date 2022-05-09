@@ -8,10 +8,11 @@
         "01 Whisky Jura 10 anos de 50 ml.",
         "01 Jura Superstition de 50 ml.",
         "01 Whisky Jura 16 anos de 50 ml.",
-        "Importado da Escócia.",
         "Graduação: 40% vol."
     ],
     "Nome": "Jura The Collection",
-    "Preço com oferta": "99.9",
-    "Preço sem oferta": "149.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "999",
+    "Preço sem oferta": "1499",
+    "Teor alcoólico": "0"
 }

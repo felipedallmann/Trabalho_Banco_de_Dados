@@ -5,12 +5,13 @@
     "Fabricante": "Glen Grant",
     "Id do produto": "792",
     "Marcadores": [
-        "País de Origem: Escócia.",
         "Single malt.",
         "Graduação: 40% vol.",
         "Volume: 1000 ml."
     ],
     "Nome": "Whisky Glen Grant Single Malt 1000 ml",
-    "Preço com oferta": "119.9",
-    "Preço sem oferta": "119.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1199",
+    "Preço sem oferta": "1199",
+    "Teor alcoólico": "0"
 }

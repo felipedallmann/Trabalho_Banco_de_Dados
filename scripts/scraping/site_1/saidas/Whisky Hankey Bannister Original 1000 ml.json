@@ -5,14 +5,14 @@
     "Fabricante": "Hankey Bannister",
     "Id do produto": "512",
     "Marcadores": [
-        "Origem: Escócia.",
         "Volume: 1000 ml.",
-        "Graduação alcoólica: 40% vol.",
         "Um aroma suave, com sabor acentuado, que proporciona profundidade extra",
         "Cor Caramelo leitoso com tom dourado",
         "Tem sabor leve, sutil, limpo, doce e picante com toques de mel e final duradouro e agradável"
     ],
     "Nome": "Whisky Hankey Bannister Original 1000 ml",
-    "Preço com oferta": "79.9",
-    "Preço sem oferta": "79.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "799",
+    "Preço sem oferta": "799",
+    "Teor alcoólico": "40"
 }

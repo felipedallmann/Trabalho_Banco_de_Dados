@@ -5,13 +5,13 @@
     "Fabricante": "Balvenie",
     "Id do produto": "1025",
     "Marcadores": [
-        "Importado da Escócia.",
         "Categoria: Single Malt.",
         "Trilpe Cask: Sherry, Bourbon e Tradicional.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Balvenie Triple Cask 16 Anos 700 ml",
-    "Preço com oferta": "1199.9",
-    "Preço sem oferta": "1699.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "11999",
+    "Preço sem oferta": "16999",
+    "Teor alcoólico": "40"
 }

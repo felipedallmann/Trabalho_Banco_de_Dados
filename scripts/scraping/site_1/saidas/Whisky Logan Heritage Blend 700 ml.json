@@ -5,12 +5,12 @@
     "Fabricante": "White Horse",
     "Id do produto": "759",
     "Marcadores": [
-        "Importado da Escócia.",
         "Categoria: Deluxe.",
-        "Graduação alcoólica: 40% vol.",
         "Volume: 700 ml."
     ],
     "Nome": "Whisky Logan Heritage Blend 700 ml",
-    "Preço com oferta": "119.9",
-    "Preço sem oferta": "149.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "1199",
+    "Preço sem oferta": "1499",
+    "Teor alcoólico": "40"
 }

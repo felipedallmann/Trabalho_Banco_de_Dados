@@ -5,13 +5,14 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "523",
     "Marcadores": [
-        "Origem: Escócia.",
         "Categoria: Super Deluxe (18 anos).",
         "Graduação: 40% vol.",
         "Volume: 750 ml.",
         "É proibida a venda de bebidas para menores de 18 anos."
     ],
     "Nome": "Whisky Johnnie Walker Platinum Label 18 anos",
-    "Preço com oferta": "599.9",
-    "Preço sem oferta": "799.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "5999",
+    "Preço sem oferta": "7999",
+    "Teor alcoólico": "0"
 }

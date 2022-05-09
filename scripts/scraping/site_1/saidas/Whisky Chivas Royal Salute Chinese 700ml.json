@@ -6,13 +6,14 @@
     "Id do produto": "5000299624333",
     "Marcadores": [
         "Envelhecimento: 21 anos.",
-        "Graduação Alcoólica: 40% vol.",
         "Volume: 700 ml.",
         "Origem: Escócia",
         "Destilaria: Strathisla Destillery.",
         "Produtor: Chivas Brothers Ltd."
     ],
     "Nome": "Whisky Chivas Royal Salute Chinese 700ml",
+    "Origem": "",
     "Preço com oferta": "1050",
-    "Preço sem oferta": "1099.9"
+    "Preço sem oferta": "10999",
+    "Teor alcoólico": "40"
 }

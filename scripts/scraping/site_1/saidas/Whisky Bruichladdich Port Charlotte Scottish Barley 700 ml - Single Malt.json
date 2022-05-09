@@ -5,12 +5,12 @@
     "Fabricante": "Bruichladdich",
     "Id do produto": "1133",
     "Marcadores": [
-        "Importado da Escócia.",
         "Islay Single Malt.",
-        "Graduação alcoólica: 50% vol.",
         "Volume: 750 ml."
     ],
     "Nome": "Whisky Bruichladdich Port Charlotte Scottish Barley 700 ml - Single Malt",
-    "Preço com oferta": "699.9",
-    "Preço sem oferta": "749.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "6999",
+    "Preço sem oferta": "7499",
+    "Teor alcoólico": "50"
 }

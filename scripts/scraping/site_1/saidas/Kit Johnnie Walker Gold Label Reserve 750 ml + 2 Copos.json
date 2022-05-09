@@ -5,7 +5,6 @@
     "Fabricante": "Johnnie Walker",
     "Id do produto": "2169",
     "Marcadores": [
-        "Origem: Escócia",
         "Graduação: 40% vol.",
         "Volume: 750 ml.",
         "detalhe 1",
@@ -13,6 +12,8 @@
         "detalhe 3"
     ],
     "Nome": "Kit Johnnie Walker Gold Label Reserve 750 ml + 2 Copos",
-    "Preço com oferta": "399.9",
-    "Preço sem oferta": "399.9"
+    "Origem": "Escócia",
+    "Preço com oferta": "3999",
+    "Preço sem oferta": "3999",
+    "Teor alcoólico": "0"
 }
