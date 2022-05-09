@@ -256,7 +256,8 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
         try ( PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS_SEARCH)) {
             statement.setString(1, loja_nome);
-            statement.setString(2, "%" + whisky_nome + "%");
+            String whisky_nome_espaco = whisky_nome.replace(' ', '%');
+            statement.setString(2, "%" + whisky_nome_espaco + "%");
             ResultSet result = statement.executeQuery();
             while (result.next()) {
                 Whisky whisky = new Whisky();
