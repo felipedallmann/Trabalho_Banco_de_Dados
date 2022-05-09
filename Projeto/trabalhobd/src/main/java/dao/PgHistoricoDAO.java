@@ -77,6 +77,8 @@ public class PgHistoricoDAO implements DAO<Historico> {
 
             if (ex.getMessage().contains("pk_historico")) {
                 throw new SQLException("Erro ao inserir historico: nome já existente.");
+            } else if (ex.getMessage().contains("fk_historico_whisky")) {
+                throw new SQLException("Erro ao inserir historico: nome já existente.");
             } else if (ex.getMessage().contains("not-null")) {
                 throw new SQLException("Erro ao inserir historico: pelo menos um campo está em branco.");
             } else {

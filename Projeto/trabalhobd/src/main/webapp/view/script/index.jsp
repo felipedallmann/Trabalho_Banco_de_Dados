@@ -11,7 +11,8 @@
         <tbody>
         <div class="container">
              <div class="text-center div_inserir_excluir">
-                <a class="btn btn-lg btn-primary" href="${pageContext.servletContext.contextPath}/script/?create=${pageContext.request.getParameter("lojaNome")}" >
+            <h1 class="h1">Scripts para a loja ${pageContext.request.getParameter("lojaNome")}</h1>
+                <a class="btn btn-lg btn-primary" href="${pageContext.servletContext.contextPath}/script/create?lojaNome=${pageContext.request.getParameter("lojaNome")}" >
                     Inserir novo script
                 </a>
 
@@ -23,7 +24,6 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th class="col-lg-5 h4">Nome da loja</th>
                             <th class="col-lg-4 h4 ">Data inserção</th>
                             <th class="col-lg-1 h4 ">Download</th>
                             <th class="col-lg-1 h4 ">Executar</th>
@@ -32,11 +32,6 @@
                     </thead>    
                     <c:forEach var="script" items="${requestScope.scriptList}">
                             <tr>
-                                <td>
-                                    <a class="link_visualizar_website" href="#" data-href="${pageContext.servletContext.contextPath}/script/read?id=${script.lojaNome}">
-                                        <span class="h4"><c:out value="${script.lojaNome}"/></span>
-                                    </a>
-                                </td>
                                 <td >
                                     <span class="h4"><c:out value="${script.dataInsercao}"/></span>
                                 </td>
