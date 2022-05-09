@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import re
 import json
 from datetime import date
 from pprint import pprint
@@ -83,19 +84,36 @@ class Scraper:
 
         # markers
         markers = description.find_all("li")
-
+        alcohol_percent = "0"
+        origin = ""
         list_of_markers = []
         for marker in markers:
             marker = marker.text
             marker = "".join(marker.split("\t"))
             marker = "".join(marker.split("\n")).strip()
-            if marker != "":
+
+            search_alcohol_percent = re.search(
+                r"(?:alcoólica|alcoólico).*([0-9]{2}(?:(?:,|\.)[0-9]{1,3})?)%",
+                marker,
+                re.IGNORECASE,
+            )
+            search_origin = re.search(r"(?:importado da|origem):? (.*)", marker, re.IGNORECASE)
+
+            if search_alcohol_percent:
+                alcohol_percent = search_alcohol_percent.group(1).replace(",", ".").strip()
+            elif search_origin:
+                origin = search_origin.group(1).replace(".", "").replace('"', "").strip()
+                if origin.lower() == "nacional":
+                    origin = "Brasil"
+            elif marker != "":
                 list_of_markers.append(marker)
 
         json_infos = {
             "Nome": title,
             "Descrição": final_text,
+            "Teor alcoólico": alcohol_percent,
             "Marcadores": list_of_markers,
+            "Origem": origin,
             "Data": self.DT,
             "Id do produto": product_id,
             "Fabricante": manufacturer,
