@@ -176,7 +176,6 @@ public class ScriptController extends HttpServlet {
             case "/script/create": {
                 Part filePart = request.getPart("codigo"); // <input type="file" name="codigo">
                 InputStream fileContent = filePart.getInputStream();
-                // Se fosse um form simples, usaria request.getParameter()
                 String lojaNome = request.getParameter("lojaNome");
                 String codigo = convertStreamToString(fileContent);
                 Logger.getLogger(ScriptController.class.getName()).log(Level.INFO, null, codigo);
@@ -187,12 +186,11 @@ public class ScriptController extends HttpServlet {
                     script.setCodigo(codigo);
                     script.setDataInsercao(new Timestamp(System.currentTimeMillis()));
                     dao.create(script);
-                    response.sendRedirect(request.getContextPath() + "/script?lojaNome=" + lojaNome);
                 } catch (ClassNotFoundException | SQLException ex) {
                     Logger.getLogger(ScriptController.class.getName()).log(Level.SEVERE, null, ex);
-                    response.sendRedirect(request.getContextPath() + "/script");
                 }
-
+                String dest = request.getContextPath() + "/script?lojaNome=" + lojaNome;
+                response.sendRedirect(dest);
                 break;
             }
         }
