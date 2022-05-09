@@ -47,27 +47,43 @@
 
                     <td>
                         <span class="h4">
-                            <c:out value="${whisky.paisOrigemNome}" /></span>
+                            <c:choose>
+                                <c:when test="${whisky.paisOrigemNome != null}">
+                                    <c:out value="${whisky.paisOrigemNome}" />
+                                </c:when>
+                                <c:otherwise>                   
+                                    Desconhecido
+                                </c:otherwise>
+                            </c:choose>
+                        </span>
                     </td>
 
                     <td>
                         <span class="h4">
-                            <c:out value="${whisky.teorAlcolico}" /></span>
+                            <c:choose>
+                                <c:when test="${whisky.teorAlcolico > 0}">
+                                    <c:out value="${whisky.teorAlcolico}"  /> %
+                                </c:when>
+                                <c:otherwise>                   
+                                    Desconhecido
+                                </c:otherwise>
+                            </c:choose>
+                        </span>
                     </td>
 
                     <td var="loja_nome" items="${requestScope.whisky}">
                         <span class="h4">
-                            <c:out value="${whisky.teorAlcolico}" /></span>
+                            <c:out value="${pageContext.request.getParameter(\"nome\")}" /> </span>
                     </td>
                     
                     <td var="maiorPreco" items="${requestScope.maiorPreco}">
                         <span class="h4">
-                            <c:out value="${maiorPreco}" /></span>
+                            R$<c:out value="${maiorPreco}" /></span>
                     </td>
                     
                     <td var="menorPreco" items="${requestScope.menorPreco}">
                         <span class="h4">
-                            <c:out value="${menorPreco}" /></span>
+                            R$<c:out value="${menorPreco}" /></span>
                     </td>
                 </tr>
             </tbody>
