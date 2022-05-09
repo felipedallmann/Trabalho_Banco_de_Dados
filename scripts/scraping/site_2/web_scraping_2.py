@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 import json
-import os
 from datetime import date
+from pprint import pprint
 from pathlib import Path
 
 import requests
@@ -16,6 +16,7 @@ class Scraper:
     def navigate_beetween_pages(self):
         for i in range(1, 10):
             url = f"{self.ROOT_URL}/whisky#{i}"
+            print(url)
             self.navigate_page(url)
 
     def navigate_page(self, url):
@@ -23,7 +24,7 @@ class Scraper:
         doc = BeautifulSoup(result.text, "html.parser")
 
         products_page = doc.find(class_="collection n3colunas")
-        products = products_page.find_all("li", {"layout": "ce56140d-7c05-4428-a765-faaedbac10c8"})
+        products = products_page.find_all("li", {"layout": "3c97f6ef-8345-4fb9-9db6-76b5fb256fd1"})
 
         for link in products:
             link = link.find("a")
@@ -45,13 +46,19 @@ class Scraper:
         if price_without_discount:
             price_without_discount = price_without_discount.text.strip()
         else:
-            price_without_discount = "Produto indisponível"
+            price_without_discount = ""
 
         price = doc.find("strong", {"class": "skuBestPrice"})
         if price:
             price = price.text.strip()
         else:
-            price = "Produto indisponível"
+            price = ""
+
+        # Limpa os preços
+        replaces = [("R$", ""), (".", ""), (",", ".")]
+        for (old, new) in replaces:
+            price_without_discount = price_without_discount.replace(old, new).strip()
+            price = price.replace(old, new).strip()
 
         origin = doc.find("td", {"class": "value-field Pais"})
         if origin:
@@ -97,6 +104,7 @@ class Scraper:
             "Teor alcoólico": alcohol_content,
             "Origem": origin,
         }
+        pprint(json_infos)
 
         js = json.dumps(json_infos, indent=4, sort_keys=True, ensure_ascii=False)
 
