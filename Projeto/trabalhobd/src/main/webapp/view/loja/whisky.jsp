@@ -160,7 +160,14 @@
                 scales: {
                     yAxes: [{ticks: {min: 0, max:1000}}],
                     xAxes: [{ticks: {min: 0, max:yValuesSemDesconto.length}}],
-                }
+                },
+                title: {
+                    display: true,
+				    text: 'Preço sem desconto',
+				    font: {
+					size: 25,
+				    },
+			    },
             }
             });
 
@@ -190,7 +197,14 @@
                 scales: {
                     yAxes: [{ticks: {min: 0, max:1000}}],
                     xAxes: [{ticks: {min: 0, max:yValuesComDesconto.length}}],
-                }
+                },
+                title: {
+                    display: true,
+				    text: 'Preço com desconto',
+				    font: {
+					size: 25,
+				    },
+			    },
             }
             });
             </script>
