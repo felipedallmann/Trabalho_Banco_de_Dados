@@ -9,35 +9,32 @@
     </head>
     <body>
        <div class="container">
-            <h2 class="text-center">Inserção de um novo script</h2>
+            <h2 class="text-center">Novo script para a loja </h2>
 
             <form
                 class="form"
                 action="${pageContext.servletContext.contextPath}/script/create"
-                enctype="form-data"
-                method="POST">
+                method = "POST"
+                enctype = "multipart/form-data">
 
                 <div class="form-group">
-                    <input value="${pageContext.request.getParameter("lojaNome")}" id="URL" class="form-control" type="hidden" name="lojaNome" required autofocus/>
-
+                    <input value="${pageContext.request.getParameter("lojaNome")}" id="URL" class="form-control" type="hidden" name="lojaNome" required />
                     <p class="help-block"></p>
                 </div>
                 
                 <div class="form-group">
-                    <label class="control-label" for="usuario-login">Codigo</label>
-                    <input id="URL" class="form-control" type="text" name="codigo" required autofocus/>
-
+                    <label class="control-label" for="codigo">Codigo: </label>
+                    <input type = "file" name = "codigo" size = "50" />
                     <p class="help-block"></p>
                 </div>
 
 
                 <div class="text-center">
-                    <button class="btn btn-lg btn-primary" type="submit">Salvar</button>
+                    <button class="btn btn-lg btn-primary" type="submit">Adicionar</button>
                 </div>
             </form>
         </div>
                 
         <%@include file="/view/include/scripts.jsp"%>
-        <script src="${pageContext.servletContext.contextPath}/assets/js/website.js"></script>
     </body>
 </html>

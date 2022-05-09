@@ -22,6 +22,10 @@ import com.google.gson.GsonBuilder;
 import dao.DAO;
 import dao.DAOFactory;
 import dao.ScriptDAO;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.http.Part;
 import model.Script;
 
 @WebServlet(name = "scriptController", urlPatterns = {
@@ -32,6 +36,7 @@ import model.Script;
         "/script/download",
         "/script/run",
 })
+@MultipartConfig
 public class ScriptController extends HttpServlet {
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -60,7 +65,7 @@ public class ScriptController extends HttpServlet {
                     request.getSession().setAttribute("error", ex.getMessage());
                 }
 
-                dispatcher = request.getRequestDispatcher("/view/script/index.jsp");
+                dispatcher = request.getRequestDispatcher("/view/script/index.jsp?lojaNome=" + request.getParameter("lojaNome"));
                 dispatcher.forward(request, response);
                 break;
             }
@@ -146,6 +151,11 @@ public class ScriptController extends HttpServlet {
         }
 
     }
+    
+    private static String convertStreamToString(java.io.InputStream is) {
+        java.util.Scanner s = new java.util.Scanner(is, StandardCharsets.UTF_8).useDelimiter("\\A");
+        return s.hasNext() ? s.next() : "";
+    }
 
     /**
      * Handles the HTTP <code>POST</code> method.
@@ -164,9 +174,12 @@ public class ScriptController extends HttpServlet {
 
         switch (servletPath) {
             case "/script/create": {
+                Part filePart = request.getPart("codigo"); // <input type="file" name="codigo">
+                InputStream fileContent = filePart.getInputStream();
                 // Se fosse um form simples, usaria request.getParameter()
                 String lojaNome = request.getParameter("lojaNome");
-                String codigo = request.getParameter("codigo");
+                String codigo = convertStreamToString(fileContent);
+                Logger.getLogger(ScriptController.class.getName()).log(Level.INFO, null, codigo);
 
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
                     dao = daoFactory.getScriptDAO();
@@ -174,7 +187,7 @@ public class ScriptController extends HttpServlet {
                     script.setCodigo(codigo);
                     script.setDataInsercao(new Timestamp(System.currentTimeMillis()));
                     dao.create(script);
-                    response.sendRedirect(request.getContextPath() + "/script?=" + lojaNome);
+                    response.sendRedirect(request.getContextPath() + "/script?lojaNome=" + lojaNome);
                 } catch (ClassNotFoundException | SQLException ex) {
                     Logger.getLogger(ScriptController.class.getName()).log(Level.SEVERE, null, ex);
                     response.sendRedirect(request.getContextPath() + "/script");
