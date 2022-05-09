@@ -39,14 +39,14 @@
                                     <a class="btn btn-default"
                                        href="${pageContext.servletContext.contextPath}/script/download?lojaNome=${script.lojaNome}&dataInsercao=${script.dataInsercao}"
                                        data-original-title="Script">
-                                        <i class="fa-solid fa-download"></i>
+                                        <i class="fa fa-download"></i>
                                     </a>
                                 </td>
                                 <td class="text-center">
                                     <a class="btn btn-default"
                                        href="${pageContext.servletContext.contextPath}/script/run?lojaNome=${script.lojaNome}&dataInsercao=${script.dataInsercao}"
                                        data-original-title="Script">
-                                        <i class="fa-solid fa-play"></i>
+                                        <i class="fa fa-play"></i>
                                     </a>
                                 </td>
                                 <td class="text-center">

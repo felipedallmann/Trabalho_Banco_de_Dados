@@ -55,7 +55,7 @@
                                 <a class="btn btn-default"
                                     href="${pageContext.servletContext.contextPath}/script?lojaNome=${loja.nome}"
                                     data-original-title="Script">
-                                    <i class="fa-solid fa-file"></i>
+                                    <i class="fa fa-file"></i>
                                 </a>
                             </td>
                             <td class="text-center">
