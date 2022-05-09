@@ -10,8 +10,7 @@
 </head>
 
 <body>
-    <script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
     <div class="container">
         <table class="table table-hover">
@@ -51,7 +50,7 @@
                                 <c:when test="${whisky.paisOrigemNome != null}">
                                     <c:out value="${whisky.paisOrigemNome}" />
                                 </c:when>
-                                <c:otherwise>                   
+                                <c:otherwise>
                                     Desconhecido
                                 </c:otherwise>
                             </c:choose>
@@ -62,9 +61,9 @@
                         <span class="h4">
                             <c:choose>
                                 <c:when test="${whisky.teorAlcolico != null}">
-                                    <c:out value="${whisky.teorAlcolico}"/>
+                                    <c:out value="${whisky.teorAlcolico}" />
                                 </c:when>
-                                <c:otherwise>                   
+                                <c:otherwise>
                                     Desconhecido
                                 </c:otherwise>
                             </c:choose>
@@ -73,17 +72,19 @@
 
                     <td var="loja_nome" items="${requestScope.whisky}">
                         <span class="h4">
-                            <c:out value="${pageContext.request.getParameter(\"nome\")}" /> </span>
+                            <c:out value="${pageContext.request.getParameter(\" nome\")}" /> </span>
                     </td>
-                    
+
                     <td var="maiorPreco" items="${requestScope.maiorPreco}">
                         <span class="h4">
-                            R$<c:out value="${maiorPreco}" /></span>
+                            R$
+                            <c:out value="${maiorPreco}" /></span>
                     </td>
-                    
+
                     <td var="menorPreco" items="${requestScope.menorPreco}">
                         <span class="h4">
-                            R$<c:out value="${menorPreco}" /></span>
+                            R$
+                            <c:out value="${menorPreco}" /></span>
                     </td>
                 </tr>
             </tbody>
@@ -115,7 +116,7 @@
                             <span class="h4">
                                 <c:out value="${whiskyItem.precoSemDesconto}" /></span>
                         </td>
-                        
+
                         <td>
                             <span class="h4">
                                 <c:out value="${whiskyItem.precoComDesconto}" /></span>
@@ -129,6 +130,70 @@
                 </tbody>
             </c:forEach>
         </table>
+
+        <canvas id="chartSemDesconto" style="width:100%;max-width:700px"></canvas>
+        <canvas id="chartComDesconto" style="width:100%;max-width:700px"></canvas>
+
+        <script>
+            var yValuesSemDesconto = [];
+            var xValuesSemDesconto = [];
+            <c:forEach var="whiskyItem" items="${requestScope.whiskyList}">
+                yValuesSemDesconto.push("${whiskyItem.precoSemDesconto}");
+                xValuesSemDesconto.push("${whiskyItem.acessadoEm}");
+            </c:forEach>
+            
+
+            new Chart("chartSemDesconto", {
+                type: "line",
+                data: {
+                labels: xValuesSemDesconto,
+                datasets: [{
+                    fill: false,
+                    lineTension: 0,
+                    backgroundColor: "rgba(0,0,255,1.0)",
+                    borderColor: "rgba(0,0,255,0.1)",
+                    data: yValuesSemDesconto
+                }]
+            },
+            options: {
+                legend: {display: false},
+                scales: {
+                    yAxes: [{ticks: {min: 0, max:1000}}],
+                    xAxes: [{ticks: {min: 0, max:yValuesSemDesconto.length}}],
+                }
+            }
+            });
+
+
+            var yValuesComDesconto = [];
+            var xValuesComDesconto = [];
+            <c:forEach var="whiskyItem" items="${requestScope.whiskyList}">
+                yValuesComDesconto.push("${whiskyItem.precoComDesconto}");
+                xValuesComDesconto.push("${whiskyItem.acessadoEm}");
+            </c:forEach>
+            
+
+            new Chart("chartComDesconto", {
+                type: "line",
+                data: {
+                labels: xValuesComDesconto,
+                datasets: [{
+                    fill: false,
+                    lineTension: 0,
+                    backgroundColor: "rgba(0,0,255,1.0)",
+                    borderColor: "rgba(0,0,255,0.1)",
+                    data: yValuesComDesconto
+                }]
+            },
+            options: {
+                legend: {display: false},
+                scales: {
+                    yAxes: [{ticks: {min: 0, max:1000}}],
+                    xAxes: [{ticks: {min: 0, max:yValuesComDesconto.length}}],
+                }
+            }
+            });
+            </script>
     </div>
     <%@include file="/view/include/scripts.jsp"%>
     <script src="${pageContext.servletContext.contextPath}/assets/js/loja.js"></script>
