@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
 import json
-import os
+from pprint import pprint
 from pathlib import Path
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from selenium.webdriver.common.by import By
 import time
 from datetime import date
 
@@ -43,9 +44,10 @@ class Scraper:
             print(f"Opening {url}")
             driver.get(url)
 
-            element = driver.find_element_by_class_name("getbowtied_ajax_load_button")
-            element = element.find_element_by_css_selector("a")
-            element.click()
+            # element = driver.find_element(By.CLASS_NAME, "getbowtied_ajax_load_button")
+            # pprint(element)
+            # element = element.find_element(By.CSS_SELECTOR, "a")
+            # element.click()
             # WebDriverWait(driver, 10).until(
             #     EC.NoSuchElementException((By.CLASS_NAME, 'getbowtied_ajax_load_button')))
             time.sleep(5)
@@ -77,7 +79,6 @@ class Scraper:
         title = title.text.replace("/", "").replace(r"\𝟯𝟰𝟮\𝟮𝟬𝟬\𝟮𝟯𝟭𝘀", "")
         title = "".join(title.split("\n"))
         title = "".join(title.rstrip())
-        print(title)
 
         # informações
         price = doc.find("span", {"class": "woocommerce-Price-amount amount"})
@@ -85,6 +86,10 @@ class Scraper:
             price = price.text.strip()
         else:
             price = ""
+
+        replaces = [("R$", ""), (".", ""), (",", ".")]
+        for (old, new) in replaces:
+            price = price.replace(old, new).strip()
 
         markers = doc.find("div", {"class": "woocommerce-product-details__short-description"})
 
@@ -100,7 +105,6 @@ class Scraper:
             # print(tuple(markers))
             # converting into dict
             markers = dict(markers)
-            print(markers)
         else:
             markers = {}
 
@@ -112,7 +116,7 @@ class Scraper:
 
         json_infos = {"Nome": title, "Descrição": description, "Data": self.DT}
         json_infos.update(markers)
-        print(json_infos)
+        pprint(json_infos)
 
         js = json.dumps(json_infos, indent=4, sort_keys=True, ensure_ascii=False)
 

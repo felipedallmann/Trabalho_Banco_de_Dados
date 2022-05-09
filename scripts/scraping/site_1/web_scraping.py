@@ -2,6 +2,7 @@
 
 import json
 from datetime import date
+from pprint import pprint
 from pathlib import Path
 
 import requests
@@ -55,8 +56,7 @@ class Scraper:
 
         # titulo
         title = doc.find_all("span", itemprop="name")
-        title = title[-1].string.replace(r"\𝟯𝟰𝟮\𝟮𝟬𝟬\𝟮𝟯𝟭𝘀", "").replaceAll("/", "")
-        print(title)
+        title = title[-1].string.replace(r"\𝟯𝟰𝟮\𝟮𝟬𝟬\𝟮𝟯𝟭𝘀", "").replace("/", "")
 
         # informações
         product_id = doc.find("input", {"name": "productCode"}).get("value").strip()
@@ -64,6 +64,12 @@ class Scraper:
         category = doc.find("input", {"name": "productCategory"}).get("value").strip()
         price = doc.find("input", {"name": "productPrice"}).get("value").strip()
         price_without_discount = doc.find("input", {"name": "productPricesOf"}).get("value").strip()
+
+        # Limpa os preços
+        replaces = [("R$", ""), (".", ""), (",", ".")]
+        for (old, new) in replaces:
+            price_without_discount = price_without_discount.replace(old, new).strip()
+            price = price.replace(old, new).strip()
 
         # descrição
         description = doc.find("div", {"class": "produto-descricao"})
@@ -84,10 +90,8 @@ class Scraper:
             marker = "".join(marker.split("\t"))
             marker = "".join(marker.split("\n")).strip()
             if marker != "":
-                print(marker)
                 list_of_markers.append(marker)
 
-        print(list_of_markers)
         json_infos = {
             "Nome": title,
             "Descrição": final_text,
@@ -99,6 +103,7 @@ class Scraper:
             "Preço com oferta": price,
             "Preço sem oferta": price_without_discount,
         }
+        pprint(json_infos)
 
         js = json.dumps(json_infos, indent=4, sort_keys=True, ensure_ascii=False)
 
