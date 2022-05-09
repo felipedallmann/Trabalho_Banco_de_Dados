@@ -18,6 +18,17 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>
+                        <div>Pesquisa</div>
+                        <form class="" action="${pageContext.servletContext.contextPath}/whiskys/pesquisa?"
+                            method="GET">
+                            <div><input type="text" name="whisky_nome" /></div>
+                            <div><input type="submit" value="Search"></div>
+                        </form>
+                    </th>
+                </tr>
+                
+                <tr>
                     <th class="col-xs-3 h5 ">Quantidade de produtos</th>
                     <th class="col-xs-4 h5 ">Ultima atualização</th>
                     <th class="col-xs-3 h5 ">Quantidade de acessos</th>
