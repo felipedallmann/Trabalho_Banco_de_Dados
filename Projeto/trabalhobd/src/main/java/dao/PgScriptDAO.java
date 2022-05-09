@@ -98,12 +98,12 @@ public class PgScriptDAO implements ScriptDAO {
     }
 
     @Override
-    public Script read(String lojaNome, Date dataInsercao) throws SQLException {
+    public Script read(String lojaNome, Timestamp dataInsercao) throws SQLException {
         Script script = new Script();
 
         try (PreparedStatement statement = connection.prepareStatement(READ_QUERY)) {
             statement.setString(1, lojaNome);
-            statement.setDate(2, dataInsercao);
+            statement.setTimestamp(2, dataInsercao);
             try (ResultSet result = statement.executeQuery()) {
                 if (result.next()) {
                     script.setLojaNome(result.getString("loja_nome"));
@@ -127,15 +127,14 @@ public class PgScriptDAO implements ScriptDAO {
 
     @Override
     public void update(Script arg0) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from
-                                                                       // nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public void delete(String lojaNome, Date dataInsercao) throws SQLException {
+    public void delete(String lojaNome, Timestamp dataInsercao) throws SQLException {
         try (PreparedStatement statement = connection.prepareStatement(DELETE_QUERY)) {
             statement.setString(1, lojaNome);
-            statement.setDate(2, dataInsercao);
+            statement.setTimestamp(2, dataInsercao);
             System.out.println(statement);
             if (statement.executeUpdate() < 1) {
                 throw new SQLException("Erro ao excluir: script não encontrado.");
@@ -153,8 +152,7 @@ public class PgScriptDAO implements ScriptDAO {
 
     @Override
     public void delete(String arg0) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from
-                                                                       // nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
@@ -188,8 +186,7 @@ public class PgScriptDAO implements ScriptDAO {
 
     @Override
     public List<Script> all() throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from
-                                                                       // nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
@@ -278,7 +275,7 @@ public class PgScriptDAO implements ScriptDAO {
                     dao.create(historico);
                 } catch (SQLException ex) {
                     Logger.getLogger(IngredienteDAO.class.getName()).log(Level.SEVERE,
-                            "DAO: Erro ao criar registro de destilaria");
+                            "DAO: Erro ao criar registro de histórico");
                 }
             } catch (ClassNotFoundException | IOException ex) {
                 Logger.getLogger(PgScriptDAO.class.getName()).log(Level.SEVERE, "DAO", ex);

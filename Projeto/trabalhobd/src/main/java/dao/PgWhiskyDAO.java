@@ -93,8 +93,14 @@ public class PgWhiskyDAO implements WhiskyDAO {
                     "Whisky não criado já que possui nome nulo!");
             return;
         }
+        if (whisky.getestilariaNome() != null && whisky.getestilariaNome().isBlank()) {
+            whisky.setDestilariaNome(null);
+        }
+        if (whisky.getPaisOrigemNome() != null && whisky.getPaisOrigemNome().isBlank()) {
+            whisky.setPaisOrigemNome(null);
+        }
 
-        try ( PreparedStatement statement = connection.prepareStatement(CREATE_QUERY)) {
+        try (PreparedStatement statement = connection.prepareStatement(CREATE_QUERY)) {
             System.out.println("Criando novo registro de whisky: " + whisky);
             statement.setString(1, whisky.getNome());
             statement.setString(2, whisky.getIdade());

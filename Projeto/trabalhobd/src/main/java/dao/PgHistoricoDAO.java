@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Historico;
+import org.postgresql.util.PSQLException;
 
 public class PgHistoricoDAO implements DAO<Historico> {
 
@@ -72,13 +73,13 @@ public class PgHistoricoDAO implements DAO<Historico> {
             statement.setString(4, historico.getPrecoComDesconto());
             statement.setTimestamp(5, historico.getAcessadoEm());
             statement.executeUpdate();
-        } catch (SQLException ex) {
-            Logger.getLogger(PgHistoricoDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+        } catch (SQLException ex ) {
+            //Logger.getLogger(PgHistoricoDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
 
             if (ex.getMessage().contains("pk_historico")) {
                 throw new SQLException("Erro ao inserir historico: nome já existente.");
             } else if (ex.getMessage().contains("fk_historico_whisky")) {
-                throw new SQLException("Erro ao inserir historico: nome já existente.");
+                throw new SQLException("Erro ao inserir historico: wisky não existe.");
             } else if (ex.getMessage().contains("not-null")) {
                 throw new SQLException("Erro ao inserir historico: pelo menos um campo está em branco.");
             } else {

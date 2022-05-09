@@ -79,7 +79,7 @@ public class ScriptController extends HttpServlet {
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
                     dao = daoFactory.getScriptDAO();
                     String lojaNome = request.getParameter("lojaNome");
-                    Date dataInsercao = Date.valueOf(request.getParameter("dataInsercao"));
+                    Timestamp dataInsercao = Timestamp.valueOf(request.getParameter("dataInsercao"));
                     dao.delete(lojaNome, dataInsercao);
                     response.sendRedirect(request.getContextPath() + "/script?=" + lojaNome);
                 } catch (ClassNotFoundException | IOException | SQLException ex) {
@@ -107,7 +107,7 @@ public class ScriptController extends HttpServlet {
             case "/script/download": {
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
                     String lojaNome = request.getParameter("lojaNome");
-                    Date dataInsercao = Date.valueOf(request.getParameter("dataInsercao"));
+                    Timestamp dataInsercao = Timestamp.valueOf(request.getParameter("dataInsercao"));
 
                     dao = daoFactory.getScriptDAO();
                     script = dao.read(lojaNome, dataInsercao);
@@ -131,21 +131,21 @@ public class ScriptController extends HttpServlet {
                 break;
             }
             case "/script/run": {
+                String lojaNome = request.getParameter("lojaNome");
+                System.out.println(lojaNome);
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
                     dao = daoFactory.getScriptDAO();
-                    String lojaNome = request.getParameter("lojaNome");
-                    System.out.println(lojaNome);
                     // Timestamp dataInsercao =
                     // Timestamp.valueOf(request.getParameter("dataInsercao"));
                     // System.out.println(request.getParameter("dataInsercao"));
                     // TODO
                     // dao.run(lojaNome, dataInsercao);
                     dao.run(lojaNome, new Timestamp(System.currentTimeMillis()));
-                    response.sendRedirect(request.getContextPath() + "/script?=" + lojaNome);
                 } catch (ClassNotFoundException | IOException | SQLException ex) {
                     request.getSession().setAttribute("error", ex.getMessage());
-                    response.sendRedirect(request.getContextPath() + "/script");
                 }
+                String dest = request.getContextPath() + "/script?lojaNome=" + lojaNome;
+                response.sendRedirect(dest);
                 break;
             }
         }
