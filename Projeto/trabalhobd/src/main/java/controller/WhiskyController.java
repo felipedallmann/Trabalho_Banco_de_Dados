@@ -16,7 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import model.Whisky;
 
 @WebServlet(name = "WhiskyController", urlPatterns = {
-        "/whiskys"
+        "/whiskys",
+        "/whiskys/pesquisa",
 
 })
 public class WhiskyController extends HttpServlet {
@@ -52,6 +53,22 @@ public class WhiskyController extends HttpServlet {
                     request.setAttribute("ultimaAtt", timestamp);
                     request.setAttribute("mediaPreco", mediaPreco);
 
+                } catch (ClassNotFoundException | IOException | SQLException ex) {
+                    request.getSession().setAttribute("error", ex.getMessage());
+                }
+
+                dispatcher = request.getRequestDispatcher("/view/whiskys/index.jsp");
+                dispatcher.forward(request, response);
+                break;
+            }
+                        
+            case "/whiskys/pesquisa": {
+                try (DAOFactory daoFactory = DAOFactory.getInstance()) {
+                    whiskydao = daoFactory.getWhiskyDAO();
+                    String whisky_nome = request.getParameter("whisky_nome");
+
+                    List<Whisky> whiskyList = whiskydao.listSearchAll(whisky_nome);
+                    request.setAttribute("whiskyList", whiskyList); 
                 } catch (ClassNotFoundException | IOException | SQLException ex) {
                     request.getSession().setAttribute("error", ex.getMessage());
                 }
