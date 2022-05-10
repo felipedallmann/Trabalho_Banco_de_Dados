@@ -12,5 +12,5 @@ public interface ScriptDAO extends DAO<Script> {
 
     public List<Script> all(String lojaNome) throws SQLException;
 
-    public void run(String lojaNome, Timestamp dataInsercao) throws SQLException;
+    public void run(Script script) throws SQLException;
 }

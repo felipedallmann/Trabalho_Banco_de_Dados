@@ -16,14 +16,14 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th class="col-lg-1 h4">Nome</th>
-                    <th class="col-lg-3 h4">Idade</th>
-                    <th class="col-lg-3 h4">Destilaria</th>
-                    <th class="col-lg-2 h4 ">Pais de origem</th>
-                    <th class="col-lg-2 h4 ">Teor alcoolico</th>
-                    <th class="col-lg-2 h4 ">Loja nome</th>
-                    <th class="col-lg-2 h4 ">Maior preço</th>
-                    <th class="col-lg-2 h4 ">Menor preço</th>
+                    <th class="col-lg-1 h3">Nome</th>
+                    <th class="col-lg-3 h3">Idade</th>
+                    <th class="col-lg-3 h3">Destilaria</th>
+                    <th class="col-lg-2 h3 ">Pais de origem</th>
+                    <th class="col-lg-2 h3 ">Teor alcoolico</th>
+                    <th class="col-lg-2 h3 ">Loja nome</th>
+                    <th class="col-lg-2 h3 ">Maior preço</th>
+                    <th class="col-lg-2 h3 ">Menor preço</th>
                 </tr>
             </thead>
             <tbody var="whisky" items="${requestScope.whisky}">
@@ -36,7 +36,14 @@
 
                     <td>
                         <span class="h4">
-                            <c:out value="${whisky.idade}" /></span>
+                            <c:choose>
+                                <c:when test="${whisky.idade != null}">
+                                    <c:out value="${whisky.idade}" />
+                                </c:when>
+                                <c:otherwise>                   
+                                    Desconhecido
+                                </c:otherwise>
+                            </c:choose>
                     </td>
 
                     <td>
@@ -72,7 +79,7 @@
 
                     <td var="loja_nome" items="${requestScope.whisky}">
                         <span class="h4">
-                            <c:out value="${pageContext.request.getParameter(\" nome\")}" /> </span>
+                            <c:out value="${pageContext.request.getParameter(\"nome\")}" /> </span>
                     </td>
 
                     <td var="maiorPreco" items="${requestScope.maiorPreco}">
@@ -97,10 +104,10 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th class="col-md-8 h1">Histórico</th>
-                    <th class="col-md-8 h1">Preço sem desconto</th>
-                    <th class="col-md-8 h1">Preço com desconto</th>
-                    <th class="col-md-8 h1">Data</th>
+                    <th class="col-md-8 h3">Histórico</th>
+                    <th class="col-md-8 h3">Preço sem desconto</th>
+                    <th class="col-md-8 h3">Preço com desconto</th>
+                    <th class="col-md-8 h3">Data</th>
                 </tr>
             </thead>
             <c:forEach var="whiskyItem" items="${requestScope.whiskyList}">
@@ -114,12 +121,12 @@
 
                         <td>
                             <span class="h4">
-                                <c:out value="${whiskyItem.precoSemDesconto}" /></span>
+                                R$<c:out value="${whiskyItem.precoSemDesconto}" /></span>
                         </td>
 
                         <td>
                             <span class="h4">
-                                <c:out value="${whiskyItem.precoComDesconto}" /></span>
+                                R$<c:out value="${whiskyItem.precoComDesconto}" /></span>
                         </td>
 
                         <td>

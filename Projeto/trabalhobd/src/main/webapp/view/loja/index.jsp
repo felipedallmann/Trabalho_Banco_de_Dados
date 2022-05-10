@@ -32,8 +32,9 @@
                         <tr>
                             <th class="col-lg-5 h4">Nome</th>
                             <th class="col-lg-4 h4 ">URL</th>
-                            <th class="col-lg-1 h4 ">Visualizar scripts</th>
-                            <th class="col-lg-1 h4 ">Excluir?</th>
+                            <th class="col-lg-1 h4 ">Histórico de execução</th>
+                            <th class="col-lg-1 h4 ">Scripts</th>
+                            <th class="col-lg-1 h4 ">Excluir</th>
                         </tr>
                     </thead>
                     <c:forEach var="loja" items="${requestScope.lojaList}">
@@ -49,6 +50,13 @@
                                 <a href="${loja.URL}">
                                     <span class="h4">
                                         <c:out value="${loja.URL}" /></span>
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <a class="btn btn-default"
+                                    href="${pageContext.servletContext.contextPath}/script/history?lojaNome=${loja.nome}"
+                                    data-original-title="Script">
+                                    <i class="fa fa-history"></i>
                                 </a>
                             </td>
                             <td class="text-center">

@@ -209,7 +209,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
     @Override
     public List<Whisky> all() throws SQLException {
-        List<Whisky> whiskyList = new ArrayList<>();
+        var whiskyList = new ArrayList<Whisky>();
         try ( PreparedStatement statement = connection.prepareStatement(ALL_QUERY)) {
             ResultSet result = statement.executeQuery();
             while (result.next()) {
@@ -224,7 +224,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
         } catch (SQLException ex) {
             Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
 
-            throw new SQLException("Erro ao listar usuários.");
+            throw new SQLException("Erro ao listar whiskys.");
         }
 
         return whiskyList;

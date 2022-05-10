@@ -48,12 +48,12 @@
 
                         <td>
                             <span class="h4">
-                                <c:out value="${whisky.precoSemDesconto}" /></span>
+                                R$<c:out value="${whisky.precoSemDesconto}" /></span>
                         </td>
 
                         <td>
                             <span class="h4">
-                                <c:out value="${whisky.precoComDesconto}" /></span>
+                                R$<c:out value="${whisky.precoComDesconto}" /></span>
                         </td>
 
                         <td var="loja_nome" items="${requestScope.loja_nome}">

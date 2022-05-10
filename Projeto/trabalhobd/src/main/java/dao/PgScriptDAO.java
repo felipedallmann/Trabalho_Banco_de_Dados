@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,6 +16,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Destilaria;
 import model.DestilariaUtilizaIngrediente;
+import model.ExecucaoScript;
 import model.Historico;
 import model.Ingrediente;
 import model.PaisDeOrigem;
@@ -24,26 +24,26 @@ import model.Script;
 import model.Whisky;
 
 public class PgScriptDAO implements ScriptDAO {
+
     private final Connection connection;
 
-    private static final String CREATE_QUERY = "INSERT INTO projetobd.script(loja_nome, data_insercao, codigo) " +
-            "VALUES(?, ?, ?);";
+    private static final String CREATE_QUERY = "INSERT INTO projetobd.script(loja_nome, data_insercao, codigo) "
+            + "VALUES(?, ?, ?);";
 
-    private static final String READ_QUERY = "SELECT loja_nome, data_insercao, codigo " +
-            "FROM projetobd.script " +
-            "WHERE loja_nome = ? AND data_insercao = ?;";
+    private static final String READ_QUERY = "SELECT loja_nome, data_insercao, codigo "
+            + "FROM projetobd.script "
+            + "WHERE loja_nome = ? AND data_insercao = ?;";
 
     // private static final String UPDATE_QUERY = "UPDATE j2ee.website " +
     // "SET url = ?, nome = ?" +
     // "WHERE id = ?;";
+    private static final String DELETE_QUERY = "DELETE FROM projetobd.script "
+            + "WHERE loja_nome = ? AND data_insercao = ?;";
 
-    private static final String DELETE_QUERY = "DELETE FROM projetobd.script " +
-            "WHERE loja_nome = ? AND data_insercao = ?;";
-
-    private static final String ALL_QUERY = "SELECT loja_nome, data_insercao, codigo " +
-            "FROM projetobd.script " +
-            "WHERE loja_nome = ? " +
-            "ORDER BY data_insercao;";
+    private static final String ALL_QUERY = "SELECT loja_nome, data_insercao, codigo "
+            + "FROM projetobd.script "
+            + "WHERE loja_nome = ? "
+            + "ORDER BY data_insercao;";
 
     public PgScriptDAO(Connection connection) {
         this.connection = connection;
@@ -51,7 +51,7 @@ public class PgScriptDAO implements ScriptDAO {
 
     @Override
     public void create(Script script) throws SQLException {
-        try (PreparedStatement statement = connection.prepareStatement(CREATE_QUERY)) {
+        try ( PreparedStatement statement = connection.prepareStatement(CREATE_QUERY)) {
             statement.setString(1, script.getLojaNome());
             statement.setTimestamp(2, script.getDataInsercao());
             statement.setString(3, script.getCodigo());
@@ -74,9 +74,9 @@ public class PgScriptDAO implements ScriptDAO {
     public Script read(String lojaNome) throws SQLException {
         Script script = new Script();
 
-        try (PreparedStatement statement = connection.prepareStatement(READ_QUERY)) {
+        try ( PreparedStatement statement = connection.prepareStatement(READ_QUERY)) {
             statement.setString(1, lojaNome);
-            try (ResultSet result = statement.executeQuery()) {
+            try ( ResultSet result = statement.executeQuery()) {
                 if (result.next()) {
                     script.setLojaNome(result.getString("lojaNome"));
                     script.setDataInsercao(result.getTimestamp("dataInsercao"));
@@ -101,10 +101,10 @@ public class PgScriptDAO implements ScriptDAO {
     public Script read(String lojaNome, Timestamp dataInsercao) throws SQLException {
         Script script = new Script();
 
-        try (PreparedStatement statement = connection.prepareStatement(READ_QUERY)) {
+        try ( PreparedStatement statement = connection.prepareStatement(READ_QUERY)) {
             statement.setString(1, lojaNome);
             statement.setTimestamp(2, dataInsercao);
-            try (ResultSet result = statement.executeQuery()) {
+            try ( ResultSet result = statement.executeQuery()) {
                 if (result.next()) {
                     script.setLojaNome(result.getString("loja_nome"));
                     script.setDataInsercao(result.getTimestamp("data_insercao"));
@@ -127,12 +127,12 @@ public class PgScriptDAO implements ScriptDAO {
 
     @Override
     public void update(Script arg0) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public void delete(String lojaNome, Timestamp dataInsercao) throws SQLException {
-        try (PreparedStatement statement = connection.prepareStatement(DELETE_QUERY)) {
+        try ( PreparedStatement statement = connection.prepareStatement(DELETE_QUERY)) {
             statement.setString(1, lojaNome);
             statement.setTimestamp(2, dataInsercao);
             System.out.println(statement);
@@ -159,10 +159,10 @@ public class PgScriptDAO implements ScriptDAO {
     public List<Script> all(String lojaNome) throws SQLException {
         List<Script> scriptList = new ArrayList<>();
 
-        try (PreparedStatement statement = connection.prepareStatement(ALL_QUERY)) {
+        try ( PreparedStatement statement = connection.prepareStatement(ALL_QUERY)) {
             statement.setString(1, lojaNome);
             System.out.println(statement);
-            try (ResultSet result = statement.executeQuery()) {
+            try ( ResultSet result = statement.executeQuery()) {
                 while (result.next()) {
                     Script script = new Script();
                     script.setLojaNome(result.getString("loja_nome"));
@@ -186,20 +186,34 @@ public class PgScriptDAO implements ScriptDAO {
 
     @Override
     public List<Script> all() throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public void run(String lojaNome, Timestamp dataInsercao) throws SQLException {
+    public void run(Script script) throws SQLException {
         File currentDir = new File("./saidas");
         File[] directoryListing = currentDir.listFiles();
-        for (File file : directoryListing) {
-            System.out.println(file);
 
-            try (DAOFactory daoFactory = DAOFactory.getInstance()) {
-                String content = new String(Files.readAllBytes(file.toPath()), StandardCharsets.UTF_8);
+        try (DAOFactory daoFactory = DAOFactory.getInstance()) {
+            // Registra a execução
+            try {
+                var registro = new ExecucaoScript(
+                        script,
+                        new Timestamp(System.currentTimeMillis())
+                );
+                var dao = daoFactory.getExecucaoScriptDAO();
+                dao.create(registro);
+            } catch (SQLException ex) {
+                Logger.getLogger(WhiskyDAO.class.getName()).log(Level.SEVERE,
+                        "DAO: Erro ao criar registro de execução do script!");
+            }
+        
+            for (File file : directoryListing) {
+                System.out.println(file);
 
-                Gson gson = new Gson();
+                var content = new String(Files.readAllBytes(file.toPath()), StandardCharsets.UTF_8);
+
+                var gson = new Gson();
 
                 // Lê o ingrediente
                 Ingrediente ingrediente = gson.fromJson(content, Ingrediente.class);
@@ -224,7 +238,6 @@ public class PgScriptDAO implements ScriptDAO {
                     Logger.getLogger(IngredienteDAO.class.getName()).log(Level.SEVERE,
                             "DAO: Erro ao criar registro de destilaria");
                 }
-                
 
                 // Lê a destilaria
                 Destilaria destilaria = gson.fromJson(content, Destilaria.class);
@@ -237,13 +250,13 @@ public class PgScriptDAO implements ScriptDAO {
                     Logger.getLogger(DestilariaDAO.class.getName()).log(Level.SEVERE,
                             "DAO: Erro ao criar registro de destilaria");
                 }
-                
+
                 // Lê a relação destilaria x ingrediente
-                DestilariaUtilizaIngrediente dui = new DestilariaUtilizaIngrediente(destilaria, ingrediente);
+                var dui = new DestilariaUtilizaIngrediente(destilaria, ingrediente);
                 System.out.println(dui.toString());
                 // Registra a relação destilaria x ingrediente
                 try {
-                    DestilariaUtilizaIngredienteDAO dao = daoFactory.getDestilariaUtilizaIngredienteDAO();
+                    var dao = daoFactory.getDestilariaUtilizaIngredienteDAO();
                     dao.create(dui);
                 } catch (SQLException ex) {
                     Logger.getLogger(IngredienteDAO.class.getName()).log(Level.SEVERE,
@@ -262,25 +275,24 @@ public class PgScriptDAO implements ScriptDAO {
                     Logger.getLogger(WhiskyDAO.class.getName()).log(Level.SEVERE,
                             "DAO: Erro ao criar registro de whisky");
                 }
-                    
+
                 // Lê o histórico
                 Historico historico = gson.fromJson(content, Historico.class);
                 // Registra o histórico
                 try {
-                    historico.setLojaNome(lojaNome);
+                    historico.setLojaNome(script.getLojaNome());
                     historico.setWhiskyId(whisky.getId());
                     historico.setAcessadoEm(new Timestamp(System.currentTimeMillis()));
-
                     PgHistoricoDAO dao = daoFactory.getHistoricoDAO();
                     dao.create(historico);
                 } catch (SQLException ex) {
                     Logger.getLogger(IngredienteDAO.class.getName()).log(Level.SEVERE,
                             "DAO: Erro ao criar registro de histórico");
                 }
-            } catch (ClassNotFoundException | IOException ex) {
-                Logger.getLogger(PgScriptDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
-                throw new RuntimeException("Erro executar script!");
             }
+        } catch (ClassNotFoundException | IOException ex) {
+            Logger.getLogger(PgScriptDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+            throw new RuntimeException("Erro ao executar script!");
         }
     }
 }

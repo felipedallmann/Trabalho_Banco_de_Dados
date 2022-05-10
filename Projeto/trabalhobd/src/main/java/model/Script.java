@@ -10,6 +10,12 @@ public class Script {
     public Script() {
     }
 
+    public Script(String lojaNome, Timestamp dataInsercao, String codigo) {
+        this.lojaNome = lojaNome;
+        this.dataInsercao = dataInsercao;
+        this.codigo = codigo;
+    }
+
     public String getLojaNome() {
         return lojaNome;
     }

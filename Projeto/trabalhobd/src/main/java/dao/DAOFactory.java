@@ -10,6 +10,7 @@ public abstract class DAOFactory implements AutoCloseable {
     protected Connection connection;
     public abstract LojaDAO getLojaDAO();
     public abstract ScriptDAO getScriptDAO();
+    public abstract ExecucaoScriptDAO getExecucaoScriptDAO();
     public abstract IngredienteDAO getIngredienteDAO();
     public abstract DestilariaDAO getDestilariaDAO();
     public abstract DestilariaUtilizaIngredienteDAO getDestilariaUtilizaIngredienteDAO();

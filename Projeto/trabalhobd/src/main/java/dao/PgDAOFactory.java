@@ -19,6 +19,11 @@ public class PgDAOFactory extends DAOFactory {
     }
 
     @Override
+    public ExecucaoScriptDAO getExecucaoScriptDAO() {
+        return new ExecucaoScriptDAO(this.connection);
+    }
+
+    @Override
     public IngredienteDAO getIngredienteDAO() {
         return new IngredienteDAO(this.connection);
     }
