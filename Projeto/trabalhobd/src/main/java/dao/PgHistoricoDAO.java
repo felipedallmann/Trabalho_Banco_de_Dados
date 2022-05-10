@@ -16,8 +16,7 @@ public class PgHistoricoDAO implements DAO<Historico> {
     private final Connection connection;
 
     private static final String CREATE_QUERY = "INSERT INTO projetobd.historico(whisky_id, loja_nome, preco_sem_desconto, preco_com_desconto, acessado_em) "
-            +
-            "VALUES(?, ?, ?, ?, ?);";
+            + "VALUES(?, ?, ?, ?, ?);";
 
     // private static final String READ_QUERY =
     // "SELECT url, nome " +
@@ -73,8 +72,9 @@ public class PgHistoricoDAO implements DAO<Historico> {
             statement.setString(4, historico.getPrecoComDesconto());
             statement.setTimestamp(5, historico.getAcessadoEm());
             statement.executeUpdate();
-        } catch (SQLException ex ) {
-            //Logger.getLogger(PgHistoricoDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+        } catch (SQLException ex) {
+            // Logger.getLogger(PgHistoricoDAO.class.getName()).log(Level.SEVERE, "DAO",
+            // ex);
 
             if (ex.getMessage().contains("pk_historico")) {
                 throw new SQLException("Erro ao inserir historico: nome já existente.");

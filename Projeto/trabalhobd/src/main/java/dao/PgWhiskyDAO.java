@@ -22,10 +22,10 @@ public class PgWhiskyDAO implements WhiskyDAO {
             + " ON CONFLICT (nome)"
             + " DO"
             + " UPDATE SET"
-            + " idade = EXCLUDED.idade, "
-            + " teor_alcolico = EXCLUDED.teor_alcolico,"
-            + " pais_origem_nome = EXCLUDED.pais_origem_nome,"
-            + " destilaria_nome = EXCLUDED.destilaria_nome "
+            + " idade = COALESCE(EXCLUDED.idade,idade)"
+            + " teor_alcolico = COALESCE(EXCLUDED.teor_alcolico,teor_alcolico),"
+            + " pais_origem_nome = COALESCE(EXCLUDED.pais_origem_nome,pais_origem_nome),"
+            + " destilaria_nome = COALESCE(EXCLUDED.destilaria_nome,destilaria_nome) "
             + " RETURNING id;";
 
     private static final String READ_QUERY = "SELECT * "
@@ -42,7 +42,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
     // "FROM projetobd.script " +
     // "WHERE loja_nome = ? " +
     // "ORDER BY data_insercao;";
-    
+
     private static final String GET_QTD = "SELECT count(*) qtd FROM projetobd.whisky;";
 
     private static final String ALL_QUERY = "SELECT DISTINCT wk.nome, "
@@ -82,7 +82,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
             + "projetobd.historico AS h, "
             + "projetobd.loja AS lj "
             + "WHERE LOWER(wk.nome) LIKE LOWER(?) AND h.whisky_id = wk.id AND h.loja_nome = lj.nome AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico as h WHERE h.whisky_id = wk.id)";
-    
+
     private static final String GET_PRODUCTS_SEARCH_DESTILARIA = "SELECT wk.id, "
             + "wk.nome, "
             + "wk.destilaria_nome, "
@@ -96,8 +96,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
             + "AND d.nome = ? "
             + "AND wk.destilaria_nome = d.nome "
             + "AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico as h WHERE h.whisky_id = wk.id) ";
-    
-    
+
     private static final String GET_HISTORY = "SELECT wk.nome, "
             + "h.preco_sem_desconto, "
             + "h.preco_com_desconto, "
@@ -110,6 +109,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
     private static final String GET_MAIOR_PRECO = "SELECT MAX(value) maiorPreco FROM (SELECT MAX(CAST(preco_com_desconto as float)) AS value FROM projetobd.historico WHERE whisky_id = ?  UNION SELECT MAX(CAST(preco_sem_desconto as float)) AS value FROM projetobd.historico WHERE whisky_id = ? ) AS ma";
     private static final String GET_MENOR_PRECO = "SELECT MIN(value) menorPreco FROM (SELECT MIN(NULLIF(CAST(preco_com_desconto as float), 0)) AS value FROM projetobd.historico WHERE whisky_id = ?  UNION SELECT MIN(NULLIF(CAST(preco_sem_desconto as float), 0)) AS value FROM projetobd.historico WHERE whisky_id = ? ) AS mi";
+
     public PgWhiskyDAO(Connection connection) {
         this.connection = connection;
     }
@@ -137,10 +137,11 @@ public class PgWhiskyDAO implements WhiskyDAO {
             statement.setString(5, whisky.getPaisOrigemNome());
             boolean status = statement.execute();
             if (status) {
-                try ( ResultSet rs = statement.getResultSet()) {
+                try (ResultSet rs = statement.getResultSet()) {
                     if (rs.next()) {
                         int id = rs.getInt("id");
-                        Logger.getLogger(WhiskyDAO.class.getName()).log(Level.INFO, "Id do whisky atualizado para {0}", id);
+                        Logger.getLogger(WhiskyDAO.class.getName()).log(Level.INFO, "Id do whisky atualizado para {0}",
+                                id);
                         whisky.setId(id);
                     }
                 }
@@ -162,9 +163,9 @@ public class PgWhiskyDAO implements WhiskyDAO {
     public Whisky read(String id) throws SQLException {
         Whisky whisky = new Whisky();
 
-        try ( PreparedStatement statement = connection.prepareStatement(READ_QUERY)) {
+        try (PreparedStatement statement = connection.prepareStatement(READ_QUERY)) {
             statement.setInt(1, Integer.parseInt(id));
-            try ( ResultSet result = statement.executeQuery()) {
+            try (ResultSet result = statement.executeQuery()) {
                 if (result.next()) {
                     whisky.setNome(result.getString("nome"));
                     whisky.setDestilariaNome(result.getString("destilaria_nome"));
@@ -190,8 +191,8 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
     public int getQtd() throws SQLException {
         int qtd;
-        try ( PreparedStatement statement = connection.prepareStatement(GET_QTD)) {
-            try ( ResultSet result = statement.executeQuery()) {
+        try (PreparedStatement statement = connection.prepareStatement(GET_QTD)) {
+            try (ResultSet result = statement.executeQuery()) {
                 if (result.next()) {
                     qtd = Integer.parseInt(result.getString("qtd"));
                 } else {
@@ -210,7 +211,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
     @Override
     public List<Whisky> all() throws SQLException {
         var whiskyList = new ArrayList<Whisky>();
-        try ( PreparedStatement statement = connection.prepareStatement(ALL_QUERY)) {
+        try (PreparedStatement statement = connection.prepareStatement(ALL_QUERY)) {
             ResultSet result = statement.executeQuery();
             while (result.next()) {
                 Whisky whisky = new Whisky();
@@ -234,7 +235,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
     public List<Whisky> listAll(String nome) throws SQLException {
         List<Whisky> whiskyList = new ArrayList<>();
 
-        try ( PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS)) {
+        try (PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS)) {
             statement.setString(1, nome);
             ResultSet result = statement.executeQuery();
             while (result.next()) {
@@ -257,7 +258,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
     public List<Whisky> listAllHistorico(String nome, String id) throws SQLException {
         List<Whisky> whiskyList = new ArrayList<>();
-        try ( PreparedStatement statement = connection.prepareStatement(GET_HISTORY)) {
+        try (PreparedStatement statement = connection.prepareStatement(GET_HISTORY)) {
             statement.setString(1, nome);
             statement.setInt(2, Integer.parseInt(id));
             statement.setInt(3, Integer.parseInt(id));
@@ -285,7 +286,7 @@ public class PgWhiskyDAO implements WhiskyDAO {
     public List<Whisky> listSearch(String whisky_nome, String loja_nome) throws SQLException {
         List<Whisky> whiskyList = new ArrayList<>();
 
-        try ( PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS_SEARCH)) {
+        try (PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS_SEARCH)) {
             statement.setString(1, loja_nome);
             statement.setString(2, "%" + whisky_nome + "%");
             ResultSet result = statement.executeQuery();
@@ -306,11 +307,11 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
         return whiskyList;
     }
-    
+
     public List<Whisky> listSearchAll(String whisky_nome) throws SQLException {
         List<Whisky> whiskyList = new ArrayList<>();
 
-        try ( PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS_SEARCH_ALL)) {
+        try (PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS_SEARCH_ALL)) {
             String whisky_nome_espaco = whisky_nome.replace(' ', '%');
             statement.setString(1, "%" + whisky_nome_espaco + "%");
             ResultSet result = statement.executeQuery();
@@ -333,11 +334,10 @@ public class PgWhiskyDAO implements WhiskyDAO {
         return whiskyList;
     }
 
-
     public List<Whisky> listSearchDestilaria(String destilaria_nome) throws SQLException {
         List<Whisky> whiskyList = new ArrayList<>();
 
-        try ( PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS_SEARCH_DESTILARIA)) {
+        try (PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS_SEARCH_DESTILARIA)) {
             statement.setString(1, destilaria_nome);
             ResultSet result = statement.executeQuery();
             while (result.next()) {
@@ -360,10 +360,10 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
     public Double getMaiorPreco(String id) throws SQLException {
         Double maiorPreco;
-        try ( PreparedStatement statement = connection.prepareStatement(GET_MAIOR_PRECO)) {
+        try (PreparedStatement statement = connection.prepareStatement(GET_MAIOR_PRECO)) {
             statement.setInt(1, Integer.parseInt(id));
             statement.setInt(2, Integer.parseInt(id));
-            try ( ResultSet result = statement.executeQuery()) {
+            try (ResultSet result = statement.executeQuery()) {
                 if (result.next()) {
                     maiorPreco = result.getDouble("maiorPreco");
                 } else {
@@ -381,10 +381,10 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
     public Double getMenorPreco(String id) throws SQLException {
         Double menorPreco;
-        try ( PreparedStatement statement = connection.prepareStatement(GET_MENOR_PRECO)) {
+        try (PreparedStatement statement = connection.prepareStatement(GET_MENOR_PRECO)) {
             statement.setInt(1, Integer.parseInt(id));
             statement.setInt(2, Integer.parseInt(id));
-            try ( ResultSet result = statement.executeQuery()) {
+            try (ResultSet result = statement.executeQuery()) {
                 if (result.next()) {
                     menorPreco = result.getDouble("menorPreco");
                 } else {
@@ -407,6 +407,6 @@ public class PgWhiskyDAO implements WhiskyDAO {
 
     @Override
     public void update(Whisky arg0) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

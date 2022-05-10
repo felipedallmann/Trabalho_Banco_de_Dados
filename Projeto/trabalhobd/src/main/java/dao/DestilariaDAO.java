@@ -17,7 +17,11 @@ public class DestilariaDAO implements DAO<Destilaria> {
     private final Connection connection;
 
     private static final String CREATE_QUERY = "INSERT INTO projetobd.destilaria(nome, pais_origem_nome) " +
-            "VALUES(?, ?);";
+            "VALUES(?, ?)"
+            + " ON CONFLICT (nome)"
+            + " DO"
+            + " UPDATE SET"
+            + " pais_origem_nome = COALESCE(EXCLUDED.pais_origem_nome, pais_origem_nome);";
 
     // private static final String READ_QUERY = "SELECT url, nome " +
     // "FROM projetobd.loja " +
