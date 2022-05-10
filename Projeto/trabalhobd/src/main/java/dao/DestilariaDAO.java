@@ -30,8 +30,8 @@ public class DestilariaDAO implements DAO<Destilaria> {
     // private static final String DELETE_QUERY = "DELETE FROM projetobd.loja " +
     // "WHERE nome = ?;";
 
-    private static final String ALL_QUERY = "SELECT nome, pais_origem_nome " +
-            "FROM projetobd.destilaria; ";
+    private static final String ALL_QUERY = "SELECT d.nome, d.pais_origem_nome " +
+            "FROM projetobd.destilaria d; ";
 
     // private static final String GET_BY_NAME_QUERY = "SELECT nome, url" +
     // "FROM projetobd.loja " +
@@ -94,7 +94,7 @@ public class DestilariaDAO implements DAO<Destilaria> {
                 Destilaria destilaria = new Destilaria();
                 destilaria.setNome(result.getString("nome"));
                 destilaria.setPaisOrigemNome(result.getString("pais_origem_nome"));
-
+                System.out.println(result.getString("nome"));
                 destilariaList.add(destilaria);
             }
         } catch (SQLException ex) {

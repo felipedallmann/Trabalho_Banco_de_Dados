@@ -18,6 +18,7 @@ import model.Whisky;
 @WebServlet(name = "WhiskyController", urlPatterns = {
         "/whiskys",
         "/whiskys/pesquisa",
+        "/whiskys/filtrarDestilaria",
 
 })
 public class WhiskyController extends HttpServlet {
@@ -68,6 +69,22 @@ public class WhiskyController extends HttpServlet {
                     String whisky_nome = request.getParameter("whisky_nome");
 
                     List<Whisky> whiskyList = whiskydao.listSearchAll(whisky_nome);
+                    request.setAttribute("whiskyList", whiskyList); 
+                } catch (ClassNotFoundException | IOException | SQLException ex) {
+                    request.getSession().setAttribute("error", ex.getMessage());
+                }
+
+                dispatcher = request.getRequestDispatcher("/view/whiskys/index.jsp");
+                dispatcher.forward(request, response);
+                break;
+            }
+
+            case "/whiskys/filtrarDestilaria": {
+                try (DAOFactory daoFactory = DAOFactory.getInstance()) {
+                    whiskydao = daoFactory.getWhiskyDAO();
+                    String destilaria_nome = request.getParameter("destilaria_nome");
+
+                    List<Whisky> whiskyList = whiskydao.listSearchDestilaria(destilaria_nome);
                     request.setAttribute("whiskyList", whiskyList); 
                 } catch (ClassNotFoundException | IOException | SQLException ex) {
                     request.getSession().setAttribute("error", ex.getMessage());

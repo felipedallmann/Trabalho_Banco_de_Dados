@@ -83,6 +83,20 @@ public class PgWhiskyDAO implements WhiskyDAO {
             + "projetobd.loja AS lj "
             + "WHERE LOWER(wk.nome) LIKE LOWER(?) AND h.whisky_id = wk.id AND h.loja_nome = lj.nome AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico as h WHERE h.whisky_id = wk.id)";
     
+    private static final String GET_PRODUCTS_SEARCH_DESTILARIA = "SELECT wk.id, "
+            + "wk.nome, "
+            + "wk.destilaria_nome, "
+            + "h.loja_nome, "
+            + "h.preco_sem_desconto, "
+            + "h.preco_com_desconto "
+            + "FROM projetobd.whisky AS wk, "
+            + "projetobd.historico AS h, "
+            + "projetobd.destilaria AS d "
+            + "WHERE h.whisky_id = wk.id "
+            + "AND d.nome = ? "
+            + "AND wk.destilaria_nome = d.nome "
+            + "AND h.acessado_em = (select max(acessado_em) FROM projetobd.historico as h WHERE h.whisky_id = wk.id) ";
+    
     
     private static final String GET_HISTORY = "SELECT wk.nome, "
             + "h.preco_sem_desconto, "
@@ -308,6 +322,31 @@ public class PgWhiskyDAO implements WhiskyDAO {
                 whisky.setId(Integer.parseInt(result.getString("id")));
                 whisky.setLojaNome(result.getString("nome_loja"));
                 System.out.println(result.getString("preco_sem_desconto"));
+                whiskyList.add(whisky);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PgLojaDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
+
+            throw new SQLException("Erro ao listar usuários.");
+        }
+
+        return whiskyList;
+    }
+
+
+    public List<Whisky> listSearchDestilaria(String destilaria_nome) throws SQLException {
+        List<Whisky> whiskyList = new ArrayList<>();
+
+        try ( PreparedStatement statement = connection.prepareStatement(GET_PRODUCTS_SEARCH_DESTILARIA)) {
+            statement.setString(1, destilaria_nome);
+            ResultSet result = statement.executeQuery();
+            while (result.next()) {
+                Whisky whisky = new Whisky();
+                whisky.setNome(result.getString("nome"));
+                whisky.setPrecoSemDesconto(result.getString("preco_sem_desconto"));
+                whisky.setPrecoComDesconto(result.getString("preco_com_desconto"));
+                whisky.setId(Integer.parseInt(result.getString("id")));
+                whisky.setLojaNome(result.getString("loja_nome"));
                 whiskyList.add(whisky);
             }
         } catch (SQLException ex) {

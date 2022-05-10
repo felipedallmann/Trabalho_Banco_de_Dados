@@ -8,38 +8,36 @@
     <%@include file="/view/include/head.jsp"  %>
     <title>[WebSite App] Destilarias</title>
 </head>
-
 <body>
-    <tbody>
-        <div class="container">
+    <script>
 
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th class="col-lg-5 h4">Nome</th>
-                        <th class="col-lg-4 h4 ">Pais</th>
-                    </tr>
-                </thead>
-                <c:forEach var="destilarias" items="${requestScope.destilariasList}">
+    </script>
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th class="col-xs-5 h3">Nome</th>
+                </tr>
+            </thead>
+            <c:forEach var="destilarias" items="${requestScope.destilariasList}">
+                <tbody>
                     <tr>
                         <td>
+                            <a href="
+                        ${pageContext.servletContext.contextPath}/whiskys/filtrarDestilaria?destilaria_nome=${destilarias.nome}">
                             <span class="h4">
-                                <c:out value="${destilarias.nome}" /></span>
+                                <c:out value="${destilarias.nome}" />
+                            </span>
                         </td>
-                        <td>
-                            <span class="h4">
-                                <c:out value="${destilarias.paisOrigemNome}" /></span>
-                        </td>
-
                     </tr>
-                    <br />
-                </c:forEach>
-            </table>
+                </tbody>
+            </c:forEach>
 
-        </div>
-    </tbody>
+
+    </div>
     <%@include file="/view/include/scripts.jsp"%>
     <script src="${pageContext.servletContext.contextPath}/assets/js/loja.js"></script>
 </body>
+
 
 </html>
