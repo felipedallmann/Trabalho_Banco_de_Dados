@@ -16,9 +16,6 @@
                     Inserir novo script
                 </a>
 
-                <button class="btn btn-lg btn-warning" data-toggle="modal" data-target=".modal_excluir_websites">
-                    Excluir múltiplos scripts
-                </button>
             </div>
             <form class="form_excluir_websites" action="${pageContext.servletContext.contextPath}/script/delete" method="POST">
                 <table class="table table-striped">
@@ -51,16 +48,13 @@
                                 </td>
                                 <td class="text-center">
                                     <a class="btn btn-default link_excluir_website"
-                                       href="#"
-                                       data-href="${pageContext.servletContext.contextPath}/script/delete?lojaNome=${script.lojaNome}&dataInsercao=${script.dataInsercao}"
+                                       href="${pageContext.servletContext.contextPath}/script/delete?lojaNome=${script.lojaNome}&dataInsercao=${script.dataInsercao}"
                                        data-toggle="tooltip"
                                        data-original-title="Excluir">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </td>
-                                <td class="text-center">
-                                    <input class="checkbox-inline" type="checkbox" name="delete" value="${script.lojaNome}" />
-                                </td>
+                                
                             </tr>
                             <br/>
                         </c:forEach>
@@ -85,53 +79,7 @@
                     </div>
             </form>
                 
-            <div class="modal fade modal_excluir_website">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Confirmação</h4>
-                            <button class="close" type="button" data-dismiss="modal"><span>&times;</span></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Tem certeza de que deseja excluir este usuário?</p>
-                        </div>
-                        <div class="modal-footer">
-                            <a class="btn btn-danger link_confirmacao_excluir_website">Sim</a>
-                            <button class="btn btn-primary" type="button" data-dismiss="modal">Não</button>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-                
-     
-                
-             <div class="modal modal-visualizar-website">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Detalhes</h4>
-                            <button class="close" type="button" data-dismiss="modal"><span>&times;</span></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <p class="p_id"></p>
-                                        <p class="p_nome"></p>
-                                        <p class="p_url"></p>
-                                        <a href="">Exibir produtos</a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-primary" type="button" data-dismiss="modal">Fechar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                
+    
         </div>      
         </tbody>
         <%@include file="/view/include/scripts.jsp"%>

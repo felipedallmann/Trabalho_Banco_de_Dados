@@ -20,7 +20,6 @@ import com.google.gson.GsonBuilder;
 
 import dao.DAO;
 import dao.DAOFactory;
-import dao.ScriptDAO;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import javax.servlet.annotation.MultipartConfig;
@@ -117,7 +116,7 @@ public class ScriptController extends HttpServlet {
                     String lojaNome = request.getParameter("lojaNome");
                     Timestamp dataInsercao = Timestamp.valueOf(request.getParameter("dataInsercao"));
                     dao.delete(lojaNome, dataInsercao);
-                    response.sendRedirect(request.getContextPath() + "/script?=" + lojaNome);
+                    response.sendRedirect(request.getContextPath() + "/script?lojaNome=" + lojaNome);
                 } catch (ClassNotFoundException | IOException | SQLException ex) {
                     request.getSession().setAttribute("error", ex.getMessage());
                     response.sendRedirect(request.getContextPath() + "/script");
@@ -170,10 +169,10 @@ public class ScriptController extends HttpServlet {
                 var lojaNome = request.getParameter("lojaNome");
                 var dataInsercao
                         = Timestamp.valueOf(request.getParameter("dataInsercao"));
-                script = new Script(lojaNome, dataInsercao, "");
-                System.out.println(script);
                 try (DAOFactory daoFactory = DAOFactory.getInstance()) {
                     var dao = daoFactory.getScriptDAO();
+                    script = dao.read(lojaNome, dataInsercao);
+                    System.out.println(script);
                     dao.run(script);
                 } catch (ClassNotFoundException | IOException | SQLException ex) {
                     request.getSession().setAttribute("error", ex.getMessage());

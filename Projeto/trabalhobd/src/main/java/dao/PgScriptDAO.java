@@ -2,15 +2,23 @@ package dao;
 
 import com.google.gson.Gson;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.SimpleFileVisitor;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -188,13 +196,56 @@ public class PgScriptDAO implements ScriptDAO {
     public List<Script> all() throws SQLException {
         throw new UnsupportedOperationException("Not supported yet.");
     }
+    
+    public static void deleteDirectory(String filePath)
+        throws IOException {
+
+        Path path = Paths.get(filePath);
+
+        Files.walkFileTree(path,
+            new SimpleFileVisitor<>() {
+
+                // delete directories or folders
+                @Override
+                public FileVisitResult postVisitDirectory(Path dir,
+                                                          IOException exc)
+                                                          throws IOException {
+                    Files.delete(dir);
+                    System.out.printf("Directory is deleted : %s%n", dir);
+                    return FileVisitResult.CONTINUE;
+                }
+
+                // delete files
+                @Override
+                public FileVisitResult visitFile(Path file,
+                                                 BasicFileAttributes attrs)
+                                                 throws IOException {
+                    Files.delete(file);
+                    System.out.printf("File is deleted : %s%n", file);
+                    return FileVisitResult.CONTINUE;
+                }
+            }
+        );
+
+    }
 
     @Override
     public void run(Script script) throws SQLException {
-        File currentDir = new File("./saidas");
-        File[] directoryListing = currentDir.listFiles();
+        try ( var out = new PrintWriter("web_scraping.py")) {
+            out.println(script.getCodigo());
+            Logger.getLogger(PgScriptDAO.class.getName()).log(Level.SEVERE, "Execuntado script!");
+            var processBuilder = new ProcessBuilder("python", "./web_scraping.py");
+            var process = processBuilder.start();
+            process.waitFor();
+        } catch (IOException | InterruptedException ex) {
+            Logger.getLogger(PgScriptDAO.class.getName()).log(Level.SEVERE, null, ex);
+            return;
+        }
 
-        try (DAOFactory daoFactory = DAOFactory.getInstance()) {
+        File outputDir = new File("./saidas");
+        File outputScript = new File("web_scraping.py");
+        File[] directoryListing = outputDir.listFiles();
+        try ( DAOFactory daoFactory = DAOFactory.getInstance()) {
             // Registra a execução
             try {
                 var registro = new ExecucaoScript(
@@ -207,7 +258,7 @@ public class PgScriptDAO implements ScriptDAO {
                 Logger.getLogger(WhiskyDAO.class.getName()).log(Level.SEVERE,
                         "DAO: Erro ao criar registro de execução do script!");
             }
-        
+
             for (File file : directoryListing) {
                 System.out.println(file);
 
@@ -293,6 +344,14 @@ public class PgScriptDAO implements ScriptDAO {
         } catch (ClassNotFoundException | IOException ex) {
             Logger.getLogger(PgScriptDAO.class.getName()).log(Level.SEVERE, "DAO", ex);
             throw new RuntimeException("Erro ao executar script!");
+        } finally {
+            try {
+                deleteDirectory("./saidas");
+            } catch (IOException ex) {
+                Logger.getLogger(PgScriptDAO.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            outputDir.delete();
+            outputScript.delete();
         }
     }
 }
