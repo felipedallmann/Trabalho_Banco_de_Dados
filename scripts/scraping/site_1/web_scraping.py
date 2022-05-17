@@ -67,7 +67,7 @@ class Scraper:
         price_without_discount = doc.find("input", {"name": "productPricesOf"}).get("value").strip()
 
         # Limpa os preços
-        replaces = [("R$", ""), (".", ""), (",", ".")]
+        replaces = [("R$", "")]
         for (old, new) in replaces:
             price_without_discount = price_without_discount.replace(old, new).strip()
             price = price.replace(old, new).strip()

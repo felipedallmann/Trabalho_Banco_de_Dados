@@ -38,8 +38,8 @@ class Scraper:
         option.headless = True
 
         try:
-            driver_path = Path("drivers", "chromedriver")
-            driver = webdriver.Chrome(driver_path, options=option)
+            # driver_path = Path("drivers", "chromedriver")
+            driver = webdriver.Chrome(options=option)
             driver.set_page_load_timeout(30)
             print(f"Opening {url}")
             driver.get(url)
