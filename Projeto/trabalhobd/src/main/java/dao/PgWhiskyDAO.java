@@ -22,10 +22,10 @@ public class PgWhiskyDAO implements WhiskyDAO {
             + " ON CONFLICT (nome)"
             + " DO"
             + " UPDATE SET"
-            + " idade = COALESCE(EXCLUDED.idade,idade)"
-            + " teor_alcolico = COALESCE(EXCLUDED.teor_alcolico,teor_alcolico),"
-            + " pais_origem_nome = COALESCE(EXCLUDED.pais_origem_nome,pais_origem_nome),"
-            + " destilaria_nome = COALESCE(EXCLUDED.destilaria_nome,destilaria_nome) "
+            + " idade = COALESCE(EXCLUDED.idade,whisky.idade),"
+            + " teor_alcolico = COALESCE(EXCLUDED.teor_alcolico,whisky.teor_alcolico),"
+            + " pais_origem_nome = COALESCE(EXCLUDED.pais_origem_nome,whisky.pais_origem_nome),"
+            + " destilaria_nome = COALESCE(EXCLUDED.destilaria_nome,whisky.destilaria_nome) "
             + " RETURNING id;";
 
     private static final String READ_QUERY = "SELECT * "

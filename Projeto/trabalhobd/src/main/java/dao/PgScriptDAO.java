@@ -1,9 +1,11 @@
 package dao;
 
 import com.google.gson.Gson;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.FileVisitResult;
@@ -18,7 +20,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -196,35 +197,38 @@ public class PgScriptDAO implements ScriptDAO {
     public List<Script> all() throws SQLException {
         throw new UnsupportedOperationException("Not supported yet.");
     }
-    
+
     public static void deleteDirectory(String filePath)
-        throws IOException {
+            throws IOException {
 
         Path path = Paths.get(filePath);
+        if (!Files.exists(path)) {
+            return;
+        }
 
         Files.walkFileTree(path,
-            new SimpleFileVisitor<>() {
+                new SimpleFileVisitor<>() {
 
-                // delete directories or folders
-                @Override
-                public FileVisitResult postVisitDirectory(Path dir,
-                                                          IOException exc)
-                                                          throws IOException {
-                    Files.delete(dir);
-                    System.out.printf("Directory is deleted : %s%n", dir);
-                    return FileVisitResult.CONTINUE;
-                }
-
-                // delete files
-                @Override
-                public FileVisitResult visitFile(Path file,
-                                                 BasicFileAttributes attrs)
-                                                 throws IOException {
-                    Files.delete(file);
-                    System.out.printf("File is deleted : %s%n", file);
-                    return FileVisitResult.CONTINUE;
-                }
+            // delete directories or folders
+            @Override
+            public FileVisitResult postVisitDirectory(Path dir,
+                    IOException exc)
+                    throws IOException {
+                Files.delete(dir);
+                System.out.printf("Directory is deleted : %s%n", dir);
+                return FileVisitResult.CONTINUE;
             }
+
+            // delete files
+            @Override
+            public FileVisitResult visitFile(Path file,
+                    BasicFileAttributes attrs)
+                    throws IOException {
+                Files.delete(file);
+                System.out.printf("File is deleted : %s%n", file);
+                return FileVisitResult.CONTINUE;
+            }
+        }
         );
 
     }
@@ -233,16 +237,44 @@ public class PgScriptDAO implements ScriptDAO {
     public void run(Script script) throws SQLException {
         try ( var out = new PrintWriter("web_scraping.py")) {
             out.println(script.getCodigo());
-            Logger.getLogger(PgScriptDAO.class.getName()).log(Level.SEVERE, "Execuntado script!");
-            var processBuilder = new ProcessBuilder("python", "./web_scraping.py");
-            var process = processBuilder.start();
-            process.waitFor();
-        } catch (IOException | InterruptedException ex) {
+            Logger.getLogger(PgScriptDAO.class.getName()).log(Level.SEVERE, "Executando script!");
+        } catch (FileNotFoundException ex) {
             Logger.getLogger(PgScriptDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            //var processBuilder = new ProcessBuilder("python", "./web_scraping.py");
+            //var process = processBuilder.start();
+            Process p = Runtime.getRuntime().exec("python web_scraping.py");
+
+            BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
+
+            BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
+
+            // read the output from the command
+            System.out.println("Here is the standard output of the command:\n");
+            String s = null;
+            while ((s = stdInput.readLine()) != null) {
+                System.out.println(s);
+            }
+
+            // read any errors from the attempted command
+            System.out.println("Here is the standard error of the command (if any):\n");
+            while ((s = stdError.readLine()) != null) {
+                System.out.println(s);
+            }
+
+            //p.waitFor();
+        } catch (IOException ex) {
+            Logger.getLogger(PgScriptDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        File outputDir = new File("saidas");
+        if (!outputDir.exists()) {
+            Logger.getLogger(WhiskyDAO.class.getName()).log(Level.SEVERE,
+                    "DAO: Pasta saidas não existe!");
             return;
         }
 
-        File outputDir = new File("./saidas");
         File outputScript = new File("web_scraping.py");
         File[] directoryListing = outputDir.listFiles();
         try ( DAOFactory daoFactory = DAOFactory.getInstance()) {
@@ -260,6 +292,9 @@ public class PgScriptDAO implements ScriptDAO {
             }
 
             for (File file : directoryListing) {
+                if (file == null) {
+                    continue;
+                }
                 System.out.println(file);
 
                 var content = new String(Files.readAllBytes(file.toPath()), StandardCharsets.UTF_8);
