@@ -1,6 +1,6 @@
 {
     "Categoria": "Whisky",
-    "Data": "09/05/2022",
+    "Data": "10/05/2022",
     "Descrição": "Whisky Buchanan's 18 anos 750 ml.Apresentamos a nova garrafa do esplêndido Buchanan's 18 anos.Buchanan's foi criado há mais de um século por James Buchanan.Em 1879, vivendo em Londres, começou a buscar por uma mistura que tivesse tanto qualidade quanto um sabor inconfundível. Em 1884, ele tinha criado um blend que ia ao encontro de seu desejo e como garantia da excepcional qualidade desse produto, colocou seu próprio nome nele.Os maltes e grãos de Whisky utilizados na fabricação de Buchanan's Special Reserve descansam por, no mínimo, 18 anos.Dalwhinnie é o principal single malte usado em sua composição.É proibida a venda de bebidas alcoólicas para menores de 18 anos.",
     "Fabricante": "Buchanan's",
     "Id do produto": "32",
@@ -11,7 +11,7 @@
     ],
     "Nome": "Whisky Buchanan's 18 anos 750 ml",
     "Origem": "Escócia",
-    "Preço com oferta": "4999",
-    "Preço sem oferta": "7999",
+    "Preço com oferta": "499.9",
+    "Preço sem oferta": "799.9",
     "Teor alcoólico": "0"
 }

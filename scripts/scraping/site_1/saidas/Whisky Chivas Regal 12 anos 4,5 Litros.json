@@ -1,6 +1,6 @@
 {
     "Categoria": "Whisky",
-    "Data": "09/05/2022",
+    "Data": "10/05/2022",
     "Descrição": "Whisky Chivas Regal 12 anos 4,5 Litros.Blended Scotch Whisky 12 Anos, Chivas Regal é reconhecido mundialmente como o melhor dos premium blended scoth whiskies, constituindo-se em um padrão de excelência para todos os destilados. Com seu aroma complexo, mas ainda suave, e seu sabor esfumaçado, balanceado por sua qualidade harmonizada, Chivas Regal é o predileto entre os apreciadores de whisky.É proibida a venda de bebida alcoólica para menores de 18 anos.",
     "Fabricante": "Chivas",
     "Id do produto": "339",
@@ -11,7 +11,7 @@
     ],
     "Nome": "Whisky Chivas Regal 12 anos 4,5 Litros",
     "Origem": "Escócia",
-    "Preço com oferta": "9999",
-    "Preço sem oferta": "9999",
+    "Preço com oferta": "999.9",
+    "Preço sem oferta": "999.9",
     "Teor alcoólico": "0"
 }

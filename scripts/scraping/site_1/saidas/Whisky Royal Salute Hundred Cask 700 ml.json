@@ -1,6 +1,6 @@
 {
     "Categoria": "Whisky",
-    "Data": "09/05/2022",
+    "Data": "10/05/2022",
     "Descrição": "Whisky Royal Salute Hundred Cask 700 ml. Estoque Limitado. Poucas unidades!O Royal Salute Hundred Cask Selection representa uma edição limitada de garrafas numeradas, demonstrando a exclusividade do produto, feito com Malte Royal 100 Cask, que envelheceu no minimo 22 anos, chegando a ter uísques com mais de 40 anos na sua composição.Com um sabor verdadeiramente sofisticado, apresenta um paladar rico em aromas de ameixas doces, marzipan e baunilha.Seu irresistível sabor quente e fumado é o resultado do envelhecimento excepcional.O Royal Salute é apresentado em decanters de porcelana , inspirada na colecção real de porcelana chinesa e decorada com ouro.",
     "Fabricante": "Chivas",
     "Id do produto": "858",
@@ -12,7 +12,7 @@
     ],
     "Nome": "Whisky Royal Salute Hundred Cask 700 ml",
     "Origem": "",
-    "Preço com oferta": "19999",
-    "Preço sem oferta": "24999",
+    "Preço com oferta": "1999.9",
+    "Preço sem oferta": "2499.9",
     "Teor alcoólico": "40"
 }

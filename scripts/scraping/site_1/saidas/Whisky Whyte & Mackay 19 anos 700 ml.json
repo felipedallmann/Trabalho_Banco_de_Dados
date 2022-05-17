@@ -1,6 +1,6 @@
 {
     "Categoria": "Whisky",
-    "Data": "09/05/2022",
+    "Data": "10/05/2022",
     "Descrição": "Whisky Whyte & Mackay 19 anos.Profundo com aromas de erva doce e um leve toque de oxidação para um sabor adocicado.Pleno e redondo com uma maciez sedutora e riqueza de sabores.",
     "Fabricante": "Whyte Mackay",
     "Id do produto": "567",
@@ -9,7 +9,7 @@
     ],
     "Nome": "Whisky Whyte & Mackay 19 anos 700 ml",
     "Origem": "Escócia",
-    "Preço com oferta": "3999",
-    "Preço sem oferta": "3999",
+    "Preço com oferta": "399.9",
+    "Preço sem oferta": "399.9",
     "Teor alcoólico": "40"
 }

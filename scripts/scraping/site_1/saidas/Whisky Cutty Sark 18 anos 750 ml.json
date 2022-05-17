@@ -1,6 +1,6 @@
 {
     "Categoria": "Whisky",
-    "Data": "09/05/2022",
+    "Data": "10/05/2022",
     "Descrição": "Whisky Cutty Sark 18 anos.O sofisticado, Cutty Sark 18 anos oferece qualidade e raridade apresentados com elegância e estilo.A cor laranja é profunda, elaborado a partir dos melhores barris de Xerez seleccionados.O aroma é suave. No paladar é maduro, rico e brilhante de sabores picantes a frutos secos, elegantes e equilibrados, levando a um final longo suave com notas de carvalho.",
     "Fabricante": "Cutty Sark",
     "Id do produto": "654",
@@ -10,7 +10,7 @@
     ],
     "Nome": "Whisky Cutty Sark 18 anos 750 ml",
     "Origem": "Escócia",
-    "Preço com oferta": "3999",
-    "Preço sem oferta": "3999",
+    "Preço com oferta": "399.9",
+    "Preço sem oferta": "399.9",
     "Teor alcoólico": "40"
 }
